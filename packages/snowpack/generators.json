@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "name": "snowpack",
+  "version": "0.0.1",
+  "generators": {
+    "snowpack": {
+      "factory": "./src/generators/snowpack/generator",
+      "schema": "./src/generators/snowpack/schema.json",
+      "description": "snowpack generator"
+    }
+  }
+}

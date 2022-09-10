@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "name": "playwright",
+  "version": "0.0.1",
+  "generators": {
+    "playwright": {
+      "factory": "./src/generators/playwright/generator",
+      "schema": "./src/generators/playwright/schema.json",
+      "description": "playwright generator"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+env:
+  NX_CLOUD_AUTH_TOKEN: ${{ secrets.NX_CLOUD_AUTH_TOKEN }}
+
+jobs:
+  ci:
+    name: Nx Cloud - Main Job
+    uses: nrwl/ci/.github/workflows/nx-cloud-main.yml@v0.6
+    with:
+      number-of-agents: 3
+      init-commands: |
+        yarn nx-cloud start-ci-run --stop-agents-after="build" --agent-count=3
+      parallel-commands: |
+        yarn nx-cloud record -- yarn nx workspace-lint
+        yarn nx-cloud record -- yarn nx format:check
+      parallel-commands-on-agents: |
+        yarn nx affected --target=lint --parallel=3
+        yarn nx affected --target=test --parallel=3 --ci --code-coverage
+        yarn nx affected --target=build --parallel=3
+
+  agents:
+    name: Nx Cloud - Agents
+    uses: nrwl/ci/.github/workflows/nx-cloud-agents.yml@v0.6
+    with:
+      number-of-agents: 3
+
+  e2e:
+    name: Run e2e
+    needs: [ci, agents]
+    runs-on: ubuntu-latest
+    env:
+      NX_BASE: origin/main
+      NX_HEAD: HEAD
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x]
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'yarn'
+          cache-dependency-path: yarn.lock
+      - name: Install dependencies
+        run: yarn install --prefer-offline --frozen-lockfile --non-interactive
+      - name: Run e2e tests
+        run: yarn nx affected --target=e2e --parallel=1
