@@ -1,0 +1,94 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "cli": "nx",
+  "title": "Test executor",
+  "description": "Run tests",
+  "type": "object",
+  "properties": {
+    "playwrightConfig": {
+      "type": "string",
+      "description": "Path to the playwright config file (.ts or .js)"
+    },
+    "headed": {
+      "type": "boolean",
+      "description": "Run tests in headed browsers. Useful for debugging"
+    },
+    "browser": {
+      "type": "string",
+      "description": " Run test in a specific browser. Available options are \"chromium\", \"firefox\", \"webkit\" or \"all\" to run tests in all three browsers at the same time",
+      "enum": ["chromium", "firefox", "webkit", "all"]
+    },
+    "debug": {
+      "type": "boolean",
+      "description": "Run tests with Playwright Inspector. Shortcut for PWDEBUG=1 environment variable and --timeout=0 --maxFailures=1 --headed --workers=1 options"
+    },
+    "forbidOnly": {
+      "type": "boolean",
+      "description": "Whether to disallow 'test.only'. Useful on CI"
+    },
+    "grep": {
+      "type": "string",
+      "description": "Only run tests matching this regular expression. For example, this will run 'should add to cart' when passed -g \"add to cart\"",
+      "alias": "g"
+    },
+    "grepInvert": {
+      "type": "string",
+      "description": "Only run tests not matching this regular expression. The opposite of 'grep'"
+    },
+    "globalTimeout": {
+      "type": "number",
+      "description": "Total timeout for the whole test run in milliseconds. By default, there is no global timeout"
+    },
+    "list": {
+      "type": "boolean",
+      "description": "List all the tests, but do not run them"
+    },
+    "maxFailures": {
+      "type": "number",
+      "description": "Stop after the first N test failures. Passing -x stops after the first failure"
+    },
+    "outputPath": {
+      "type": "string",
+      "description": "Directory for artifacts produced by tests"
+    },
+    "project": {
+      "type": "string",
+      "description": "Only run tests from one of the specified projects. Defaults to running all projects defined in the configuration file"
+    },
+    "quiet": {
+      "type": "boolean",
+      "description": "Whether to suppress stdout and stderr from the tests"
+    },
+    "repeatEach": {
+      "type": "number",
+      "description": "Run each test N times, defaults to one"
+    },
+    "reporter": {
+      "type": "string",
+      "description": "Choose a reporter: minimalist <dot>, concise <line> or detailed <list>. See https://playwright.dev/docs/test-reporters for more information."
+    },
+    "retries": {
+      "type": "number",
+      "description": " The maximum number of retries for flaky tests, defaults to zero (no retries)."
+    },
+    "shard": {
+      "type": "string",
+      "description": "Shard tests and execute only selected shard, specified in the form current/all, 1-based, for example 3/5"
+    },
+    "timeout": {
+      "type": "number",
+      "description": " Maximum timeout in milliseconds for each test, defaults to 30 seconds"
+    },
+    "updateSnapshots": {
+      "type": "boolean",
+      "description": "Whether to update snapshots with actual results instead of comparing them. Use this when snapshot expectations have changed",
+      "alias": "u"
+    },
+    "workers": {
+      "type": "number",
+      "description": "The maximum number of concurrent worker processes that run in parallel",
+      "alias": "j"
+    }
+  },
+  "required": ["playwrightConfig", "outputPath"]
+}

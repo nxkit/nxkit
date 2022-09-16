@@ -24,34 +24,32 @@ describe('playwright e2e', () => {
   });
 
   it('should create playwright', async () => {
-    const project = uniq('playwright');
-    await runNxCommandAsync(
-      `generate @nxkit/playwright:playwright ${project}`
-    );
-    const result = await runNxCommandAsync(`build ${project}`);
+    const project = uniq('playwright') + '-e2e';
+    await runNxCommandAsync(`generate @nxkit/playwright:project ${project}`);
+    const result = await runNxCommandAsync(`e2e ${project}`);
     expect(result.stdout).toContain('Executor ran');
   }, 120000);
 
   describe('--directory', () => {
     it('should create src in the specified directory', async () => {
-      const project = uniq('playwright');
+      const project = uniq('playwright') + '-e2e';
       await runNxCommandAsync(
-        `generate @nxkit/playwright:playwright ${project} --directory subdir`
+        `generate @nxkit/playwright:project ${project} --directory subdir`
       );
       expect(() =>
-        checkFilesExist(`libs/subdir/${project}/src/index.ts`)
+        checkFilesExist(`apps/subdir/${project}/src/e2e/example.spec.ts`)
       ).not.toThrow();
     }, 120000);
   });
 
   describe('--tags', () => {
     it('should add tags to the project', async () => {
-      const projectName = uniq('playwright');
+      const projectName = uniq('playwright') + '-e2e';
       ensureNxProject('@nxkit/playwright', 'dist/packages/playwright');
       await runNxCommandAsync(
-        `generate @nxkit/playwright:playwright ${projectName} --tags e2etag,e2ePackage`
+        `generate @nxkit/playwright:project ${projectName} --tags e2etag,e2ePackage`
       );
-      const project = readJson(`libs/${projectName}/project.json`);
+      const project = readJson(`apps/${projectName}/project.json`);
       expect(project.tags).toEqual(['e2etag', 'e2ePackage']);
     }, 120000);
   });

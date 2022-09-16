@@ -2,11 +2,11 @@ import { createTreeWithEmptyWorkspace } from '@nrwl/devkit/testing';
 import { Tree, readProjectConfiguration } from '@nrwl/devkit';
 
 import generator from './generator';
-import { PlaywrightGeneratorSchema } from './schema';
+import { ProjectGeneratorSchema } from './schema';
 
-describe('playwright generator', () => {
+describe('project generator', () => {
   let appTree: Tree;
-  const options: PlaywrightGeneratorSchema = { name: 'test' };
+  const options: ProjectGeneratorSchema = { name: 'test' };
 
   beforeEach(() => {
     appTree = createTreeWithEmptyWorkspace();

@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "cli": "nx",
+  "$id": "Init",
+  "title": "",
+  "type": "object",
+  "properties": {
+    "skipFormat": {
+      "type": "boolean",
+      "description": "Skip formatting files.",
+      "default": false
+    },
+    "skipPackageJson": {
+      "type": "boolean",
+      "description": "Do not add dependencies to `package.json`.",
+      "default": false
+    },
+    "skipPlaywrightInstall": {
+      "type": "boolean",
+      "description": "Do not run playwright install command.",
+      "default": false
+    }
+  },
+  "required": []
+}
