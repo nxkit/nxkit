@@ -1,1 +1,3 @@
-export interface ShowReportExecutorSchema {} // eslint-disable-line
+export interface ShowReportExecutorSchema {
+  reportPath: string;
+}

@@ -1,11 +1,15 @@
 import { GeneratorCallback } from '@nrwl/devkit';
-import { execSync } from 'child_process';
+import { PlaywrightCLI } from '../../../utils/playwright';
 
-export function installPlaywright(): GeneratorCallback {
+export function installPlaywright({
+  force,
+}: {
+  force: boolean;
+}): GeneratorCallback {
   return () => {
-    const args = ['--with-deps'];
-    execSync(['npx', 'playwright', 'install'].concat(args).join(' '), {
-      stdio: 'inherit',
+    PlaywrightCLI.install({
+      withDeps: true,
+      force,
     });
   };
 }

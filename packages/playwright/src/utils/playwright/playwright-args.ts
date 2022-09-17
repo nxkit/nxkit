@@ -23,21 +23,9 @@ export interface PlaywrightTestCLIOptions {
   workers?: number;
 }
 
-export interface PlaywrightShowReportCLIOptions {
-  config?: string;
-}
-
-export interface PlaywrightCodegenCLIOptions {
-  saveStorage?: string;
-  loadStorage?: string;
-}
-
-export interface PlaywrightOpenCLIOptions {
-  loadStorage?: string;
-}
-
 export interface PlaywrightInstallCLIOptions {
   withDeps?: boolean;
+  force?: boolean;
 }
 
 function toKebabCase(text: string) {
@@ -45,12 +33,7 @@ function toKebabCase(text: string) {
 }
 
 export function getArgsFromCLIOptions(
-  cliOptions:
-    | PlaywrightTestCLIOptions
-    | PlaywrightShowReportCLIOptions
-    | PlaywrightCodegenCLIOptions
-    | PlaywrightOpenCLIOptions
-    | PlaywrightInstallCLIOptions
+  cliOptions: PlaywrightTestCLIOptions | PlaywrightInstallCLIOptions
 ): string[] {
   const args = Object.entries(cliOptions).reduce<string[]>(
     (args, [option, optionValue]) => {

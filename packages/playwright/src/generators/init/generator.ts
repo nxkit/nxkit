@@ -14,7 +14,9 @@ export async function initGenerator(tree: Tree, options: InitGeneratorSchema) {
   }
 
   if (!options.skipPlaywrightInstall) {
-    const installPlaywrightTask = installPlaywright();
+    const installPlaywrightTask = installPlaywright({
+      force: options.forcePlaywrightInstall,
+    });
     tasks.push(installPlaywrightTask);
   }
 

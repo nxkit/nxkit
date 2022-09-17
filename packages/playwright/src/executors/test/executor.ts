@@ -3,6 +3,7 @@ import {
   PlaywrightCLI,
   PlaywrightTestCLIOptions,
 } from '../../utils/playwright';
+import { ExecutorContext, logger } from '@nrwl/devkit';
 
 function createCLIOptions(
   options: TestExecutorSchema
@@ -19,9 +20,12 @@ function createCLIOptions(
   return cliOptions;
 }
 
-export default async function runExecutor(options: TestExecutorSchema) {
+export default async function runExecutor(
+  options: TestExecutorSchema,
+  context: ExecutorContext
+) {
   const cliOptions = createCLIOptions(options);
   PlaywrightCLI.test(cliOptions);
-  console.log('Executor ran for Test', options);
+  logger.log(`Playwright tests ran for ${context.projectName} project`);
   return { success: true };
 }

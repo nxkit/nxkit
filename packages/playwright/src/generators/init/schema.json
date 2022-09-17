@@ -7,18 +7,24 @@
   "properties": {
     "skipFormat": {
       "type": "boolean",
-      "description": "Skip formatting files.",
+      "description": "Skip formatting files",
       "default": false
     },
     "skipPackageJson": {
       "type": "boolean",
-      "description": "Do not add dependencies to `package.json`.",
+      "description": "Do not add dependencies to `package.json`",
       "default": false
     },
     "skipPlaywrightInstall": {
       "type": "boolean",
-      "description": "Do not run playwright install command.",
+      "description": "Do not run playwright install command",
       "default": false
+    },
+    "forcePlaywrightInstall": {
+      "type": "boolean",
+      "description": "Force reinstall of stable browser channels",
+      "default": false,
+      "alias": "f"
     }
   },
   "required": []

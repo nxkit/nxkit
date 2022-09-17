@@ -14,7 +14,7 @@ function createE2ETarget(
     executor: '@nxkit/playwright:test',
     outputs: ['{options.outputPath}'],
     options: {
-      outputPath: joinPathFragments('dist', projectRoot),
+      outputPath: joinPathFragments('dist', projectRoot, 'test-results'),
       playwrightConfig: `${projectRoot}/playwright.config.ts`,
     },
   };
@@ -27,7 +27,7 @@ function createDebugTarget(
   return {
     executor: '@nxkit/playwright:test',
     options: {
-      outputPath: joinPathFragments('dist', projectRoot),
+      outputPath: joinPathFragments('dist', projectRoot, 'test-results'),
       playwrightConfig: `${projectRoot}/playwright.config.ts`,
       debug: true,
     },
@@ -41,7 +41,7 @@ function createShowReportTarget(
   return {
     executor: '@nxkit/playwright:show-report',
     options: {
-      outputPath: joinPathFragments('dist', projectRoot),
+      reportPath: joinPathFragments('dist', projectRoot, 'playwright-report'),
     },
   };
 }
@@ -63,7 +63,7 @@ export function addProjectConfig(
   tree: Tree,
   normalizedOptions: NormalizedProjectGeneratorSchema
 ) {
-  const { projectRoot } = normalizedOptions;
+  const { projectRoot, frontendProject } = normalizedOptions;
 
   addProjectConfiguration(tree, normalizedOptions.projectName, {
     root: projectRoot,
@@ -76,5 +76,6 @@ export function addProjectConfig(
       lint: createLintTarget(normalizedOptions),
     },
     tags: normalizedOptions.parsedTags,
+    implicitDependencies: frontendProject ? [frontendProject] : undefined,
   });
 }

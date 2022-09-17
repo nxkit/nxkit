@@ -1,8 +1,6 @@
 import {
   getArgsFromCLIOptions,
-  PlaywrightCodegenCLIOptions,
   PlaywrightInstallCLIOptions,
-  PlaywrightShowReportCLIOptions,
   PlaywrightTestCLIOptions,
 } from './playwright-args';
 import {
@@ -16,19 +14,9 @@ export class PlaywrightCLI {
     runPlaywrightCommand(PlayWrightCommand.TEST, args, cwd);
   }
 
-  static showReport(cliOptions: PlaywrightShowReportCLIOptions, cwd?: string) {
-    const args = getArgsFromCLIOptions(cliOptions);
+  static showReport(reportPath: string, cwd?: string) {
+    const args = [reportPath];
     runPlaywrightCommand(PlayWrightCommand.SHOW_REPORT, args, cwd);
-  }
-
-  static codegen(cliOptions: PlaywrightCodegenCLIOptions, cwd?: string) {
-    const args = getArgsFromCLIOptions(cliOptions);
-    runPlaywrightCommand(PlayWrightCommand.CODEGEN, args, cwd);
-  }
-
-  static open(cliOptions: PlaywrightCodegenCLIOptions, cwd?: string) {
-    const args = getArgsFromCLIOptions(cliOptions);
-    runPlaywrightCommand(PlayWrightCommand.OPEN, args, cwd);
   }
 
   static install(cliOptions: PlaywrightInstallCLIOptions, cwd?: string) {

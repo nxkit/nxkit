@@ -4,6 +4,11 @@
   "title": "ShowReport executor",
   "description": "",
   "type": "object",
-  "properties": {},
-  "required": []
+  "properties": {
+    "reportPath": {
+      "type": "string",
+      "description": "Path to the directory containing the tests report"
+    }
+  },
+  "required": ["reportPath"]
 }

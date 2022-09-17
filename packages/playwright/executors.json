@@ -10,17 +10,6 @@
       "implementation": "./src/executors/show-report/executor",
       "schema": "./src/executors/show-report/schema.json",
       "description": "show-report executor"
-    },
-    "codegen": {
-      "implementation": "./src/executors/codegen/executor",
-      "schema": "./src/executors/codegen/schema.json",
-      "description": "codegen executor"
-    },
-    "open": {
-      "implementation": "./src/executors/open/executor",
-      "schema": "./src/executors/open/schema.json",
-      "description": "open executor",
-      "hasher": "./src/executors/open/hasher"
     }
   }
 }

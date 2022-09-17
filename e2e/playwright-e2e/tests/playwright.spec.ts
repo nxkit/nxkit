@@ -27,7 +27,7 @@ describe('playwright e2e', () => {
     const project = uniq('playwright') + '-e2e';
     await runNxCommandAsync(`generate @nxkit/playwright:project ${project}`);
     const result = await runNxCommandAsync(`e2e ${project}`);
-    expect(result.stdout).toContain('Executor ran');
+    expect(result.stdout).toContain('Playwright tests ran');
   }, 120000);
 
   describe('--directory', () => {
