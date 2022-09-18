@@ -7,6 +7,7 @@ export function installPlaywright({
   force: boolean;
 }): GeneratorCallback {
   return () => {
+    console.log('I was called 4');
     PlaywrightCLI.install({
       withDeps: true,
       force,
