@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "cli": "nx",
+  "title": "ShowReport executor",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "reportPath": {
+      "type": "string",
+      "description": "Path to the directory containing the tests report"
+    }
+  },
+  "required": ["reportPath"]
+}

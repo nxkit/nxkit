@@ -2,11 +2,11 @@ import { createTreeWithEmptyWorkspace } from '@nrwl/devkit/testing';
 import { Tree, readProjectConfiguration } from '@nrwl/devkit';
 
 import generator from './generator';
-import { PlaywrightGeneratorSchema } from './schema';
+import { ProjectGeneratorSchema } from './schema';
 
-describe('playwright generator', () => {
+describe('project generator', () => {
   let appTree: Tree;
-  const options: PlaywrightGeneratorSchema = { name: 'test' };
+  const options: ProjectGeneratorSchema = { name: 'test' };
 
   beforeEach(() => {
     appTree = createTreeWithEmptyWorkspace();
@@ -14,7 +14,7 @@ describe('playwright generator', () => {
 
   it('should run successfully', async () => {
     await generator(appTree, options);
-    const config = readProjectConfiguration(appTree, 'test');
+    const config = readProjectConfiguration(appTree, 'test-e2e');
     expect(config).toBeDefined();
   });
 });

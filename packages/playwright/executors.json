@@ -1,10 +1,15 @@
 {
   "$schema": "http://json-schema.org/schema",
   "executors": {
-    "build": {
-      "implementation": "./src/executors/build/executor",
-      "schema": "./src/executors/build/schema.json",
-      "description": "build executor"
+    "test": {
+      "implementation": "./src/executors/test/executor",
+      "schema": "./src/executors/test/schema.json",
+      "description": "test executor"
+    },
+    "show-report": {
+      "implementation": "./src/executors/show-report/executor",
+      "schema": "./src/executors/show-report/schema.json",
+      "description": "show-report executor"
     }
   }
 }
