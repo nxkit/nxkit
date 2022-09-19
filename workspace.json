@@ -7,6 +7,7 @@
     "rollup": "packages/rollup",
     "rollup-e2e": "e2e/rollup-e2e",
     "snowpack": "packages/snowpack",
-    "snowpack-e2e": "e2e/snowpack-e2e"
+    "snowpack-e2e": "e2e/snowpack-e2e",
+    "utils-testing": "packages/utils/testing"
   }
 }
