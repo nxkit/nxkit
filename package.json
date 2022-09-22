@@ -20,7 +20,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "build": "nx build",
+    "build": "nx run-many --target build --all --parallel 8 --exclude utils-testing",
     "test": "nx test",
     "format:check": "nx format:check",
     "format": "nx format",
@@ -30,10 +30,8 @@
     "check-format": "nx format:check --all",
     "check-lock-files": "node ./tools/scripts/check-lock-files.js",
     "prepare": "is-ci || husky install",
-    "version:prerelease": "lerna version --conventional-commits --conventional-prerelease --preid beta",
-    "version:publish": "lerna version --conventional-commits --conventional-graduate",
-    "publish": "lerna publish from-git"
-
+    "local-registry": "./tools/scripts/local-registry.sh",
+    "release": "ts-node -P ./tools/scripts/tsconfig.scripts.json ./tools/scripts/release/run"
   },
   "private": true,
   "devDependencies": {
