@@ -64,7 +64,7 @@ function hideFromGitIndex(uncommittedFiles: string[]) {
     versionOptions.bump = options.version ? options.version : 'minor';
   }
 
-  const lernaJsonPath = join(__dirname, '../lerna.json');
+  const lernaJsonPath = join(__dirname, '../../lerna.json');
   let originalLernaJson: Buffer | undefined;
 
   if (options.local || options.tag === 'next') {

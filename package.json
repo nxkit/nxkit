@@ -31,7 +31,7 @@
     "check-lock-files": "node ./tools/scripts/check-lock-files.js",
     "prepare": "is-ci || husky install",
     "local-registry": "./tools/scripts/local-registry.sh",
-    "release": "ts-node -P ./tools/scripts/tsconfig.scripts.json ./tools/scripts/release/run"
+    "release": "ts-node -P ./tools/scripts/tsconfig.scripts.json ./tools/scripts/release"
   },
   "private": true,
   "devDependencies": {
