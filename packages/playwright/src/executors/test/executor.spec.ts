@@ -17,6 +17,7 @@ describe('Playwright Test Executor', () => {
   const mockContext = {
     root: '/root',
     workspace: { projects: {} },
+    projectName: 'mock-project',
   } as any;
 
   it('can run', async () => {
