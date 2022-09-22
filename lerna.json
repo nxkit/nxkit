@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/lerna/schemas/lerna-schema.json",
+  "version": "0.0.2",
+  "packages": ["dist/packages/*"],
+  "granularPathspec": false,
+  "command": {
+    "version": {
+      "allowBranch": "main"
+    },
+    "publish": {
+      "graphType": "all"
+    }
+  }
+}

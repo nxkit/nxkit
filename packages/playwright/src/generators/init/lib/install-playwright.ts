@@ -1,13 +1,12 @@
 import { GeneratorCallback } from '@nrwl/devkit';
 import { PlaywrightCLI } from '../../../utils/playwright';
 
-export function installPlaywright({
+export async function installPlaywright({
   force,
 }: {
   force: boolean;
-}): GeneratorCallback {
+}): Promise<GeneratorCallback> {
   return () => {
-    console.log('I was called 4');
     PlaywrightCLI.install({
       withDeps: true,
       force,

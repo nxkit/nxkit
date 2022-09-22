@@ -16,8 +16,6 @@ module.exports = {
   scopes: [
     { name: 'core', description: 'anything NxKit core specific' },
     { name: 'playwright', description: 'anything playwright specific' },
-    { name: 'rollup', description: 'anything rollup specific' },
-    { name: 'snowpack', description: 'anything snowpack specific' },
     {
       name: 'repo',
       description: 'anything related to managing the repo itself',

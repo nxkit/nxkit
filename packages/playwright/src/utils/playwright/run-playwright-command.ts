@@ -8,14 +8,25 @@ export const enum PlayWrightCommand {
   INSTALL = 'install',
 }
 
+export interface PlaywrightCommandOpts {
+  cwd?: string;
+  env?: NodeJS.ProcessEnv;
+}
+
 export function runPlaywrightCommand(
   playwrightCommand: PlayWrightCommand,
   args?: string[],
-  cwd?: string
+  opts: PlaywrightCommandOpts = { cwd: undefined, env: undefined }
 ) {
   const command = ['npx', 'playwright', playwrightCommand]
     .concat(args)
     .join(' ');
-  execSync(command, { stdio: 'inherit', cwd });
+
+  const { cwd, env } = opts;
+  execSync(command, {
+    stdio: 'inherit',
+    cwd: cwd ?? undefined,
+    env: { ...process.env, ...(env ?? {}) },
+  });
   return;
 }

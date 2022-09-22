@@ -16,8 +16,6 @@
     "baseUrl": ".",
     "paths": {
       "@nxkit/playwright": ["packages/playwright/src/index.ts"],
-      "@nxkit/rollup": ["packages/rollup/src/index.ts"],
-      "@nxkit/snowpack": ["packages/snowpack/src/index.ts"],
       "@nxkit/utils/testing": ["packages/utils/testing/src/index.ts"]
     }
   },

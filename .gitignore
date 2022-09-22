@@ -7,6 +7,8 @@
 
 # dependencies
 node_modules
+.npmrc
+.yarnrc
 
 # IDEs and editors
 /.idea
@@ -40,3 +42,7 @@ Thumbs.db
 
 # Nx
 nx-cloud.env
+
+# Lerna creates this
+CHANGELOG.md
+lerna-debug.log
