@@ -30,9 +30,9 @@
     "check-format": "nx format:check --all",
     "check-lock-files": "node ./tools/scripts/check-lock-files.js",
     "prepare": "is-ci || husky install",
-    "version:prerelease": "lerna version --conventional-commits --conventional-prerelease --preid beta --yes",
-    "version:publish": "lerna version --conventional-commits --conventional-graduate --yes",
-    "publish": "lerna publish from-git --yes"
+    "version:prerelease": "lerna version --conventional-commits --conventional-prerelease --preid beta",
+    "version:publish": "lerna version --conventional-commits --conventional-graduate",
+    "publish": "lerna publish from-git"
 
   },
   "private": true,

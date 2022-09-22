@@ -1,7 +1,9 @@
 {
   "$schema": "node_modules/lerna/schemas/lerna-schema.json",
-  "version": "0.0.0",
-  "packages": ["dist/packages/*"],
+  "version": "0.0.2-beta.0",
+  "packages": [
+    "dist/packages/*"
+  ],
   "command": {
     "publish": {
       "graphType": "all"
