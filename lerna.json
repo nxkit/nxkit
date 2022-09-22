@@ -1,6 +1,10 @@
 {
-  "$schema": "./node_modules/lerna/schemas/lerna-schema.json",
-  "useNx": true,
-  "useWorkspaces": true,
-  "version": "0.0.0"
+  "$schema": "node_modules/lerna/schemas/lerna-schema.json",
+  "version": "0.0.0",
+  "packages": ["dist/packages/*"],
+  "command": {
+    "publish": {
+      "graphType": "all"
+    }
+  }
 }
