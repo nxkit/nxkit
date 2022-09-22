@@ -22,12 +22,15 @@
   "scripts": {
     "build": "nx build",
     "test": "nx test",
+    "format:check": "nx format:check",
+    "format": "nx format",
     "commit": "git-cz",
     "nx": "nx",
     "check-commit": "node ./tools/scripts/commit-lint.js",
     "check-format": "nx format:check --all",
     "check-lock-files": "node ./tools/scripts/check-lock-files.js",
-    "prepare": "is-ci || husky install"
+    "prepare": "is-ci || husky install",
+    "lerna:version": "lerna version --conventional-commits"
   },
   "private": true,
   "devDependencies": {
@@ -73,8 +76,5 @@
     "commitizen": {
       "path": "./node_modules/cz-customizable"
     }
-  },
-  "workspaces": [
-    "packages/*"
-  ]
+  }
 }
