@@ -5,8 +5,9 @@
 [![CI](https://github.com/nxkit/nxkit/actions/workflows/ci.yml/badge.svg)](https://github.com/nxkit/nxkit/actions/workflows/ci.yml)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
-<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="100"></p>
 <p style="text-align: center;">
+<img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="100">
+<br>
 <a href="/nxkit/nxkit/tree/main/packages/playwright"><img src="https://playwright.dev/img/playwright-logo.svg" width="70"></a>
 </p>
 
