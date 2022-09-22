@@ -1,9 +1,8 @@
 {
   "$schema": "node_modules/lerna/schemas/lerna-schema.json",
   "version": "0.0.0",
-  "packages": [
-    "dist/packages/*"
-  ],
+  "packages": ["dist/packages/*"],
+  "granularPathspec": false,
   "command": {
     "publish": {
       "graphType": "all"
