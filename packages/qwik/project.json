@@ -1,0 +1,60 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/qwik/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/qwik",
+        "main": "packages/qwik/src/index.ts",
+        "tsConfig": "packages/qwik/tsconfig.lib.json",
+        "assets": [
+          "packages/qwik/*.md",
+          {
+            "input": "./packages/qwik/src",
+            "glob": "**/!(*.ts)",
+            "output": "./src"
+          },
+          {
+            "input": "./packages/qwik/src",
+            "glob": "**/*.d.ts",
+            "output": "./src"
+          },
+          {
+            "input": "./packages/qwik",
+            "glob": "generators.json",
+            "output": "."
+          },
+          {
+            "input": "./packages/qwik",
+            "glob": "executors.json",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "packages/qwik/**/*.ts",
+          "packages/qwik/generators.json",
+          "packages/qwik/executors.json",
+          "packages/qwik/package.json"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/packages/qwik"],
+      "options": {
+        "jestConfig": "packages/qwik/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

@@ -4,6 +4,8 @@
   "projects": {
     "playwright": "packages/playwright",
     "playwright-e2e": "e2e/playwright-e2e",
+    "qwik": "packages/qwik",
+    "qwik-e2e": "e2e/qwik-e2e",
     "utils-testing": "packages/utils/testing"
   }
 }
