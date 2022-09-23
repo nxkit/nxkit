@@ -1,5 +1,3 @@
-
-
 # NxKit
 
 [![CI](https://github.com/nxkit/nxkit/actions/workflows/ci.yml/badge.svg)](https://github.com/nxkit/nxkit/actions/workflows/ci.yml)
