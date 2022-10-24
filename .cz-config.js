@@ -16,7 +16,10 @@ module.exports = {
   scopes: [
     { name: 'core', description: 'anything NxKit core specific' },
     { name: 'playwright', description: 'anything playwright specific' },
-    { name: 'style-dictionary', description: 'anything style-dictionary specific' },
+    {
+      name: 'style-dictionary',
+      description: 'anything style-dictionary specific',
+    },
     {
       name: 'repo',
       description: 'anything related to managing the repo itself',
