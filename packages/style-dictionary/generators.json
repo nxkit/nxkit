@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "name": "style-dictionary",
+  "version": "0.0.1",
+  "generators": {
+    "style-dictionary": {
+      "factory": "./src/generators/style-dictionary/generator",
+      "schema": "./src/generators/style-dictionary/schema.json",
+      "description": "style-dictionary generator"
+    }
+  }
+}
