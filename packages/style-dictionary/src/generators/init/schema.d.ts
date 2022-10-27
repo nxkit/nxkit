@@ -1,4 +1,4 @@
 export interface InitGeneratorSchema {
-    skipFormat?: boolean;
+  skipFormat?: boolean;
   skipPackageJson?: boolean;
 }
