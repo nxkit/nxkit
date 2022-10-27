@@ -3,10 +3,17 @@
   "name": "style-dictionary",
   "version": "0.0.1",
   "generators": {
-    "style-dictionary": {
-      "factory": "./src/generators/style-dictionary/generator",
-      "schema": "./src/generators/style-dictionary/schema.json",
-      "description": "style-dictionary generator"
+    "init": {
+      "factory": "./src/generators/init/generator",
+      "schema": "./src/generators/init/schema.json",
+      "description": "init generator"
+    },
+    "library": {
+      "factory": "./src/generators/library/generator",
+      "schema": "./src/generators/library/schema.json",
+      "aliases": ["lib"],
+      "x-type": "library",
+      "description": "Create a Style Dictionary library."
     }
   }
 }

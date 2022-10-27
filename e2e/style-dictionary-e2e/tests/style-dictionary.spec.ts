@@ -29,7 +29,7 @@ describe('style-dictionary e2e', () => {
   it('should create style-dictionary', async () => {
     const project = uniq('style-dictionary');
     await runNxCommandAsync(
-      `generate @nxkit/style-dictionary:style-dictionary ${project}`
+      `generate @nxkit/style-dictionary:library ${project}`
     );
     const result = await runNxCommandAsync(`build ${project}`);
     expect(result.stdout).toContain('Executor ran');
@@ -39,10 +39,10 @@ describe('style-dictionary e2e', () => {
     it('should create src in the specified directory', async () => {
       const project = uniq('style-dictionary');
       await runNxCommandAsync(
-        `generate @nxkit/style-dictionary:style-dictionary ${project} --directory subdir`
+        `generate @nxkit/style-dictionary:library ${project} --directory subdir`
       );
       expect(() =>
-        checkFilesExist(`libs/subdir/${project}/src/index.ts`)
+        checkFilesExist(`libs/subdir/${project}/style-dictionary.config.ts`)
       ).not.toThrow();
     }, 120000);
   });
@@ -55,7 +55,7 @@ describe('style-dictionary e2e', () => {
         'dist/packages/style-dictionary'
       );
       await runNxCommandAsync(
-        `generate @nxkit/style-dictionary:style-dictionary ${projectName} --tags e2etag,e2ePackage`
+        `generate @nxkit/style-dictionary:library ${projectName} --tags e2etag,e2ePackage`
       );
       const project = readJson(`libs/${projectName}/project.json`);
       expect(project.tags).toEqual(['e2etag', 'e2ePackage']);

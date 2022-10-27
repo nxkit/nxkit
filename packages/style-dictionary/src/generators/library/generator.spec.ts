@@ -2,11 +2,11 @@ import { createTreeWithEmptyWorkspace } from '@nrwl/devkit/testing';
 import { Tree, readProjectConfiguration } from '@nrwl/devkit';
 
 import generator from './generator';
-import { StyleDictionaryGeneratorSchema } from './schema';
+import { LibraryGeneratorSchema } from './schema';
 
-describe('style-dictionary generator', () => {
+describe('library generator', () => {
   let appTree: Tree;
-  const options: StyleDictionaryGeneratorSchema = { name: 'test' };
+  const options: LibraryGeneratorSchema = { name: 'test' };
 
   beforeEach(() => {
     appTree = createTreeWithEmptyWorkspace();

@@ -3,5 +3,19 @@
   "version": "0.0.1",
   "main": "src/index.js",
   "generators": "./generators.json",
-  "executors": "./executors.json"
+  "executors": "./executors.json",
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/nxkit/nxkit",
+    "directory": "packages/style-dictionary"
+  },
+  "bugs": {
+    "url": "https://github.com/nxkit/nxkit/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "style-dictionary": "^3.7.1"
+  }
 }

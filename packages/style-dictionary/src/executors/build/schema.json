@@ -3,8 +3,31 @@
   "version": 2,
   "cli": "nx",
   "title": "Build executor",
-  "description": "",
+  "description": "Builds the Style Dictionary library",
   "type": "object",
-  "properties": {},
-  "required": []
+  "properties": {
+    "styleDictionaryConfig": {
+      "type": "string",
+      "description": "Path to the Style Dictionary config file (JSON, JSONC, JSON5, TS or JS)"
+    },
+    "tsConfig": {
+      "type": "string",
+      "description": "Path to the typescript config file"
+    },
+    "outputPath": {
+      "type": "string",
+      "description": "The output path of the generated files.",
+      "x-completion-type": "directory"
+    },
+    "deleteOutputPath": {
+      "type": "boolean",
+      "description": "Delete the output path before building.",
+      "default": true
+    },
+    "platform": {
+      "type": "string",
+      "description": "Build only the passed platform defined in the configuration."
+    }
+  },
+  "required": ["styleDictionaryConfig", "outputPath"]
 }

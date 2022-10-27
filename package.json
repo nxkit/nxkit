@@ -71,6 +71,7 @@
   },
   "dependencies": {
     "@swc/helpers": "~0.4.11",
+    "style-dictionary": "^3.7.1",
     "tslib": "^2.3.0"
   },
   "config": {
