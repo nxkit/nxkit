@@ -32,7 +32,14 @@ describe('style-dictionary e2e', () => {
       `generate @nxkit/style-dictionary:library ${project}`
     );
     const result = await runNxCommandAsync(`build ${project}`);
-    expect(result.stdout).toContain('Executor ran');
+    expect(result.stdout).toContain('Successfully built design tokens');
+    expect(() => {
+      checkFilesExist(
+        `dist/libs/${project}/scss/_variables.scss`,
+        `dist/libs/${project}/android/font_dimens.xml`,
+        `dist/libs/${project}/android/colors.xml`
+      );
+    }).not.toThrow();
   }, 120000);
 
   describe('--directory', () => {

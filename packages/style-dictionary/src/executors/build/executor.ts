@@ -1,5 +1,5 @@
 import { ExecutorContext, logger } from '@nrwl/devkit';
-import { resolveStyleDictionaryConfig } from '../../utils/style-dictionary/get-config';
+import { resolveFile } from '../../utils/typescript/resolve-file';
 import { normalizeStyleDictionaryConfig } from './lib/normalize-config';
 import { normalizeOptions } from './lib/normalize-options';
 import { runBuild } from './lib/run-style-dictionary';
@@ -14,7 +14,7 @@ export default async function runExecutor(
   const normalizedOptions = normalizeOptions(options, context.root, sourceRoot);
 
   const { tsConfig } = normalizedOptions;
-  const styleDictionaryConfig = resolveStyleDictionaryConfig(
+  const styleDictionaryConfig = resolveFile(
     options.styleDictionaryConfig,
     tsConfig
   );
@@ -23,10 +23,19 @@ export default async function runExecutor(
     normalizedOptions,
     context
   );
-  runBuild(normalizedConfig, options.platform);
-  logger.debug('Style Dictionary Config', normalizedConfig);
-  logger.log('Executor ran for Build', options);
-  return {
-    success: true,
-  };
+
+  try {
+    runBuild(normalizedConfig, options.platform);
+
+    logger.log('\n🔨 Successfully built design tokens');
+    return {
+      success: true,
+    };
+  } catch (error) {
+    logger.error('\n❌ Error building design tokens');
+    logger.error(error);
+    return {
+      success: false,
+    };
+  }
 }

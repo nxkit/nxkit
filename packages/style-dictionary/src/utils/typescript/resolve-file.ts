@@ -20,14 +20,14 @@ export function tsNodeRegister(file = '', tsConfig?: string) {
   }
 }
 
-export function resolveStyleDictionaryConfig(path: string, tsConfig: string) {
+export function resolveFile(path: string, tsConfig: string) {
   tsNodeRegister(path, tsConfig);
 
-  const styleDictionaryConfig = require(path);
-  // If the user provides a configuration in TS file
+  const resolvedObject = require(path);
+  // If the user provides an object in TS file
   // then there are 2 cases for exporing an object. The first one is:
   // `module.exports = { ... }`. And the second one is:
   // `export default { ... }`. The ESM format is compiled into:
   // `{ default: { ... } }`
-  return styleDictionaryConfig.default || styleDictionaryConfig;
+  return resolvedObject.default || resolvedObject;
 }
