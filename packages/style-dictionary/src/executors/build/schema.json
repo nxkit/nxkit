@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/schema",
   "version": 2,
   "cli": "nx",
-  "title": "Build executor",
+  "title": "Style Dictionary Build",
   "description": "Builds the Style Dictionary library",
   "type": "object",
   "properties": {

@@ -35,9 +35,20 @@ describe('style-dictionary e2e', () => {
     expect(result.stdout).toContain('Successfully built design tokens');
     expect(() => {
       checkFilesExist(
-        `dist/libs/${project}/scss/_variables.scss`,
         `dist/libs/${project}/android/font_dimens.xml`,
-        `dist/libs/${project}/android/colors.xml`
+        `dist/libs/${project}/android/colors.xml`,
+        `dist/libs/${project}/compose/StyleDictionaryColor.kt`,
+        `dist/libs/${project}/compose/StyleDictionarySize.kt`,
+        `dist/libs/${project}/ios/StyleDictionaryColor.h`,
+        `dist/libs/${project}/ios/StyleDictionaryColor.m`,
+        `dist/libs/${project}/ios/StyleDictionarySize.h`,
+        `dist/libs/${project}/ios/StyleDictionarySize.m`,
+        `dist/libs/${project}/ios-swift/StyleDictionary+Class.swift`,
+        `dist/libs/${project}/ios-swift/StyleDictionary+Enum.swift`,
+        `dist/libs/${project}/ios-swift/StyleDictionary+Struct.swift`,
+        `dist/libs/${project}/ios-swift/StyleDictionaryColor.swift`,
+        `dist/libs/${project}/ios-swift/StyleDictionarySize.swift`,
+        `dist/libs/${project}/scss/_variables.scss`
       );
     }).not.toThrow();
   }, 120000);

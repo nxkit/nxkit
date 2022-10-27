@@ -6,14 +6,14 @@
     "init": {
       "factory": "./src/generators/init/generator",
       "schema": "./src/generators/init/schema.json",
-      "description": "init generator"
+      "description": "Initializes the @nxkit/style-dictionary plugin"
     },
     "library": {
       "factory": "./src/generators/library/generator",
       "schema": "./src/generators/library/schema.json",
       "aliases": ["lib"],
       "x-type": "library",
-      "description": "Create a Style Dictionary library."
+      "description": "Creates a Style Dictionary library."
     }
   }
 }

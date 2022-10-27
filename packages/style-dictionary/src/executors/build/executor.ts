@@ -27,12 +27,12 @@ export default async function runExecutor(
   try {
     runBuild(normalizedConfig, options.platform);
 
-    logger.log('\n🔨 Successfully built design tokens');
+    logger.log('🔨 Successfully built design tokens');
     return {
       success: true,
     };
   } catch (error) {
-    logger.error('\n❌ Error building design tokens');
+    logger.error('❌ Error building design tokens');
     logger.error(error);
     return {
       success: false,

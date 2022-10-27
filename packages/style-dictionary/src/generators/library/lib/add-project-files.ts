@@ -13,7 +13,7 @@ export function addProjectFiles(
   tree: Tree,
   options: NormalizedLibraryGeneratorSchema
 ) {
-  const { projectRoot } = options;
+  const { projectRoot, preset } = options;
   const templateOptions = {
     ...options,
     ...names(options.name),
@@ -22,9 +22,10 @@ export function addProjectFiles(
     outputPath: joinPathFragments('dist', projectRoot),
     template: '',
   };
+
   generateFiles(
     tree,
-    path.join(__dirname, '../files/basic'),
+    path.join(__dirname, `../files/${preset}`),
     options.projectRoot,
     templateOptions
   );
