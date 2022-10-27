@@ -12,6 +12,7 @@ const options: BuildExecutorSchema = {
 
 jest.mock('./lib/run-style-dictionary');
 jest.mock('./lib/normalize-config');
+
 describe('Build Executor', () => {
   it('can run', async () => {
     const mockContext: ExecutorContext = {

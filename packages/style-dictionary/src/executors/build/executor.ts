@@ -27,7 +27,7 @@ export default async function runExecutor(
   try {
     runBuild(normalizedConfig, options.platform);
 
-    logger.log('🔨 Successfully built design tokens');
+    logger.log('✅ Successfully built design tokens');
     return {
       success: true,
     };
