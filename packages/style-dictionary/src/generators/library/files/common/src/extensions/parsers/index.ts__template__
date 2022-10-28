@@ -1,0 +1,19 @@
+import {
+    CustomParsersBuilder,
+    ExtensionContext
+} from '@nxkit/style-dictionary';
+
+const customParsersBuilder: CustomParsersBuilder = (
+  extensionContext: ExtensionContext
+) => {
+  return [
+    {
+      pattern: /\.json$/,
+      parse: ({ contents, filePath }) => {
+        return JSON.parse(contents);
+      },
+    },
+  ];
+};
+
+export default customParsersBuilder;

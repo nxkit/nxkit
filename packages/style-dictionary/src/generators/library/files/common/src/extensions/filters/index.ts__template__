@@ -1,0 +1,16 @@
+import {
+  CustomFiltersBuilder,
+  ExtensionContext,
+} from '@nxkit/style-dictionary';
+
+const customFiltersBuilder: CustomFiltersBuilder = (
+  extensionContext: ExtensionContext
+) => {
+  return {
+    isColor: function (token) {
+      return token.attributes.category === 'color';
+    },
+  };
+};
+
+export default customFiltersBuilder;

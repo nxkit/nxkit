@@ -4,6 +4,8 @@
   "projects": {
     "playwright": "packages/playwright",
     "playwright-e2e": "e2e/playwright-e2e",
+    "style-dictionary": "packages/style-dictionary",
+    "style-dictionary-e2e": "e2e/style-dictionary-e2e",
     "utils-testing": "packages/utils/testing"
   }
 }

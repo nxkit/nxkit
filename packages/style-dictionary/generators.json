@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "name": "style-dictionary",
+  "version": "0.0.1",
+  "generators": {
+    "init": {
+      "factory": "./src/generators/init/generator",
+      "schema": "./src/generators/init/schema.json",
+      "description": "Initializes the @nxkit/style-dictionary plugin"
+    },
+    "library": {
+      "factory": "./src/generators/library/generator",
+      "schema": "./src/generators/library/schema.json",
+      "aliases": ["lib"],
+      "x-type": "library",
+      "description": "Creates a Style Dictionary library."
+    }
+  }
+}

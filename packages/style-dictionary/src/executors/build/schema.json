@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "version": 2,
+  "cli": "nx",
+  "title": "Style Dictionary Build",
+  "description": "Builds the Style Dictionary library",
+  "type": "object",
+  "properties": {
+    "styleDictionaryConfig": {
+      "type": "string",
+      "description": "Path to the Style Dictionary config file (JSON, JSONC, JSON5, TS or JS)."
+    },
+    "tsConfig": {
+      "type": "string",
+      "description": "Path to the typescript config file."
+    },
+    "customActions": {
+      "type": "string",
+      "description": "Path to the ts file exporting the custom actions to register.",
+      "x-completion-type": "file"
+    },
+    "customFileHeaders": {
+      "type": "string",
+      "description": "Path to the ts file exporting the custom file headers to register.",
+      "x-completion-type": "file"
+    },
+    "customFilters": {
+      "type": "string",
+      "description": "Path to the ts file exporting the custom filters to register.",
+      "x-completion-type": "file"
+    },
+    "customFormats": {
+      "type": "string",
+      "description": "Path to the ts file exporting the custom formats to register.",
+      "x-completion-type": "file"
+    },
+    "customParsers": {
+      "type": "string",
+      "description": "Path to the ts file exporting the custom parsers to register.",
+      "x-completion-type": "file"
+    },
+    "customTransformGroups": {
+      "type": "string",
+      "description": "Path to the ts file exporting the custom transform groups to register.",
+      "x-completion-type": "file"
+    },
+    "customTransforms": {
+      "type": "string",
+      "description": "Path to the ts file exporting the custom transform to register.",
+      "x-completion-type": "file"
+    },
+    "outputPath": {
+      "type": "string",
+      "description": "The output path of the generated files.",
+      "x-completion-type": "directory"
+    },
+    "deleteOutputPath": {
+      "type": "boolean",
+      "description": "Delete the output path before building.",
+      "default": true
+    },
+    "platform": {
+      "type": "string",
+      "description": "Build only the passed platform defined in the configuration."
+    }
+  },
+  "required": ["styleDictionaryConfig", "tsConfig", "outputPath"]
+}

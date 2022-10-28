@@ -1,0 +1,16 @@
+import {
+  CustomFileHeadersBuilder,
+  ExtensionContext,
+} from '@nxkit/style-dictionary';
+
+const customFileHeadersBuilder: CustomFileHeadersBuilder = (
+  extensionContext: ExtensionContext
+) => {
+  return {
+    myCustomHeader: function (defaultMessage) {
+      return [...defaultMessage, `hello, world!`];
+    },
+  };
+};
+
+export default customFileHeadersBuilder;

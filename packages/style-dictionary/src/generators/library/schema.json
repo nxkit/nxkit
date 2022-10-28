@@ -1,0 +1,95 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "cli": "nx",
+  "$id": "Library",
+  "title": "Creates a Style Directory project",
+  "description": "Creates a Style Directory project",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the library",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "What name would you like to use?",
+      "pattern": "^[a-zA-Z].*$"
+    },
+    "preset": {
+      "description": "The Style Directory preset to be used for generating the library.",
+      "type": "string",
+      "default": "basic",
+      "enum": ["basic", "complete"],
+      "x-prompt": {
+        "message": "Which project preset would you like to use?",
+        "type": "list",
+        "items": [
+          {
+            "value": "basic",
+            "label": "Basic"
+          },
+          {
+            "value": "complete",
+            "label": "Complete"
+          }
+        ]
+      }
+    },
+    "extensions": {
+      "type": "array",
+      "description": "Extension to register in Style Directory",
+      "x-prompt": {
+        "message": "Choose the type of Style Directory extensions to generate",
+        "type": "list",
+        "multiselect": true,
+        "items": [
+          {
+            "value": "actions",
+            "label": "Actions"
+          },
+          {
+            "value": "file-headers",
+            "label": "File Headers"
+          },
+          {
+            "value": "filters",
+            "label": "Filters"
+          },
+          {
+            "value": "formats",
+            "label": "Formats"
+          },
+          {
+            "value": "parsers",
+            "label": "Parsers"
+          },
+          {
+            "value": "transform-groups",
+            "label": "Transform Groups"
+          },
+          {
+            "value": "transforms",
+            "label": "Transforms"
+          }
+        ]
+      }
+    },
+    "tags": {
+      "type": "string",
+      "description": "Add tags to the project (used for linting)",
+      "alias": "t"
+    },
+    "directory": {
+      "type": "string",
+      "description": "A directory where the project is placed",
+      "alias": "d"
+    },
+    "skipFormat": {
+      "description": "Skip formatting files.",
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": ["name"]
+}
