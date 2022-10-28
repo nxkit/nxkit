@@ -6,7 +6,6 @@ export interface BuildExecutorSchema {
   customFilters?: string;
   customFormats?: string;
   customParsers?: string;
-  customTemplates?: string;
   customTransformGroups?: string;
   customTransforms?: string;
   outputPath: string;

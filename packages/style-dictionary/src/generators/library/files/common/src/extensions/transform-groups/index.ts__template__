@@ -1,0 +1,14 @@
+import {
+  CustomTransformGroupsBuilder,
+  ExtensionContext,
+} from '@nxkit/style-dictionary';
+
+const customTransformGroupsBuilder: CustomTransformGroupsBuilder = (
+  extensionContext: ExtensionContext
+) => {
+  return {
+    Swift: ['attribute/cti', 'size/pt', 'name/cti'],
+  };
+};
+
+export default customTransformGroupsBuilder;

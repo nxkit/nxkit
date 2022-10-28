@@ -36,6 +36,45 @@
         ]
       }
     },
+    "extensions": {
+      "type": "array",
+      "description": "Extension to register in Style Directory",
+      "x-prompt": {
+        "message": "Choose the type of Style Directory extensions to generate",
+        "type": "list",
+        "multiselect": true,
+        "items": [
+          {
+            "value": "actions",
+            "label": "Actions"
+          },
+          {
+            "value": "file-headers",
+            "label": "File Headers"
+          },
+          {
+            "value": "filters",
+            "label": "Filters"
+          },
+          {
+            "value": "formats",
+            "label": "Formats"
+          },
+          {
+            "value": "parsers",
+            "label": "Parsers"
+          },
+          {
+            "value": "transform-groups",
+            "label": "Transform Groups"
+          },
+          {
+            "value": "transforms",
+            "label": "Transforms"
+          }
+        ]
+      }
+    },
     "tags": {
       "type": "string",
       "description": "Add tags to the project (used for linting)",

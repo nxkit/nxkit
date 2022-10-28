@@ -1,0 +1,16 @@
+import {
+  CustomFormatsBuilder,
+  ExtensionContext,
+} from '@nxkit/style-dictionary';
+
+const customFormatsBuilder: CustomFormatsBuilder = (
+  extensionContext: ExtensionContext
+) => {
+  return {
+    json: function ({ dictionary, platform, options, file }) {
+      return JSON.stringify(dictionary.tokens, null, 2);
+    },
+  };
+};
+
+export default customFormatsBuilder;

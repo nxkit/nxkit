@@ -30,7 +30,7 @@ export default async function runExecutor(
   }
 
   try {
-    runBuild(normalizedConfig, options.platform);
+    runBuild(normalizedConfig, options, context);
 
     logger.log('✅ Successfully built design tokens');
     return {

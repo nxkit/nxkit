@@ -2,7 +2,7 @@
 import { BuildExecutorSchema } from './schema';
 import executor from './executor';
 import { ExecutorContext } from '@nrwl/devkit';
-import { runBuild } from './lib/run-style-dictionary';
+import { runBuild } from './lib/style-dictionary/run-build';
 
 const options: BuildExecutorSchema = {
   styleDictionaryConfig: '',
@@ -10,7 +10,7 @@ const options: BuildExecutorSchema = {
   outputPath: '',
 };
 
-jest.mock('./lib/run-style-dictionary');
+jest.mock('./lib/style-dictionary/run-build');
 jest.mock('./lib/normalize-config');
 
 describe('Build Executor', () => {

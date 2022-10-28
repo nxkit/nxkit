@@ -39,11 +39,6 @@
       "description": "Path to the ts file exporting the custom parsers to register.",
       "x-completion-type": "file"
     },
-    "customTemplates": {
-      "type": "string",
-      "description": "Path to the ts file exporting the custom templates to register.",
-      "x-completion-type": "file"
-    },
     "customTransformGroups": {
       "type": "string",
       "description": "Path to the ts file exporting the custom transform groups to register.",

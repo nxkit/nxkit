@@ -1,10 +1,8 @@
-import { ExecutorContext } from '@nrwl/devkit';
-import { BuildExecutorSchema } from '@nxkit/style-dictionary';
+import { ExtensionContext } from '@nxkit/style-dictionary';
 import { Action, Dictionary, Platform } from 'style-dictionary';
 
 export function copyFilesAction(
-  options: BuildExecutorSchema,
-  context: ExecutorContext
+  extensionContext: ExtensionContext
 ): Action {
   return {
     /** The action in the form of a function. */

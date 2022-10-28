@@ -1,0 +1,25 @@
+import {
+  CustomTransformsBuilder,
+  ExtensionContext,
+} from '@nxkit/style-dictionary';
+
+const customTransformsBuilder: CustomTransformsBuilder = (
+  extensionContext: ExtensionContext
+) => {
+  return {
+    'time/seconds': {
+      type: 'value',
+      matcher: function (token) {
+        return token.attributes.category === 'time';
+      },
+      transformer: function (token) {
+        // Note the use of prop.original.value,
+        // before any transforms are performed, the build system
+        // clones the original token to the 'original' attribute.
+        return (parseInt(token.original.value) / 1000).toString() + 's';
+      },
+    },
+  };
+};
+
+export default customTransformsBuilder;

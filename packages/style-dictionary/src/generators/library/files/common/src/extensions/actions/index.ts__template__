@@ -1,14 +1,12 @@
-import { ExecutorContext } from '@nrwl/devkit';
-import { BuildExecutorSchema } from '@nxkit/style-dictionary';
-import { Action, Dictionary, Platform } from 'style-dictionary';
+import { CustomActionsBuilder, ExtensionContext } from '@nxkit/style-dictionary';
+import { Dictionary, Platform } from 'style-dictionary';
 import { copyFilesAction } from './copy_files_action';
 
-function customActions(
-  options: BuildExecutorSchema,
-  context: ExecutorContext
-): Record<string, Action> {
+const customActionsBuilder: CustomActionsBuilder = (
+  extensionContext: ExtensionContext
+) => {
   return {
-    copy_files: copyFilesAction(options, context),
+    copy_files: copyFilesAction(extensionContext),
     my_custom_action: {
       /** The action in the form of a function. */
       do: (dictionary: Dictionary, config: Platform) => {
@@ -23,4 +21,4 @@ function customActions(
   };
 }
 
-export default customActions;
+export default customActionsBuilder;
