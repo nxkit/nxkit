@@ -1,6 +1,6 @@
-import * as StyleDictionary from 'style-dictionary';
+import { Config } from 'style-dictionary';
 
-const config: StyleDictionary.Config = {
+const config: Config = {
   source: ['src/tokens/**/*.json'],
   platforms: {
     ios: {

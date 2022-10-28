@@ -1,26 +1,23 @@
 import { ExecutorContext, joinPathFragments } from '@nrwl/devkit';
 import { getProjectRoots } from 'nx/src/utils/command-line-utils';
 import { resolve } from 'path';
-import * as StyleDictionary from 'style-dictionary';
+import { Config, Platform } from 'style-dictionary';
 import { NormalizedBuildExecutorSchema } from '../schema';
 
 export function normalizeStyleDictionaryConfig(
-  config: StyleDictionary.Config,
+  config: Config,
   options: NormalizedBuildExecutorSchema,
   context: ExecutorContext
-): StyleDictionary.Config {
+): Config {
   const [projectRoot] = getProjectRoots(
     [context.projectName],
     context.projectGraph
   );
-  const normalized: StyleDictionary.Config = {
+  const normalized: Config = {
     ...config,
     source: config.source.map((src) => resolve(projectRoot, src)),
     platforms: Object.entries(config.platforms).reduce(
-      (
-        accum: { [key: string]: StyleDictionary.Platform },
-        [name, platform]
-      ) => {
+      (accum: { [key: string]: Platform }, [name, platform]) => {
         return {
           ...accum,
           [name]: {

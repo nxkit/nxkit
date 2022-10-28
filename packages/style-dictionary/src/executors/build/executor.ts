@@ -3,7 +3,7 @@ import { deleteOutputDir } from '../../utils/fs/delete-output-path';
 import { resolveFile } from '../../utils/typescript/resolve-file';
 import { normalizeStyleDictionaryConfig } from './lib/normalize-config';
 import { normalizeOptions } from './lib/normalize-options';
-import { runBuild } from './lib/run-style-dictionary';
+import { runBuild } from './lib/style-dictionary/run-build';
 import { BuildExecutorSchema } from './schema';
 
 export default async function runExecutor(
