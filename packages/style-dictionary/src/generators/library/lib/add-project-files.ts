@@ -25,7 +25,14 @@ export function addProjectFiles(
 
   generateFiles(
     tree,
-    path.join(__dirname, `../files/${preset}`),
+    path.join(__dirname, `../files/common`),
+    options.projectRoot,
+    templateOptions
+  );
+
+  generateFiles(
+    tree,
+    path.join(__dirname, `../files/presets/${preset}`),
     options.projectRoot,
     templateOptions
   );

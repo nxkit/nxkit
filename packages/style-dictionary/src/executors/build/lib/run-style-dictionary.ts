@@ -4,8 +4,8 @@ export function runBuild(config: styleDictionary.Config, platform?: string) {
   const instance = styleDictionary.extend(config);
 
   if (platform) {
-    instance.cleanPlatform(platform).buildPlatform(platform);
+    instance.buildPlatform(platform);
     return;
   }
-  instance.cleanAllPlatforms().buildAllPlatforms();
+  instance.buildAllPlatforms();
 }
