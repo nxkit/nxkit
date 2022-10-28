@@ -2,11 +2,14 @@ import { createTreeWithEmptyWorkspace } from '@nrwl/devkit/testing';
 import { Tree, readProjectConfiguration } from '@nrwl/devkit';
 
 import generator from './generator';
-import { LibraryGeneratorSchema } from './schema';
+import { LibraryGeneratorSchema, Preset } from './schema';
 
 describe('library generator', () => {
   let appTree: Tree;
-  const options: LibraryGeneratorSchema = { name: 'test' };
+  const options: LibraryGeneratorSchema = {
+    name: 'test',
+    preset: Preset.BASIC,
+  };
 
   beforeEach(() => {
     appTree = createTreeWithEmptyWorkspace();
