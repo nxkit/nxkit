@@ -1,4 +1,4 @@
-export const enum Extensions {
+export const enum Extension {
   ACTIONS = 'actions',
   FILE_HEADERS = 'file-headers',
   FILTERS = 'filters',
@@ -10,10 +10,10 @@ export const enum Extensions {
 
 export interface ExtensionGeneratorSchema {
   project: string;
-  extensions?: Extensions[];
-  directory?: string;
+  extensions: Extension[];
+  directory: string;
 }
 
-interface NormalizedSchema extends ExtensionGeneratorSchema {
+interface NormalizedExtensionGeneratorSchema extends ExtensionGeneratorSchema {
   projectRoot: string;
 }

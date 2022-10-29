@@ -7,7 +7,7 @@ const customTransformGroupsBuilder: CustomTransformGroupsBuilder = (
   extensionContext: ExtensionContext
 ) => {
   return {
-    Swift: ['attribute/cti', 'size/pt', 'name/cti'],
+    MyCustomGroup: ['attribute/cti', 'color/rgb', 'name/cti/pascal'],
   };
 };
 

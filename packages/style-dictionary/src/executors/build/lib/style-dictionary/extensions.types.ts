@@ -21,9 +21,9 @@ type ExtensionBuilder<T> = (
 export type CustomActionsBuilder = ExtensionBuilder<Action>;
 export type CustomTransformsBuilder = ExtensionBuilder<Transform>;
 export type CustomFormatsBuilder = ExtensionBuilder<Formatter>;
-export type CustomTransformGroupsBuilder = ExtensionBuilder<Array<string>>;
+export type CustomTransformGroupsBuilder = ExtensionBuilder<string[]>;
 export type CustomFileHeadersBuilder = ExtensionBuilder<FileHeader>;
 export type CustomFiltersBuilder = ExtensionBuilder<Matcher>;
 export type CustomParsersBuilder = (
   extensionContext: ExtensionContext
-) => [Parser];
+) => Parser[];

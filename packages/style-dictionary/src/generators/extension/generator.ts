@@ -4,7 +4,7 @@ import { normalizeOptions } from './lib/normalize-options';
 import { updateProjectConfig } from './lib/update-project-config';
 import { ExtensionGeneratorSchema } from './schema';
 
-export async function extensionsGenerator(
+export async function extensionGenerator(
   tree: Tree,
   options: ExtensionGeneratorSchema
 ) {
@@ -14,4 +14,4 @@ export async function extensionsGenerator(
   await formatFiles(tree);
 }
 
-export default extensionsGenerator;
+export default extensionGenerator;

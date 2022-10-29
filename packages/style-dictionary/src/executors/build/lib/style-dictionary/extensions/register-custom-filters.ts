@@ -9,9 +9,9 @@ export function registerCustomFilters(
   options: NormalizedBuildExecutorSchema,
   context: ExecutorContext
 ) {
-  const { customActions, tsConfig } = options;
+  const { customFilters, tsConfig } = options;
 
-  const builder = resolveFile(customActions, tsConfig) as CustomFiltersBuilder;
+  const builder = resolveFile(customFilters, tsConfig) as CustomFiltersBuilder;
   const filters = builder({
     options,
     context,

@@ -9,9 +9,9 @@ export function registerCustomParsers(
   options: NormalizedBuildExecutorSchema,
   context: ExecutorContext
 ) {
-  const { customActions, tsConfig } = options;
+  const { customParsers, tsConfig } = options;
 
-  const builder = resolveFile(customActions, tsConfig) as CustomParsersBuilder;
+  const builder = resolveFile(customParsers, tsConfig) as CustomParsersBuilder;
   const parsers = builder({
     options,
     context,

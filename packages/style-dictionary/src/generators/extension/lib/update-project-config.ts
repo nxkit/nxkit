@@ -1,19 +1,29 @@
 import {
-  updateProjectConfiguration,
+  joinPathFragments,
+  ProjectConfiguration,
   readProjectConfiguration,
   Tree,
-  joinPathFragments,
+  updateProjectConfiguration,
 } from '@nrwl/devkit';
-import { NormalizedSchema } from '../schema';
+import { extensionsOptionsMap } from '../../../utils/extensions/options-map';
+import { NormalizedExtensionGeneratorSchema } from '../schema';
 
-export function updateProjectConfig(tree: Tree, options: NormalizedSchema) {
+function addExtensionsBuildOptions(
+  config: ProjectConfiguration,
+  options: NormalizedExtensionGeneratorSchema
+) {
+  options.extensions.forEach((extension) => {
+    config.targets.build.options[extensionsOptionsMap[extension]] =
+      joinPathFragments(options.directory, extension, 'index.ts');
+  });
+}
+
+export function updateProjectConfig(
+  tree: Tree,
+  options: NormalizedExtensionGeneratorSchema
+) {
   const config = readProjectConfiguration(tree, options.project);
 
-  config.targets.build.options.customActions = joinPathFragments(
-    options.directory,
-    'actions',
-    'index.ts'
-  );
-
+  addExtensionsBuildOptions(config, options);
   updateProjectConfiguration(tree, options.project, config);
 }
