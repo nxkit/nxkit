@@ -24,7 +24,7 @@ describe('extension generator', () => {
     expect(config).toBeDefined();
     expect(config.targets.build.options.customActions).toBe(
       `libs/${options.project}/src/extensions/actions/index.ts`
-    )
+    );
     expect(config.targets.build.options.customFilters).toBe(
       `libs/${options.project}/src/extensions/filters/index.ts`
     );
