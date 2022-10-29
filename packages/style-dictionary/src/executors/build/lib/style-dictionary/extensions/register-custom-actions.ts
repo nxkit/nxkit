@@ -3,6 +3,7 @@ import { resolveFile } from '../../../../../utils/typescript/resolve-file';
 import { Core } from 'style-dictionary';
 import { NormalizedBuildExecutorSchema } from '../../../schema';
 import { CustomActionsBuilder } from '../extensions.types';
+import { resolve } from 'path';
 
 export function registerCustomActions(
   styleDictionaryInstace: Core,
@@ -11,7 +12,10 @@ export function registerCustomActions(
 ) {
   const { customActions, tsConfig } = options;
 
-  const builder = resolveFile(customActions, tsConfig) as CustomActionsBuilder;
+  const builder = resolveFile(
+    resolve(options.root, customActions),
+    tsConfig
+  ) as CustomActionsBuilder;
   const actions = builder({
     options,
     context,

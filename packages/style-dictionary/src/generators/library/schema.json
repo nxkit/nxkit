@@ -2,8 +2,8 @@
   "$schema": "http://json-schema.org/schema",
   "cli": "nx",
   "$id": "Library",
-  "title": "Creates a Style Directory project",
-  "description": "Creates a Style Directory project",
+  "title": "Style Dictionary library generator",
+  "description": "Creates a Style Dictionary library",
   "type": "object",
   "properties": {
     "name": {
@@ -17,7 +17,7 @@
       "pattern": "^[a-zA-Z].*$"
     },
     "preset": {
-      "description": "The Style Directory preset to be used for generating the library.",
+      "description": "The Style Dictionary preset to be used for generating the library.",
       "type": "string",
       "default": "basic",
       "enum": ["basic", "complete"],
@@ -32,45 +32,6 @@
           {
             "value": "complete",
             "label": "Complete"
-          }
-        ]
-      }
-    },
-    "extensions": {
-      "type": "array",
-      "description": "Extension to register in Style Directory",
-      "x-prompt": {
-        "message": "Choose the type of Style Directory extensions to generate",
-        "type": "list",
-        "multiselect": true,
-        "items": [
-          {
-            "value": "actions",
-            "label": "Actions"
-          },
-          {
-            "value": "file-headers",
-            "label": "File Headers"
-          },
-          {
-            "value": "filters",
-            "label": "Filters"
-          },
-          {
-            "value": "formats",
-            "label": "Formats"
-          },
-          {
-            "value": "parsers",
-            "label": "Parsers"
-          },
-          {
-            "value": "transform-groups",
-            "label": "Transform Groups"
-          },
-          {
-            "value": "transforms",
-            "label": "Transforms"
           }
         ]
       }

@@ -12,11 +12,12 @@ export default async function runExecutor(
 ) {
   const metadata = context.workspace.projects[context.projectName];
   const sourceRoot = metadata.sourceRoot;
+
   const normalizedOptions = normalizeOptions(options, context.root, sourceRoot);
 
-  const { tsConfig } = normalizedOptions;
+  const { tsConfig, deleteOutputPath, outputPath } = normalizedOptions;
   const styleDictionaryConfig = resolveFile(
-    options.styleDictionaryConfig,
+    normalizedOptions.styleDictionaryConfig,
     tsConfig
   );
   const normalizedConfig = normalizeStyleDictionaryConfig(
@@ -25,12 +26,12 @@ export default async function runExecutor(
     context
   );
 
-  if (options.deleteOutputPath) {
-    deleteOutputDir(context.root, options.outputPath);
+  if (deleteOutputPath) {
+    deleteOutputDir(context.root, outputPath);
   }
 
   try {
-    runBuild(normalizedConfig, options, context);
+    runBuild(normalizedConfig, normalizedOptions, context);
 
     logger.log('✅ Successfully built design tokens');
     return {

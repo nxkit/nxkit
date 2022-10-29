@@ -6,7 +6,7 @@
     "init": {
       "factory": "./src/generators/init/generator",
       "schema": "./src/generators/init/schema.json",
-      "description": "Initializes the @nxkit/style-dictionary plugin"
+      "description": "Initializes the @nxkit/style-dictionary plugin."
     },
     "library": {
       "factory": "./src/generators/library/generator",
@@ -14,6 +14,12 @@
       "aliases": ["lib"],
       "x-type": "library",
       "description": "Creates a Style Dictionary library."
+    },
+    "extension": {
+      "factory": "./src/generators/extension/generator",
+      "schema": "./src/generators/extension/schema.json",
+      "description": "Generates Style Dictionary extensions configuration for a project.",
+      "aliases": ["ext"]
     }
   }
 }
