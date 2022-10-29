@@ -9,10 +9,10 @@ export function registerCustomTransformGroups(
   options: NormalizedBuildExecutorSchema,
   context: ExecutorContext
 ) {
-  const { customActions, tsConfig } = options;
+  const { customTransformGroups, tsConfig } = options;
 
   const builder = resolveFile(
-    customActions,
+    customTransformGroups,
     tsConfig
   ) as CustomTransformGroupsBuilder;
   const transformGroups = builder({

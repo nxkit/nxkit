@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "cli": "nx",
+  "$id": "Extension",
+  "title": "Style Dictionary extensions extensions",
+  "description": "Generates Style Dictionary extensions configuration for a project.",
+  "type": "object",
+  "properties": {
+    "project": {
+      "type": "string",
+      "aliases": ["p", "projectName"],
+      "description": "Project for which to generate Style Dictionary extensions configuration.",
+      "x-prompt": "For which project do you want to generate Style Dictionary extensions configuration?",
+      "x-dropdown": "projects"
+    },
+    "extensions": {
+      "type": "array",
+      "description": "Extension to register in Style Dictionary",
+      "x-prompt": {
+        "message": "Choose the type of Style Dictionary extensions to generate",
+        "type": "list",
+        "multiselect": true,
+        "items": [
+          {
+            "value": "actions",
+            "label": "Actions"
+          },
+          {
+            "value": "file-headers",
+            "label": "File Headers"
+          },
+          {
+            "value": "filters",
+            "label": "Filters"
+          },
+          {
+            "value": "formats",
+            "label": "Formats"
+          },
+          {
+            "value": "parsers",
+            "label": "Parsers"
+          },
+          {
+            "value": "transform-groups",
+            "label": "Transform Groups"
+          },
+          {
+            "value": "transforms",
+            "label": "Transforms"
+          }
+        ]
+      }
+    },
+    "directory": {
+      "type": "string",
+      "default": "src/extensions",
+      "description": "Create the extensions under this directory (can be nested).",
+      "alias": "dir"
+    }
+  },
+  "required": ["project", "extensions", "directory"]
+}

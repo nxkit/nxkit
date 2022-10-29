@@ -1,6 +1,6 @@
 import { ExecutorContext } from '@nrwl/devkit';
-import { resolveFile } from '../../../../../utils/typescript/resolve-file';
 import { Core } from 'style-dictionary';
+import { resolveFile } from '../../../../../utils/typescript/resolve-file';
 import { NormalizedBuildExecutorSchema } from '../../../schema';
 import { CustomActionsBuilder } from '../extensions.types';
 

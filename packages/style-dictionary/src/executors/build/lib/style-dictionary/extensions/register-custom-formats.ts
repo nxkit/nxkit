@@ -9,9 +9,9 @@ export function registerCustomFormats(
   options: NormalizedBuildExecutorSchema,
   context: ExecutorContext
 ) {
-  const { customActions, tsConfig } = options;
+  const { customFormats, tsConfig } = options;
 
-  const builder = resolveFile(customActions, tsConfig) as CustomFormatsBuilder;
+  const builder = resolveFile(customFormats, tsConfig) as CustomFormatsBuilder;
   const formats = builder({
     options,
     context,
