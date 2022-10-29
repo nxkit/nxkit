@@ -5,7 +5,7 @@ export const enum Preset {
 
 export interface LibraryGeneratorSchema {
   name: string;
-  preset?: Preset;
+  preset: Preset;
   tags?: string;
   directory?: string;
   skipFormat?: boolean;

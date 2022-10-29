@@ -7,7 +7,10 @@ import { addProjectFiles } from './lib/add-project-files';
 import { normalizeOptions } from './lib/normalize-options';
 import { LibraryGeneratorSchema } from './schema';
 
-export default async function (tree: Tree, options: LibraryGeneratorSchema) {
+export async function libraryGenerator(
+  tree: Tree,
+  options: LibraryGeneratorSchema
+) {
   const normalizedOptions = normalizeOptions(tree, options);
 
   const initTask = await initGenerator(tree, {
@@ -26,3 +29,5 @@ export default async function (tree: Tree, options: LibraryGeneratorSchema) {
 
   return runTasksInSerial(initTask, lintTask);
 }
+
+export default libraryGenerator;

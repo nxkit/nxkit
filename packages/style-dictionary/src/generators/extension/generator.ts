@@ -4,9 +4,14 @@ import { normalizeOptions } from './lib/normalize-options';
 import { updateProjectConfig } from './lib/update-project-config';
 import { ExtensionGeneratorSchema } from './schema';
 
-export default async function (tree: Tree, options: ExtensionGeneratorSchema) {
+export async function extensionsGenerator(
+  tree: Tree,
+  options: ExtensionGeneratorSchema
+) {
   const normalizedOptions = normalizeOptions(tree, options);
   updateProjectConfig(tree, normalizedOptions);
   addFiles(tree, normalizedOptions);
   await formatFiles(tree);
 }
+
+export default extensionsGenerator;
