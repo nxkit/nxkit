@@ -1,18 +1,21 @@
 import { ExtensionContext } from '@nxkit/style-dictionary';
 import { Action, Dictionary, Platform } from 'style-dictionary';
+import * as fs from 'fs-extra';
+import * as path from 'path';
 
-export function copyFilesAction(
-  extensionContext: ExtensionContext
-): Action {
+export function copyFilesAction(extensionContext: ExtensionContext): Action {
+  const assetsPath = path.join(
+    extensionContext.options.sourceRoot,
+    'assets'
+  );
   return {
-    /** The action in the form of a function. */
     do: (dictionary: Dictionary, config: Platform) => {
-      console.log('do copy_files');
+      console.log('Copying assets directory to ' + config.buildPath + 'assets');
+      fs.copySync(assetsPath, config.buildPath + 'assets');
     },
-
-    /** A function that undoes the action. */
     undo: (dictionary: Dictionary, config: Platform) => {
-      console.log('undo copy_files');
+      console.log('Removing assets directory from ' + config.buildPath + 'assets');
+      fs.removeSync( config.buildPath + 'assets');
     },
   };
 }

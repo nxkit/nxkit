@@ -6,7 +6,7 @@ const customActionsBuilder: CustomActionsBuilder = (
   extensionContext: ExtensionContext
 ) => {
   return {
-    copy_files: copyFilesAction(extensionContext),
+    copy_assets_files: copyFilesAction(extensionContext),
     my_custom_action: {
       /** The action in the form of a function. */
       do: (dictionary: Dictionary, config: Platform) => {
