@@ -16,5 +16,6 @@ export function registerCustomParsers(
     options,
     context,
   });
-  parsers.forEach(styleDictionaryInstace.registerParser);
+
+  parsers.forEach((parser) => styleDictionaryInstace.registerParser(parser));
 }
