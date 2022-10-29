@@ -10,6 +10,7 @@
         "outputPath": "dist/packages/playwright",
         "main": "packages/playwright/src/index.ts",
         "tsConfig": "packages/playwright/tsconfig.lib.json",
+        "updateBuildableProjectDepsInPackageJson": false,
         "assets": [
           "packages/playwright/*.md",
           {

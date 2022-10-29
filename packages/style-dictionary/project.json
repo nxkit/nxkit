@@ -11,7 +11,7 @@
         "outputPath": "dist/packages/style-dictionary",
         "main": "packages/style-dictionary/src/index.ts",
         "tsConfig": "packages/style-dictionary/tsconfig.lib.json",
-        "buildableProjectDepsInPackageJsonType": "dependencies",
+        "updateBuildableProjectDepsInPackageJson": false,
         "assets": [
           "packages/style-dictionary/*.md",
           {
