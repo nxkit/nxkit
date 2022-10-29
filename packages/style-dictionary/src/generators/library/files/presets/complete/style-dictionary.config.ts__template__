@@ -118,7 +118,7 @@ const config: Config = {
           format: 'json',
         },
       ],
-      actions: ['copy_assets'],
+      actions: ['copy_assets_files'],
     },
   },
 };

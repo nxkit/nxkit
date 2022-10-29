@@ -1,11 +1,13 @@
-import { formatFiles, Tree } from '@nrwl/devkit';
+import { formatFiles, joinPathFragments, Tree } from '@nrwl/devkit';
 import { runTasksInSerial } from '@nrwl/workspace/src/utilities/run-tasks-in-serial';
+import extensionGenerator from '../extension/generator';
+import { Extension } from '../extension/schema';
 import initGenerator from '../init/generator';
 import { addLinter } from './lib/add-linter';
 import { addProjectConfig } from './lib/add-project-config';
 import { addProjectFiles } from './lib/add-project-files';
 import { normalizeOptions } from './lib/normalize-options';
-import { LibraryGeneratorSchema } from './schema';
+import { LibraryGeneratorSchema, Preset } from './schema';
 
 export async function libraryGenerator(
   tree: Tree,
@@ -20,6 +22,14 @@ export async function libraryGenerator(
 
   addProjectConfig(tree, normalizedOptions);
   addProjectFiles(tree, normalizedOptions);
+
+  if (normalizedOptions.preset === Preset.COMPLETE) {
+    await extensionGenerator(tree, {
+      project: normalizedOptions.name,
+      extensions: [Extension.ACTIONS],
+      directory: joinPathFragments('src', 'extensions'),
+    });
+  }
 
   const lintTask = await addLinter(tree, normalizedOptions);
 
