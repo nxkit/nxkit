@@ -3,16 +3,15 @@ import { resolve } from 'path';
 
 import type {
   BuildExecutorSchema,
-  NormalizedBuildExecutorSchema
+  NormalizedBuildExecutorSchema,
 } from '../schema';
 
 export function normalizeOptions(
   options: BuildExecutorSchema,
   context: ExecutorContext
 ): NormalizedBuildExecutorSchema {
-
   const projectConfig = context.workspace.projects[context.projectName];
-  const { sourceRoot, root: projectRoot  } = projectConfig;
+  const { sourceRoot, root: projectRoot } = projectConfig;
   const { root } = context;
   return {
     ...options,
