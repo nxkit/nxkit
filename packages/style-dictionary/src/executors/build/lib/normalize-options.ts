@@ -1,3 +1,4 @@
+import { ExecutorContext } from '@nrwl/devkit';
 import { resolve } from 'path';
 
 import type {
@@ -7,12 +8,15 @@ import type {
 
 export function normalizeOptions(
   options: BuildExecutorSchema,
-  root: string,
-  sourceRoot: string
+  context: ExecutorContext
 ): NormalizedBuildExecutorSchema {
+  const projectConfig = context.workspace.projects[context.projectName];
+  const { sourceRoot, root: projectRoot } = projectConfig;
+  const { root } = context;
   return {
     ...options,
     root,
+    projectRoot,
     sourceRoot,
     outputPath: resolve(root, options.outputPath),
     styleDictionaryConfig: resolve(root, options.styleDictionaryConfig),

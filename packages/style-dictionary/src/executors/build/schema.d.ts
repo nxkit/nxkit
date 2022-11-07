@@ -15,5 +15,6 @@ export interface BuildExecutorSchema {
 
 export interface NormalizedBuildExecutorSchema extends BuildExecutorSchema {
   root?: string;
+  projectRoot?: string;
   sourceRoot?: string;
 }
