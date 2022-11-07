@@ -10,10 +10,7 @@ export async function buildExecutor(
   options: BuildExecutorSchema,
   context: ExecutorContext
 ) {
-  const metadata = context.workspace.projects[context.projectName];
-  const sourceRoot = metadata.sourceRoot;
-
-  const normalizedOptions = normalizeOptions(options, context.root, sourceRoot);
+  const normalizedOptions = normalizeOptions(options, context);
 
   const { tsConfig, deleteOutputPath, outputPath } = normalizedOptions;
   const styleDictionaryConfig = resolveFile(
