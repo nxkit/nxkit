@@ -111,7 +111,7 @@ function parseArgs() {
     .version(false)
     .command(
       '$0 [version]',
-      'This script is for publishing Nx both locally and publically'
+      'This script is for publishing Nxkit both locally and publically'
     )
     .option('skipPublish', {
       type: 'boolean',
@@ -125,7 +125,7 @@ function parseArgs() {
     })
     .option('local', {
       type: 'boolean',
-      description: 'Publish Nx locally, not to actual NPM',
+      description: 'Publish Nxkit locally, not to actual NPM',
       alias: 'l',
       default: true,
     })
