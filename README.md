@@ -1,4 +1,6 @@
-<img src="docs/nxkit-banner.png">
+<p style="width: 100%" align="center">
+<img src="docs/nxkit-isologo.png">
+</p>
 
 > Keyboard crafted plugins for you Nx workspace
 
