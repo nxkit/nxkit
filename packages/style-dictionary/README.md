@@ -1,8 +1,10 @@
 # @nxkit/style-dictionary
+> Nx Plugin to generate [Style Dictionary](https://amzn.github.io/style-dictionary) projects & maintain your design tokens within your Nx workspace
 
-> Generate Style Dictionary projects & maintain your design tokens within your Nx workspace
+<img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="90"> X <a href="https://github.com/nxkit/nxkit/tree/main/packages/style-dictionary"><img src="https://amzn.github.io/style-dictionary/assets/logo.png" width="60"></a>
 
-🔎 **Plug Playwright into your [Nx](https://nx.dev) workspace**
+
+📦 **Plug Style Dictionary into your [Nx](https://nx.dev) workspace**
 
 ## Quick Start
 
@@ -24,22 +26,16 @@ Generate a Style Dictionary library
 npx nx generate @nxkit/style-dictionary:lib my-tokens
 ```
 
-## 
+## Build your tokens
 
-Build your desig tokens
+Build your design tokens
 
 ```bash
 npx nx build my-tokens
 ```
 
-See your tests report
+To know more about the `@nxkit/style-dictionary` plugin, run:
 
 ```bash
-npx nx show-report my-app-e2e
-```
-
-To know more about the `@nxkit/playwright` plugin, run:
-
-```bash
-npx nx list @nxkit/playwright
+npx nx list @nxkit/style-dictionary
 ```
