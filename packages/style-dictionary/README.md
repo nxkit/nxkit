@@ -1,8 +1,8 @@
 # @nxkit/style-dictionary
+
 > Nx Plugin to generate [Style Dictionary](https://amzn.github.io/style-dictionary) projects & maintain your design tokens within your Nx workspace
 
 <img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="90"> X <a href="https://github.com/nxkit/nxkit/tree/main/packages/style-dictionary"><img src="https://amzn.github.io/style-dictionary/assets/logo.png" width="60"></a>
-
 
 📦 **Plug Style Dictionary into your [Nx](https://nx.dev) workspace**
 
