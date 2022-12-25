@@ -1,18 +1,31 @@
 {
   "name": "@nxkit/playwright",
-  "description": "Nx Plugin for Playwright contains executors and generators allowing your workspace to use the powerful Playwright end-to-end testing capabilities.",
+  "description": "Nx Plugin for writting Playwright end-to-end testing projects.",
   "version": "0.0.1",
+  "private": false,
   "main": "src/index.js",
   "generators": "./generators.json",
   "executors": "./executors.json",
+  "keywords": [
+    "nx",
+    "nx-plugin",
+    "playwright",
+    "e2e",
+    "testing",
+    "monorepo",
+    "cli"
+  ],
   "repository": {
     "type": "github",
     "url": "https://github.com/nxkit/nxkit",
     "directory": "packages/playwright"
   },
+  "author": "Sebastian Duque",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/nxkit/nxkit/issues"
   },
+  "homepage": "https://github.com/nxkit/nxkit",
   "publishConfig": {
     "access": "public"
   },

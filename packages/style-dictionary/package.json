@@ -1,17 +1,31 @@
 {
   "name": "@nxkit/style-dictionary",
+  "description": "Nx Plugin to generate Style Dictionary projects & maintain your design tokens within your Nx workspace",
   "version": "0.0.1",
+  "private": false,
   "main": "src/index.js",
   "generators": "./generators.json",
   "executors": "./executors.json",
+  "keywords": [
+    "nx",
+    "nx-plugin",
+    "style-dictionary",
+    "design-system",
+    "design-tokens",
+    "monorepo",
+    "cli"
+  ],
   "repository": {
     "type": "github",
     "url": "https://github.com/nxkit/nxkit",
     "directory": "packages/style-dictionary"
   },
+  "author": "Sebastian Duque",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/nxkit/nxkit/issues"
   },
+  "homepage": "https://github.com/nxkit/nxkit",
   "publishConfig": {
     "access": "public"
   },
