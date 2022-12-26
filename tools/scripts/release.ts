@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import * as yargs from 'yargs';
+import {* as yargs} from 'yargs';
 import { execSync } from 'child_process';
 import { existsSync, readFileSync, writeFileSync } from 'fs';
 import { URL } from 'url';

@@ -12,5 +12,6 @@
     }
   },
   "tags": [],
-  "implicitDependencies": ["playwright"]
+  "implicitDependencies": ["playwright"],
+  "name": "playwright-e2e"
 }
