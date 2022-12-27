@@ -12,10 +12,13 @@ export default async function runExecutor(
     const cliOptions = createCLIOptions(options);
     const baseUrl = await startDevServer(options, context);
 
-    await PlaywrightCLI.test(cliOptions, {
+    const { stdout, stderr } = await PlaywrightCLI.test(cliOptions, {
       cwd: context.root,
       env: baseUrl ? { E2E_BASE_URL: baseUrl } : {},
     });
+
+    console.log('stdout', stdout);
+    console.log('stderr', stderr);
 
     logger.log(`Playwright tests ran for ${context.projectName} project`);
     return { success: true };
