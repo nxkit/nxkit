@@ -33,9 +33,9 @@ export async function runPlaywrightCommand(
         cwd,
         env: { ...process.env, ...(env ?? {}) },
       },
-      (err, stdout, stderr) => {
-        if (err) {
-          reject(err);
+      (error, stdout, stderr) => {
+        if (error) {
+          reject({ error, stdout, stderr });
         }
         resolve({ stdout, stderr });
       }
