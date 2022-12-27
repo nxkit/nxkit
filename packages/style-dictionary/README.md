@@ -8,15 +8,10 @@
 
 ## Quick Start
 
-Create an Nx workspace
+Create an Nx workspace and add the Style Dictionary plugin
 
 ```bash
 npx create-nx-workspace@latest my-org
-```
-
-Add the Style Dictionary plugin
-
-```bash
 npm install -D @nxkit/style-dictionary
 ```
 
@@ -38,4 +33,27 @@ To know more about the `@nxkit/style-dictionary` plugin, run:
 
 ```bash
 npx nx list @nxkit/style-dictionary
+```
+
+## Generate extensions
+
+If you'd like to add customizatios to your Style Dictionary projects like:
+
+- Custom Actions
+- Custom Filters
+- Custom Formats
+- Custom Parsers
+- Custom Transform Groups
+- Custom Tranforms
+
+you can generate and register them using the `extension` generator:
+
+```bash
+npx nx generate @nxkit/style-dictionary:extension --project my-tokens
+```
+
+The terminal will prompt you to choose the desired extensions, or they can be passed in a comma-separated string with the `--extensions` argument. For example:
+
+```bash
+npx nx generate @nxkit/style-dictionary:extension --project my-tokens --extensions actions,filters,transforms
 ```

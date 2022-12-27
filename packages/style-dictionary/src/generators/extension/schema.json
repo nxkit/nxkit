@@ -15,7 +15,7 @@
     },
     "extensions": {
       "type": "array",
-      "description": "Extension to register in Style Dictionary",
+      "description": "Extensions to register in Style Dictionary",
       "x-prompt": {
         "message": "Choose the type of Style Dictionary extensions to generate",
         "type": "list",
