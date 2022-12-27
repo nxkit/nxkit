@@ -1,25 +1,26 @@
-import { createTreeWithEmptyWorkspace } from '@nrwl/devkit/testing';
-import { Tree, readProjectConfiguration } from '@nrwl/devkit';
-import { createLib } from '../../utils/testing/generators';
-import generator from './generator';
+import { readProjectConfiguration, Tree } from '@nrwl/devkit';
+import { createTestTokensLib } from '../../utils/testing/generators';
+import { extensionGenerator } from './generator';
 import { Extension, ExtensionGeneratorSchema } from './schema';
+import * as extensionSchema from './schema.json';
 
 describe('extension generator', () => {
   let appTree: Tree;
   const options: ExtensionGeneratorSchema = {
-    project: 'test',
+    project: 'test-tokens',
     extensions: [],
-    directory: 'src/extensions',
+    directory: extensionSchema.properties.directory.default,
   };
 
   beforeEach(async () => {
-    appTree = createTreeWithEmptyWorkspace();
-    await createLib(appTree, options.project);
+    appTree = await createTestTokensLib(options.project, {
+      appsLibsLayout: true,
+    });
   });
 
   it('should run successfully', async () => {
     options.extensions = [Extension.ACTIONS, Extension.FILTERS];
-    await generator(appTree, options);
+    await extensionGenerator(appTree, options);
     const config = readProjectConfiguration(appTree, options.project);
     expect(config).toBeDefined();
     expect(config.targets.build.options.customActions).toBe(

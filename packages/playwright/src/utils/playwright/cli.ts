@@ -10,24 +10,24 @@ import {
 } from './run-playwright-command';
 
 export class PlaywrightCLI {
-  static test(
+  static async test(
     cliOptions: PlaywrightTestCLIOptions,
     opts?: PlaywrightCommandOpts
   ) {
     const args = getArgsFromCLIOptions(cliOptions);
-    runPlaywrightCommand(PlayWrightCommand.TEST, args, opts);
+    return runPlaywrightCommand(PlayWrightCommand.TEST, args, opts);
   }
 
-  static showReport(reportPath: string, opts?: PlaywrightCommandOpts) {
+  static async showReport(reportPath: string, opts?: PlaywrightCommandOpts) {
     const args = [reportPath];
-    runPlaywrightCommand(PlayWrightCommand.SHOW_REPORT, args, opts);
+    return runPlaywrightCommand(PlayWrightCommand.SHOW_REPORT, args, opts);
   }
 
-  static install(
+  static async install(
     cliOptions: PlaywrightInstallCLIOptions,
     opts?: PlaywrightCommandOpts
   ) {
     const args = getArgsFromCLIOptions(cliOptions);
-    runPlaywrightCommand(PlayWrightCommand.INSTALL, args, opts);
+    return runPlaywrightCommand(PlayWrightCommand.INSTALL, args, opts);
   }
 }

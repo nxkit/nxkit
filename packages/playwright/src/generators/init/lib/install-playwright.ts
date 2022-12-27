@@ -6,8 +6,8 @@ export async function installPlaywright({
 }: {
   force: boolean;
 }): Promise<GeneratorCallback> {
-  return () => {
-    PlaywrightCLI.install({
+  return async () => {
+    await PlaywrightCLI.install({
       withDeps: true,
       force,
     });

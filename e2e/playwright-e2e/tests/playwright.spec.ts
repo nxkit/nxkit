@@ -33,6 +33,7 @@ describe('playwright e2e', () => {
         JEST_WORKER_ID: undefined,
       },
     });
+
     expect(result.stdout).toContain('Playwright tests ran');
   }, 120000);
 
@@ -43,7 +44,7 @@ describe('playwright e2e', () => {
         `generate @nxkit/playwright:project ${project} --directory subdir`
       );
       expect(() =>
-        checkFilesExist(`apps/subdir/${project}/src/e2e/example.spec.ts`)
+        checkFilesExist(`apps/subdir/${project}/src/e2e/app.spec.ts`)
       ).not.toThrow();
     }, 120000);
   });
@@ -51,7 +52,6 @@ describe('playwright e2e', () => {
   describe('--tags', () => {
     it('should add tags to the project', async () => {
       const projectName = uniq('playwright') + '-e2e';
-      ensureNxProject('@nxkit/playwright', 'dist/packages/playwright');
       await runNxCommandAsync(
         `generate @nxkit/playwright:project ${projectName} --tags e2etag,e2ePackage`
       );

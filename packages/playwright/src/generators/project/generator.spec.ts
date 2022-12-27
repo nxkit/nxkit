@@ -9,10 +9,16 @@ describe('project generator', () => {
   const options: ProjectGeneratorSchema = { name: 'test' };
 
   beforeEach(() => {
-    appTree = createTreeWithEmptyWorkspace();
+    appTree = createTreeWithEmptyWorkspace({ layout: 'apps-libs' });
   });
 
-  it('should run successfully', async () => {
+  it('should create standalone project', async () => {
+    await generator(appTree, options);
+    const config = readProjectConfiguration(appTree, 'test-e2e');
+    expect(config).toBeDefined();
+  });
+
+  it('should create standalone project', async () => {
     await generator(appTree, options);
     const config = readProjectConfiguration(appTree, 'test-e2e');
     expect(config).toBeDefined();

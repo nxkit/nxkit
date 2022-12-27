@@ -15,16 +15,20 @@
     },
     "frontendProject": {
       "type": "string",
-      "description": "The name of the frontend project to test"
+      "description": "The name of the frontend project to test."
+    },
+    "baseUrl": {
+      "type": "string",
+      "description": "The base url of the application to be tested (can be used if no frontendProject is defined)."
     },
     "tags": {
       "type": "string",
-      "description": "Add tags to the project (used for linting)",
+      "description": "Add tags to the project (used for linting).",
       "alias": "t"
     },
     "directory": {
       "type": "string",
-      "description": "A directory where the project is placed",
+      "description": "A directory where the project is placed.",
       "alias": "d",
       "x-completion-type": "directory"
     },

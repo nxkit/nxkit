@@ -1,11 +1,21 @@
-import { addProjectConfiguration, names, Tree } from '@nrwl/devkit';
+import { Tree } from '@nrwl/devkit';
+import { createTreeWithEmptyWorkspace } from '@nrwl/devkit/testing';
 import libraryGenerator from '../../generators/library/generator';
 import { Preset } from '../../generators/library/schema';
 
-export async function createLib(tree: Tree, appName: string): Promise<void> {
-  await libraryGenerator(tree, {
-    name: appName,
+export async function createTestTokensLib(
+  libName: string,
+  opts = {} as { appsLibsLayout?: boolean }
+): Promise<Tree> {
+  const appTree = createTreeWithEmptyWorkspace(
+    opts.appsLibsLayout ? { layout: 'apps-libs' } : undefined
+  );
+  await libraryGenerator(appTree, {
+    name: libName,
     preset: Preset.BASIC,
-    skipFormat: true,
   });
+  appTree.listChanges().forEach((change) => {
+    console.log(change.path);
+  });
+  return appTree;
 }

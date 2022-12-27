@@ -1,5 +1,6 @@
 {
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "playwright-e2e",
   "projectType": "application",
   "sourceRoot": "e2e/playwright-e2e/src",
   "targets": {
