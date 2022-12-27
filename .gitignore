@@ -41,6 +41,9 @@ Thumbs.db
 # Nx
 nx-cloud.env
 
+# Env
+.env
+
 # Lerna creates this
 CHANGELOG.md
 lerna-debug.log
