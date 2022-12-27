@@ -33,6 +33,7 @@
     "local-registry": "./tools/scripts/local-registry.sh",
     "release": "ts-node -P ./tools/scripts/tsconfig.scripts.json ./tools/scripts/release"
   },
+  "nx": {},
   "private": true,
   "devDependencies": {
     "@lerna/publish": "^6.2.0",
