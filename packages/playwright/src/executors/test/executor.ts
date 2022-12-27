@@ -21,11 +21,9 @@ export default async function runExecutor(
     return { success: true };
   } catch (error) {
     // ¯\_(ツ)_/¯
-    logger.error(`stdout ${error.stdout}`);
-    logger.error(`stderr ${error.stderr}`);
-
+    logger.error(error.stdout);
+    logger.error(error.error);
     logger.error('❌ Error running playwright tests');
-    logger.error(error);
     return { success: false };
   }
 }

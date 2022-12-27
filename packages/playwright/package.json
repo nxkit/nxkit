@@ -18,5 +18,8 @@
   },
   "peerDependencies": {
     "@playwright/test": "^1.25.2"
+  },
+  "scripts": {
+    "postinstall": "nx generate @nxkit/playwright:init"
   }
 }

@@ -44,3 +44,8 @@ nx-cloud.env
 # Lerna creates this
 CHANGELOG.md
 lerna-debug.log
+
+# Playwright
+**/test-results/
+**/playwright-report/
+**/playwright/.cache/

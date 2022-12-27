@@ -46,6 +46,7 @@
     "@nrwl/nx-cloud": "15.0.2",
     "@nrwl/nx-plugin": "15.4.2",
     "@nrwl/workspace": "15.4.2",
+    "@playwright/test": "^1.25.2",
     "@swc-node/register": "^1.4.2",
     "@swc/cli": "~0.1.55",
     "@swc/core": "^1.2.173",
