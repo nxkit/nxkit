@@ -68,10 +68,6 @@ describe('style-dictionary e2e', () => {
   describe('--tags', () => {
     it('should add tags to the project', async () => {
       const projectName = uniq('style-dictionary');
-      ensureNxProject(
-        '@nxkit/style-dictionary',
-        'dist/packages/style-dictionary'
-      );
       await runNxCommandAsync(
         `generate @nxkit/style-dictionary:library ${projectName} --tags e2etag,e2ePackage`
       );

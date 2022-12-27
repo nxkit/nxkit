@@ -1,4 +1,5 @@
-import { execSync } from 'child_process';
+import { getPackageManagerCommand } from '@nrwl/devkit';
+import { exec } from 'child_process';
 
 export const enum PlayWrightCommand {
   TEST = 'test',
@@ -13,20 +14,31 @@ export interface PlaywrightCommandOpts {
   env?: NodeJS.ProcessEnv;
 }
 
-export function runPlaywrightCommand(
+export async function runPlaywrightCommand(
   playwrightCommand: PlayWrightCommand,
   args?: string[],
   opts: PlaywrightCommandOpts = { cwd: undefined, env: undefined }
-) {
-  const command = ['npx', 'playwright', playwrightCommand]
+): Promise<{ stdout: string; stderr: string }> {
+  const pmc = getPackageManagerCommand();
+  const command = [pmc.exec, 'playwright', playwrightCommand]
     .concat(args)
     .join(' ');
 
   const { cwd, env } = opts;
-  execSync(command, {
-    stdio: 'inherit',
-    cwd: cwd ?? undefined,
-    env: { ...process.env, ...(env ?? {}) },
+
+  return new Promise((resolve, reject) => {
+    exec(
+      command,
+      {
+        cwd,
+        env: { ...process.env, ...(env ?? {}) },
+      },
+      (err, stdout, stderr) => {
+        if (err) {
+          reject(err);
+        }
+        resolve({ stdout, stderr });
+      }
+    ).stdout.pipe(process.stdout);
   });
-  return;
 }

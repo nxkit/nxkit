@@ -24,6 +24,7 @@ function getE2EprojectName(options: ProjectGeneratorSchema) {
   if (frontendProject) {
     return `${frontendProject}-e2e`;
   }
+
   const defaultProjectName = 'playwright-tests-e2e';
   logger.warn(`Using deafult project name: ${defaultProjectName}`);
   return defaultProjectName;
@@ -50,6 +51,7 @@ export function normalizeOptions(
 
   return {
     ...options,
+    baseUrl: options.baseUrl,
     projectName,
     projectRoot,
     projectDirectory,

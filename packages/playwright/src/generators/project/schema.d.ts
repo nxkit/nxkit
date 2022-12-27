@@ -1,6 +1,7 @@
 export interface ProjectGeneratorSchema {
   name?: string;
   frontendProject?: string;
+  baseUrl?: string;
   tags?: string;
   directory?: string;
   skipFormat?: boolean;

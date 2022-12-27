@@ -4,14 +4,26 @@ import { TestExecutorSchema } from '../schema';
 export function createCLIOptions(
   options: TestExecutorSchema
 ): PlaywrightTestCLIOptions {
-  const { outputPath, playwrightConfig } = options;
-  const cliOptions = {
-    ...options,
-    output: outputPath,
-    config: playwrightConfig,
+  return {
+    output: options.outputPath,
+    config: options.playwrightConfig,
+    browser: options.browser,
+    debug: options.debug,
+    forbidOnly: options.forbidOnly,
+    globalTimeout: options.globalTimeout,
+    grep: options.grep,
+    grepInvert: options.grepInvert,
+    headed: options.headed,
+    list: options.list,
+    maxFailures: options.maxFailures,
+    project: options.project,
+    quiet: options.quiet,
+    repeatEach: options.repeatEach,
+    reporter: options.reporter,
+    retries: options.retries,
+    shard: options.shard,
+    timeout: options.timeout,
+    updateSnapshots: options.updateSnapshots,
+    workers: options.workers,
   };
-  delete cliOptions.playwrightConfig;
-  delete cliOptions.outputPath;
-
-  return cliOptions;
 }

@@ -32,7 +32,7 @@ function hideFromGitIndex(uncommittedFiles: string[]) {
     execSync('yarn local-registry clear');
   }
 
-  const buildCommand = 'yarn build';
+  const buildCommand = 'pnpm build-all';
   console.log(`> ${buildCommand}`);
   execSync(buildCommand, {
     stdio: [0, 1, 2],

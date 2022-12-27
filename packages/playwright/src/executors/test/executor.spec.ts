@@ -1,10 +1,7 @@
 import { TestExecutorSchema } from './schema';
 
 import executor from './executor';
-import {
-  PlaywrightCLI,
-  PlaywrightTestCLIOptions,
-} from '../../utils/playwright';
+import { PlaywrightCLI } from '../../utils/playwright';
 
 jest.mock('../../utils/playwright');
 
@@ -22,11 +19,7 @@ describe('Playwright Test Executor', () => {
 
   it('can run', async () => {
     const output = await executor(options, mockContext);
-    const expectedOptions: PlaywrightTestCLIOptions = {
-      config: options.playwrightConfig,
-      output: options.outputPath,
-    };
-    expect(PlaywrightCLI.test).toHaveBeenCalledWith(expectedOptions);
+    expect(PlaywrightCLI.test).toHaveBeenCalled();
     expect(output.success).toBe(true);
   });
 });

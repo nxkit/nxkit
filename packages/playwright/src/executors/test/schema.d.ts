@@ -1,6 +1,11 @@
 export interface TestExecutorSchema {
   outputPath: string;
   playwrightConfig: string;
+  devServerTarget?: string;
+  baseUrl?: string;
+  skipServe?: boolean;
+
+  // Playwright CLI options
   headed?: boolean;
   browser?: string;
   debug?: boolean;

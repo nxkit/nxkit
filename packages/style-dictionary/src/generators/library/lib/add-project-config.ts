@@ -42,7 +42,7 @@ export function addProjectConfig(
 
   addProjectConfiguration(tree, normalizedOptions.projectName, {
     root: projectRoot,
-    projectType: 'application',
+    projectType: 'library',
     sourceRoot: `${projectRoot}/src`,
     targets: {
       build: createBuildTarget(normalizedOptions),
