@@ -34,9 +34,6 @@ describe('playwright e2e', () => {
       },
     });
 
-    console.log('result.stdout', result.stdout);
-    console.log('result.stderr', result.stderr);
-
     expect(result.stdout).toContain('Playwright tests ran');
   }, 120000);
 
