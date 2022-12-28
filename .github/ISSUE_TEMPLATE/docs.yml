@@ -1,0 +1,40 @@
+name: 📖 Documentation issue
+description: Suggestions on how we can improve the documentation
+labels: [documentation, triage]
+body:
+  - type: dropdown
+    id: type
+    attributes:
+      label: What type of documentation issue are you reporting?
+      multiple: true
+      options:
+        - Reporting a typo
+        - Reporting a documentation bug
+        - Documentation improvement
+        - Documentation feedback
+    validations:
+      required: true
+
+  - type: input
+    id: docs_url
+    attributes:
+      label: Is there a specific documentation page you are reporting? Enter the URL here.
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: 'Additional context'
+      description: 'Add any other context or screenshots about the documentation request here.'
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/nxkit/nxkit/blob/main/CODE_OF_CONDUCT.md)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
