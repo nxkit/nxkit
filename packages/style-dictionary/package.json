@@ -7,13 +7,13 @@
   "generators": "./generators.json",
   "executors": "./executors.json",
   "keywords": [
-    "nx",
-    "nx-plugin",
-    "style-dictionary",
-    "design-system",
-    "design-tokens",
-    "monorepo",
-    "cli"
+    "Nx",
+    "Nx Plugin",
+    "Style Dictionary",
+    "Design System",
+    "Design Tokens",
+    "Monorepo",
+    "CLI"
   ],
   "repository": {
     "type": "github",
