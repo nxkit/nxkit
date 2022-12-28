@@ -17,7 +17,7 @@ body:
       label: Expected Behaviour
     validations:
       required: true
-  
+
   - type: input
     id: repo
     attributes:
