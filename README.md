@@ -43,6 +43,12 @@
 | <a href="https://github.com/nxkit/nxkit/tree/main/packages/playwright"><img src="https://playwright.dev/img/playwright-logo.svg" width="30"> Playwright</a>                      | [![@nxkit/playwright](https://img.shields.io/npm/v/@nxkit/playwright?label=%40nxkit%2Fplaywright&logo=nx)](https://www.npmjs.com/package/@nxkit/playwright)              |
 | <a href="https://github.com/nxkit/nxkit/tree/main/packages/style-dictionary"><img src="https://amzn.github.io/style-dictionary/assets/logo.png" width="20"> Style Dictionary</a> | [![npm (scoped)](https://img.shields.io/npm/v/@nxkit/style-dictionary?label=%40nxkit%2Fstyle-dictionary&logo=nx)](https://www.npmjs.com/package/@nxkit/style-dictionary) |
 
+## Contributing
+
+First off, thanks for taking the time to contribute! Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make will benefit everybody else and are **greatly appreciated**. Feel free to dive in and open an [new issue](https://github.com/nxkit/nxkit/issues/new/choose) or submit a [Pull Request](https://github.com/nxkit/nxkit/compare?expand=1).
+
+Read our [CONTRIBUTING](CONTRIBUTING.md) guide to get started.
+
 ## Code of conduct
 
 NxKit is dedicated to providing a welcoming, diverse, and harrassment-free experience for everyone. We expect everyone in the NxKit community to abide by our [**Code of Conduct**](CODE_OF_CONDUCT.md). Please read it.
