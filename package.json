@@ -21,11 +21,7 @@
   "license": "MIT",
   "scripts": {
     "build-all": "nx run-many --target build --all --parallel 8 --exclude utils-testing",
-    "test": "nx test",
-    "format:check": "nx format:check",
-    "format": "nx format",
     "commit": "git-cz",
-    "nx": "nx",
     "check-commit": "node ./tools/scripts/commit-lint.js",
     "check-format": "nx format:check --all",
     "check-lock-files": "node ./tools/scripts/check-lock-files.js",
