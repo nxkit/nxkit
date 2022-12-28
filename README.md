@@ -26,6 +26,7 @@
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://makeapullrequest.com)
 [![CI](https://img.shields.io/github/actions/workflow/status/nxkit/nxkit/ci.yml?label=CI&style=flat-square)](https://github.com/nxkit/nxkit/actions/workflows/ci.yml)
+![license](https://img.shields.io/npm/l/@divetool/coral.svg?style=flat-square)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)](http://commitizen.github.io/cz-cli/)
 [![Star on GitHub](https://img.shields.io/github/stars/nxkit/nxkit.svg?style=social)](https://github.com/nxkit/nxkit/stargazers)
