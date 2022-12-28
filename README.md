@@ -26,10 +26,10 @@
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://makeapullrequest.com)
 [![CI](https://img.shields.io/github/actions/workflow/status/nxkit/nxkit/ci.yml?label=CI&style=flat-square)](https://github.com/nxkit/nxkit/actions/workflows/ci.yml)
-![license](https://img.shields.io/npm/l/@divetool/coral.svg?style=flat-square)
+![license](https://img.shields.io/github/license/nxkit/nxkit?style=flat-square)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/nxkit/nxkit?style=flat-square)
 [![Semantic Release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)]()
-[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg?style=flat-square)](CODE_OF_CONDUCT.md)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)](http://commitizen.github.io/cz-cli/)
 [![Star on GitHub](https://img.shields.io/github/stars/nxkit/nxkit.svg?style=social)](https://github.com/nxkit/nxkit/stargazers)
