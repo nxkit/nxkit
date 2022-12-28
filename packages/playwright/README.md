@@ -4,7 +4,7 @@
 
 <img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="90"> X <a href="https://github.com/nxkit/nxkit/tree/main/packages/playwright" style="margin-left: 1em;"><img src="https://playwright.dev/img/playwright-logo.svg" width="60"></a>
 
-🔎 **Plug Playwright into your [Nx](https://nx.dev) workspace**
+📦 **Plug Playwright into your [Nx](https://nx.dev) workspace**
 
 ## Quick Start
 
