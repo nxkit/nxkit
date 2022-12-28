@@ -8,20 +8,27 @@ Note we have a [code of conduct](CODE_OF_CONDUCT.md), please follow it in all yo
 
 **Working on your first Pull Request?** You can learn how from this _free_ series [How to Contribute to an Open Source Project on GitHub](https://kcd.im/pull-request).
 
+## Not familiar with Nx plugins yet?
+
+We invite you to read Nx docs about [how to create your own plugin](https://nx.dev/plugin-features/create-your-own-plugin) before opening a PR to NxKit.
+
 ## Development environment setup
 
 To set up a development environment, please follow these steps:
 
 1. Clone the repo
 
-   ```sh
+   ```bash
    git clone https://github.com/nxkit/nxkit
    ```
 
 2. Install dependencies
 
-   ```sh
+   ```bash
    npm i -g pnpm # If pnpm not installed
+   ```
+
+   ```bash
    pnpm install
    ```
 
@@ -29,6 +36,12 @@ To set up a development environment, please follow these steps:
 
    ```sh
    pnpm nx build playwright
+   ```
+
+4. You can run E2E test for a plugin with:
+
+   ```bash
+   pnpm nx e2e playwright-e2e
    ```
 
 ## Issues and feature requests
