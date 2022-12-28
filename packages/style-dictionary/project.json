@@ -1,6 +1,6 @@
 {
-  "name": "style-dictionary",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "style-dictionary",
   "sourceRoot": "packages/style-dictionary/src",
   "projectType": "library",
   "targets": {

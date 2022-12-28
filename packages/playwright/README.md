@@ -1,10 +1,26 @@
-# @nxkit/playwright
+<p align="center">
+    <a href="https://nx.dev">
+        <img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="90">
+    </a>
+    <a href="https://github.com/nxkit/nxkit/tree/main/packages/style-dictionary" style="margin-left: 1rem;">
+        <img src="https://playwright.dev/img/playwright-logo.svg" width="65">
+    </a>
+    <br><br>
+    <a href="https://github.com/nxkit">
+        <img alt="NxKit" src="https://github.com/nxkit.png" width="100" />
+    </a>
+</p>
+<h1 align="center">
+  @nxkit/playwright
+</h1>
 
-> Nx Plugin for Playwright contains executors and generators allowing your workspace to use the powerful Playwright end-to-end testing capabilities.
+<h2 align="center">
+    🔌 Plug <a href="https://playwright.dev">Playwright</a> into your <a href="https://nx.dev">Nx</a> workspace
+</h2>
 
-<img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="90"> X <a href="https://github.com/nxkit/nxkit/tree/main/packages/playwright" style="margin-left: 1em;"><img src="https://playwright.dev/img/playwright-logo.svg" width="60"></a>
+<br>
 
-📦 **Plug Playwright into your [Nx](https://nx.dev) workspace**
+> Nx Plugin containing executors and generators allowing your workspace to use the powerful Playwright end-to-end testing capabilities.
 
 ## Quick Start
 
@@ -12,12 +28,13 @@ Create an Nx workspace and add the Playwirght plugin
 
 ```bash
 npx create-nx-workspace@latest my-org
+```
+
+```bash
 npm install -D @nxkit/playwright
 ```
 
 ### Create a playwright E2E project
-
-**Create an E2E project existing workspace project**
 
 Create a web project in your workspace without a default e2e test runner. This is a `@nrwl/react` example:
 

@@ -1,20 +1,40 @@
-<p style="width: 100%" align="center">
-<img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="100">
-<br><br>
-<img src="docs/nxkit-isologo.png">
+<p align="center">
+  <a href="https://github.com/nxkit">
+    <img alt="NxKit" src="https://github.com/nxkit.png" width="100" />
+  </a>
+</p>
+<h1 align="center">
+  NxKit
+</h1>
+
+<h3 align="center">
+  Keyboard crafted plugins for your <a href="https://nx.dev">
+    Nx
+  </a> workspace.
+</h3>
+<p align="center">
+  NxKit is an open source set of Nx plugins, and the easiest way to use Playwright, Style Dictionary in your Nx workspace.
 </p>
 
-> Keyboard crafted plugins for you Nx workspace
+<h3 align="center">
+ 🔌 📦 ⚒️
+</h3>
 
-[![CI](https://github.com/nxkit/nxkit/actions/workflows/ci.yml/badge.svg)](https://github.com/nxkit/nxkit/actions/workflows/ci.yml)
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+---
 
-<div style="text-align: center;">
-<a href="https://github.com/nxkit/nxkit/tree/main/packages/playwright" style="margin-left: 1em;"><img src="https://playwright.dev/img/playwright-logo.svg" width="30"></a>
-<a href="https://github.com/nxkit/nxkit/tree/main/packages/style-dictionary"><img src="https://amzn.github.io/style-dictionary/assets/logo.png" width="30"></a>
+<div align="center" style="text-align: center;">
+
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://makeapullrequest.com)
+[![CI](https://img.shields.io/github/actions/workflow/status/nxkit/nxkit/ci.yml?label=CI&style=flat-square)](https://github.com/nxkit/nxkit/actions/workflows/ci.yml)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)](http://commitizen.github.io/cz-cli/)
+[![Star on GitHub](https://img.shields.io/github/stars/nxkit/nxkit.svg?style=social)](https://github.com/nxkit/nxkit/stargazers)
+
 </div>
 
 ## Available plugins
 
-- 📦 Playwright
-- 📦 Style Dictionary
+| 🔌 Plugin                                                                                                                                                                        | 📦 Package                                                                                                                                                               |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| <a href="https://github.com/nxkit/nxkit/tree/main/packages/playwright"><img src="https://playwright.dev/img/playwright-logo.svg" width="30"> Playwright</a>                      | [![@nxkit/playwright](https://img.shields.io/npm/v/@nxkit/playwright?label=%40nxkit%2Fplaywright&logo=nx)](https://www.npmjs.com/package/@nxkit/playwright)              |
+| <a href="https://github.com/nxkit/nxkit/tree/main/packages/style-dictionary"><img src="https://amzn.github.io/style-dictionary/assets/logo.png" width="20"> Style Dictionary</a> | [![npm (scoped)](https://img.shields.io/npm/v/@nxkit/style-dictionary?label=%40nxkit%2Fstyle-dictionary&logo=nx)](https://www.npmjs.com/package/@nxkit/style-dictionary) |
