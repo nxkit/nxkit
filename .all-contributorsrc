@@ -1,0 +1,41 @@
+{
+  "projectName": "nxkit",
+  "projectOwner": "nxkit",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "sebastiandg7",
+      "name": "Sebastian Duque Gutierrez",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13395979?v=4",
+      "profile": "https://sebastiandg.com/",
+      "contributions": [
+        "code",
+        "tool",
+        "review",
+        "ideas",
+        "infra",
+        "maintenance",
+        "projectManagement",
+        "doc"
+      ]
+    },
+    {
+      "login": "AndresVD21",
+      "name": "Andrés Valencia Díaz ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/21989106?v=4",
+      "profile": "https://cv-portfolio-angular.vercel.app/home",
+      "contributions": [
+        "test"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "linkToUsage": true
+}
