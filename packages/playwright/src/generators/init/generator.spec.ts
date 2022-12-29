@@ -26,8 +26,6 @@ describe('init generator', () => {
     expect(installPackagesTask).toHaveBeenCalled();
     expect(PlaywrightCLI.install).toHaveBeenCalled();
 
-    expect(() => {
-      checkFilesExist(`playwright.config.base.ts`);
-    }).not.toThrow();
+    expect(appTree.exists(`playwright.config.base.ts`)).toBeTruthy();
   });
 });
