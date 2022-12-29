@@ -1,7 +1,7 @@
 import { createTreeWithEmptyWorkspace } from '@nrwl/devkit/testing';
 import { Tree, readProjectConfiguration } from '@nrwl/devkit';
 
-import generator from './generator';
+import { projectGenerator } from './generator';
 import { ProjectGeneratorSchema } from './schema';
 
 describe('project generator', () => {
@@ -12,14 +12,17 @@ describe('project generator', () => {
     appTree = createTreeWithEmptyWorkspace({ layout: 'apps-libs' });
   });
 
-  it('should create standalone project', async () => {
-    await generator(appTree, options);
+  it('should create standalone e2e project', async () => {
+    await projectGenerator(appTree, options);
     const config = readProjectConfiguration(appTree, 'test-e2e');
     expect(config).toBeDefined();
   });
 
-  it('should create standalone project', async () => {
-    await generator(appTree, options);
+  it('should create e2e project for a frontend app', async () => {
+    await projectGenerator(appTree, {
+      ...options,
+      frontendProject: 'test-app',
+    });
     const config = readProjectConfiguration(appTree, 'test-e2e');
     expect(config).toBeDefined();
   });

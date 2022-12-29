@@ -8,6 +8,6 @@ test('<%= frontendProject ?? 'App E2E' %>', async ({ page }) => {
     <% if (!frontendProject && !baseUrl) { %>
     'Example Domain'
     <% } else { %>
-    'Welcome <%= frontendProject ? ` ${frontendProject}` : ''%>'
+    'Welcome<%= frontendProject ? ` ${frontendProject}` : ''%>'
     <% } %>);
 });

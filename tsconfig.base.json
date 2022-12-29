@@ -15,9 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@nxkit/e2e/utils": ["e2e/utils/src/index.ts"],
       "@nxkit/playwright": ["packages/playwright/src/index.ts"],
-      "@nxkit/style-dictionary": ["packages/style-dictionary/src/index.ts"],
-      "@nxkit/utils/testing": ["packages/utils/testing/src/index.ts"]
+      "@nxkit/style-dictionary": ["packages/style-dictionary/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
