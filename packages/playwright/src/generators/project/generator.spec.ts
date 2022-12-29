@@ -1,5 +1,9 @@
 import { createTreeWithEmptyWorkspace } from '@nrwl/devkit/testing';
-import { Tree, readProjectConfiguration } from '@nrwl/devkit';
+import {
+  Tree,
+  readProjectConfiguration,
+  addProjectConfiguration,
+} from '@nrwl/devkit';
 
 import { projectGenerator } from './generator';
 import { ProjectGeneratorSchema } from './schema';
@@ -19,11 +23,27 @@ describe('project generator', () => {
   });
 
   it('should create e2e project for a frontend app', async () => {
+    const frontendProject = 'test-app';
+    const project = frontendProject + '-e2e';
+    addProjectConfiguration(appTree, frontendProject, {
+      root: 'my-app',
+      targets: {
+        serve: {
+          executor: 'serve-executor',
+          options: {},
+          configurations: {
+            production: {},
+          },
+        },
+      },
+    });
+
     await projectGenerator(appTree, {
       ...options,
-      frontendProject: 'test-app',
+      name: project,
+      frontendProject,
     });
-    const config = readProjectConfiguration(appTree, 'test-e2e');
+    const config = readProjectConfiguration(appTree, project);
     expect(config).toBeDefined();
   });
 });
