@@ -1,7 +1,6 @@
 import { readJson, Tree } from '@nrwl/devkit';
 import { installPackagesTask } from '@nrwl/devkit/src/tasks/install-packages-task';
 import { createTreeWithEmptyWorkspace } from '@nrwl/devkit/testing';
-import { checkFilesExist } from '@nrwl/nx-plugin/testing';
 import { PlaywrightCLI } from '../../utils/playwright';
 import { initGenerator } from './generator';
 import { InitGeneratorSchema } from './schema';
