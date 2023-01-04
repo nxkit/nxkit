@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Playwright Project --directory should set right path names in \`playwright.config.ts\` 1`] = `
+"import type { PlaywrightTestConfig } from '@playwright/test';
+import { baseConfig } from '../../../playwright.config.base';
+
+/**
+ * Read environment variables from file.
+ * https://github.com/motdotla/dotenv
+ */
+// require('dotenv').config();
+
+/**
+ * See https://playwright.dev/docs/test-configuration.
+ */
+
+const config: PlaywrightTestConfig = {
+  ...baseConfig,
+  testDir: './src/e2e',
+  reporter: [
+    ['html', { outputFolder: '../../../dist/apps/my-dir/my-app-e2e/playwright-report' }],
+    ['json', { outputFile: '../../../dist/apps/my-dir/my-app-e2e/playwright-report/test-results.json' }],
+  ],
+};
+
+export default config;
+"
+`;
+
+exports[`Playwright Project --directory should set right path names in \`tsconfig.e2e.json\` 1`] = `
+Object {
+  "compilerOptions": Object {
+    "allowJs": true,
+    "outDir": "../../../dist/out-tsc",
+    "sourceMap": false,
+    "types": Array [
+      "node",
+    ],
+  },
+  "extends": "./tsconfig.json",
+  "include": Array [
+    "src/**/*.ts",
+    "src/**/*.js",
+    "playwright.config.ts",
+  ],
+}
+`;
+
+exports[`Playwright Project should set right path names in \`playwright.config.ts\` 1`] = `
+"import type { PlaywrightTestConfig } from '@playwright/test';
+import { baseConfig } from '../../playwright.config.base';
+
+/**
+ * Read environment variables from file.
+ * https://github.com/motdotla/dotenv
+ */
+// require('dotenv').config();
+
+/**
+ * See https://playwright.dev/docs/test-configuration.
+ */
+
+const config: PlaywrightTestConfig = {
+  ...baseConfig,
+  testDir: './src/e2e',
+  reporter: [
+    ['html', { outputFolder: '../../dist/apps/my-app-e2e/playwright-report' }],
+    ['json', { outputFile: '../../dist/apps/my-app-e2e/playwright-report/test-results.json' }],
+  ],
+};
+
+export default config;
+"
+`;
+
+exports[`Playwright Project should set right path names in \`tsconfig.e2e.json\` 1`] = `
+Object {
+  "compilerOptions": Object {
+    "allowJs": true,
+    "outDir": "../../dist/out-tsc",
+    "sourceMap": false,
+    "types": Array [
+      "node",
+    ],
+  },
+  "extends": "./tsconfig.json",
+  "include": Array [
+    "src/**/*.ts",
+    "src/**/*.js",
+    "playwright.config.ts",
+  ],
+}
+`;
