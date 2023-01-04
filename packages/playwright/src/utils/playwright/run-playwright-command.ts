@@ -27,7 +27,6 @@ export async function runPlaywrightCommand(
   const { cwd, env } = opts;
 
   return new Promise((resolve, reject) => {
-    console.log('running command: ', command);
     exec(
       command,
       {

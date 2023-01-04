@@ -1,7 +1,7 @@
 /* eslint-disable */
 export default {
-  displayName: 'utils-testing',
-  preset: '../../../jest.preset.js',
+  displayName: 'utils',
+  preset: '../../jest.preset.js',
   globals: {
     'ts-jest': {
       tsconfig: '<rootDir>/tsconfig.spec.json',
@@ -11,5 +11,5 @@ export default {
     '^.+\\.[tj]sx?$': 'ts-jest',
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '../../../coverage/packages/utils/testing',
+  coverageDirectory: '../../coverage/packages/utils',
 };
