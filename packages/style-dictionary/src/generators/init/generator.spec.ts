@@ -7,7 +7,7 @@ import { InitGeneratorSchema } from './schema';
 
 jest.mock('@nrwl/devkit/src/tasks/install-packages-task');
 
-describe('init generator', () => {
+describe('Style Dictionary Init', () => {
   let appTree: Tree;
   const options: InitGeneratorSchema = { skipPackageJson: false };
 
