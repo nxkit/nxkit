@@ -29,6 +29,11 @@
   "publishConfig": {
     "access": "public"
   },
+  "dependencies": {
+    "@phenomnomnominal/tsquery": "^5.0.0",
+    "fs-extra": "^11.1.0",
+    "ts-node": "10.9.1"
+  },
   "peerDependencies": {
     "style-dictionary": "^3.7.1"
   },
