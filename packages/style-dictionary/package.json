@@ -31,5 +31,8 @@
   },
   "peerDependencies": {
     "style-dictionary": "^3.7.1"
+  },
+  "nx-migrations": {
+    "migrations": "./migrations.json"
   }
 }

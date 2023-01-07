@@ -71,9 +71,9 @@
     "yargs": "^17.6.2"
   },
   "dependencies": {
+    "@phenomnomnominal/tsquery": "^5.0.0",
     "@swc/helpers": "~0.4.11",
     "fs-extra": "^11.1.0",
-    "style-dictionary": "^3.7.1",
     "tslib": "^2.3.0"
   },
   "config": {
