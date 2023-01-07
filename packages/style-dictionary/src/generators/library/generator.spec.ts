@@ -68,7 +68,7 @@ describe('Style Dictionary Library', () => {
     expect(project.tags).toEqual(['type:ui-tokens', 'scope:tokens']);
   });
 
-  it('should set right path names in `playwright.config.ts`', async () => {
+  it('should set right path names in `style-dictionary.config.ts`', async () => {
     await libraryGenerator(appTree, {
       ...defaultOptions,
       name: 'my-tokens',
@@ -149,7 +149,7 @@ describe('Style Dictionary Library', () => {
       ].forEach((path) => expect(appTree.exists(path)).toBeTruthy());
     });
 
-    it('should set right path names in `playwright.config.ts`', async () => {
+    it('should set right path names in `style-dictionary.config.ts`', async () => {
       await libraryGenerator(appTree, {
         ...defaultOptions,
         name: 'my-tokens',
@@ -216,6 +216,19 @@ describe('Style Dictionary Library', () => {
         'libs/my-tokens/src/assets/fonts/OpenSans-Regular.ttf',
         'libs/my-tokens/src/assets/fonts/Roboto-Regular.ttf',
       ].forEach((path) => expect(appTree.exists(path)).toBeTruthy());
+    });
+
+    it('should set right path names in `style-dictionary.config.ts`', async () => {
+      await libraryGenerator(appTree, {
+        ...defaultOptions,
+        name: 'my-tokens',
+        preset: Preset.COMPLETE,
+      });
+      const styleDictionaryConfig = appTree.read(
+        'libs/my-tokens/style-dictionary.config.ts',
+        'utf-8'
+      );
+      expect(styleDictionaryConfig).toMatchSnapshot();
     });
   });
 });
