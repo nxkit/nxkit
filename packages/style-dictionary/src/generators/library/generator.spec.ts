@@ -22,6 +22,24 @@ describe('Style Dictionary Library', () => {
 
     const projectConfig = readProjectConfiguration(appTree, 'my-tokens');
     expect(projectConfig).toBeDefined();
+
+    expect(projectConfig.targets.build).toEqual({
+      executor: '@nxkit/style-dictionary:build',
+      outputs: ['{options.outputPath}'],
+      options: {
+        outputPath: 'dist/libs/my-tokens',
+        styleDictionaryConfig: 'libs/my-tokens/style-dictionary.config.ts',
+        tsConfig: 'libs/my-tokens/tsconfig.json',
+      },
+    });
+
+    expect(projectConfig.targets.lint).toEqual({
+      executor: '@nrwl/linter:eslint',
+      outputs: ['{options.outputFile}'],
+      options: {
+        lintFilePatterns: ['libs/my-tokens/**/*.{js,ts}'],
+      },
+    });
   });
 
   it('should generate project files', async () => {
@@ -39,6 +57,41 @@ describe('Style Dictionary Library', () => {
     ].forEach((path) => expect(appTree.exists(path)).toBeTruthy());
   });
 
+  it('should add tags', async () => {
+    await libraryGenerator(appTree, {
+      ...defaultOptions,
+      name: 'my-tokens',
+      tags: 'type:ui-tokens,scope:tokens',
+    });
+
+    const project = readProjectConfiguration(appTree, 'my-tokens');
+    expect(project.tags).toEqual(['type:ui-tokens', 'scope:tokens']);
+  });
+
+  it('should set right path names in `playwright.config.ts`', async () => {
+    await libraryGenerator(appTree, {
+      ...defaultOptions,
+      name: 'my-tokens',
+    });
+    const styleDictionaryConfig = appTree.read(
+      'libs/my-tokens/style-dictionary.config.ts',
+      'utf-8'
+    );
+    expect(styleDictionaryConfig).toMatchSnapshot();
+  });
+
+  it('should set right path names in `tsconfig.lib.json`', async () => {
+    await libraryGenerator(appTree, {
+      ...defaultOptions,
+      name: 'my-tokens',
+    });
+    const tsconfigLibJson = readJson(
+      appTree,
+      'libs/my-tokens/tsconfig.lib.json'
+    );
+    expect(tsconfigLibJson).toMatchSnapshot();
+  });
+
   it('should extend from tsconfig.base.json', async () => {
     await libraryGenerator(appTree, {
       ...defaultOptions,
@@ -47,6 +100,91 @@ describe('Style Dictionary Library', () => {
 
     const tsConfig = readJson(appTree, 'libs/my-tokens/tsconfig.json');
     expect(tsConfig.extends).toBe('../../tsconfig.base.json');
+  });
+
+  describe('--directory', () => {
+    it('should generate in the right directory', async () => {
+      await libraryGenerator(appTree, {
+        ...defaultOptions,
+        name: 'my-tokens',
+        directory: 'my-dir',
+      });
+
+      const project = readProjectConfiguration(appTree, 'my-dir-my-tokens');
+      expect(project).toBeDefined();
+      expect(project.root).toEqual('libs/my-dir/my-tokens');
+      expect(project.sourceRoot).toEqual('libs/my-dir/my-tokens/src');
+      expect(project.targets.build.options.outputPath).toEqual(
+        'dist/libs/my-dir/my-tokens'
+      );
+
+      [
+        'libs/my-dir/my-tokens/style-dictionary.config.ts',
+        'libs/my-dir/my-tokens/src/tokens/color/base.json',
+        'libs/my-dir/my-tokens/src/tokens/color/font.json',
+        'libs/my-dir/my-tokens/src/tokens/size/font.json',
+      ].forEach((path) => expect(appTree.exists(path)).toBeTruthy());
+    });
+
+    it('should generate in nested --directory', async () => {
+      await libraryGenerator(appTree, {
+        ...defaultOptions,
+        name: 'my-tokens',
+        directory: 'foo/bar',
+      });
+
+      const project = readProjectConfiguration(appTree, 'foo-bar-my-tokens');
+      expect(project).toBeDefined();
+      expect(project.root).toEqual('libs/foo/bar/my-tokens');
+      expect(project.sourceRoot).toEqual('libs/foo/bar/my-tokens/src');
+      expect(project.targets.build.options.outputPath).toEqual(
+        'dist/libs/foo/bar/my-tokens'
+      );
+
+      [
+        'libs/foo/bar/my-tokens/style-dictionary.config.ts',
+        'libs/foo/bar/my-tokens/src/tokens/color/base.json',
+        'libs/foo/bar/my-tokens/src/tokens/color/font.json',
+        'libs/foo/bar/my-tokens/src/tokens/size/font.json',
+      ].forEach((path) => expect(appTree.exists(path)).toBeTruthy());
+    });
+
+    it('should set right path names in `playwright.config.ts`', async () => {
+      await libraryGenerator(appTree, {
+        ...defaultOptions,
+        name: 'my-tokens',
+        directory: 'my-dir',
+      });
+      const styleDictionaryConfig = appTree.read(
+        'libs/my-dir/my-tokens/style-dictionary.config.ts',
+        'utf-8'
+      );
+      expect(styleDictionaryConfig).toMatchSnapshot();
+    });
+
+    it('should set right path names in `tsconfig.lib.json`', async () => {
+      await libraryGenerator(appTree, {
+        ...defaultOptions,
+        name: 'my-tokens',
+        directory: 'my-dir',
+      });
+      const tsconfigLibJson = readJson(
+        appTree,
+        'libs/my-dir/my-tokens/tsconfig.lib.json'
+      );
+      expect(tsconfigLibJson).toMatchSnapshot();
+    });
+
+    it('should extend from tsconfig.base.json', async () => {
+      await libraryGenerator(appTree, {
+        ...defaultOptions,
+        name: 'my-tokens',
+        directory: 'my-dir',
+      });
+
+      const tsConfig = readJson(appTree, 'libs/my-dir/my-tokens/tsconfig.json');
+      expect(tsConfig.extends).toBe('../../../tsconfig.base.json');
+    });
   });
 
   describe('--preset complete', () => {
