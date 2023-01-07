@@ -1,7 +1,7 @@
 import {
   CustomFileHeadersBuilder,
   ExtensionContext,
-} from '@nxkit/style-dictionary';
+} from '@nxkit/style-dictionary/extensions';
 
 const customFileHeadersBuilder: CustomFileHeadersBuilder = (
   extensionContext: ExtensionContext

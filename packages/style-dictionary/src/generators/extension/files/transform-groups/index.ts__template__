@@ -1,7 +1,7 @@
 import {
   CustomTransformGroupsBuilder,
   ExtensionContext,
-} from '@nxkit/style-dictionary';
+} from '@nxkit/style-dictionary/extensions';
 
 const customTransformGroupsBuilder: CustomTransformGroupsBuilder = (
   extensionContext: ExtensionContext

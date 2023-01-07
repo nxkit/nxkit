@@ -4,7 +4,7 @@ import { createCLIOptions } from './lib/create-cli-options';
 import { startDevServer } from './lib/start-dev-server';
 import { TestExecutorSchema } from './schema';
 
-export default async function runExecutor(
+export async function testExecutor(
   options: TestExecutorSchema,
   context: ExecutorContext
 ) {
@@ -27,3 +27,5 @@ export default async function runExecutor(
     return { success: false };
   }
 }
+
+export default testExecutor;
