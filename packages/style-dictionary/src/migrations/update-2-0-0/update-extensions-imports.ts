@@ -9,11 +9,10 @@ export function update(tree: Tree) {
     const contents = fileEntry.toString();
 
     // Replace each `@nxkit/style-dictionary` import with `@nxkit/style-dictionary/extensions`
-    tsquery.replace;
     const newContents = tsquery.replace(
       contents,
       'ImportDeclaration > StringLiteral[value=@nxkit/style-dictionary]',
-      (node) => `'@nxkit/style-dictionary/extensions'`
+      () => `'@nxkit/style-dictionary/extensions'`
     );
 
     // only write the file if something has changed

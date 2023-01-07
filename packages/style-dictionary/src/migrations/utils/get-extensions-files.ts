@@ -1,5 +1,5 @@
 import { getProjects, Tree } from '@nrwl/devkit';
-import { getDirectoryFiles } from '@nxkit/utils/workspace';
+import { getDirectoryFiles } from './get-directory-files';
 import { dirname } from 'path';
 import { BuildExecutorSchema } from '../../executors/build/schema';
 
