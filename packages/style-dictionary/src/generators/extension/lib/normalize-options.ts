@@ -26,7 +26,6 @@ function normalizeExtensions(
     }
     return canGenerate;
   });
-  logger.info('');
 
   return normalized;
 }

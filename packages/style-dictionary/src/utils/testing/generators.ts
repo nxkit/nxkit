@@ -14,8 +14,6 @@ export async function createTestTokensLib(
     name: libName,
     preset: Preset.BASIC,
   });
-  appTree.listChanges().forEach((change) => {
-    console.log(change.path);
-  });
+
   return appTree;
 }
