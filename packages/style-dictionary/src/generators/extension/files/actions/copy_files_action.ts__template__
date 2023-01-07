@@ -1,4 +1,4 @@
-import { ExtensionContext } from '@nxkit/style-dictionary';
+import { ExtensionContext } from '@nxkit/style-dictionary/extensions';
 import { Action, Dictionary, Platform } from 'style-dictionary';
 import * as fs from 'fs-extra';
 import * as path from 'path';
