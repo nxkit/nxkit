@@ -1,6 +1,6 @@
 {
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "name": "style-dictionary",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "packages/style-dictionary/src",
   "projectType": "library",
   "targets": {
@@ -33,6 +33,11 @@
             "input": "./packages/style-dictionary",
             "glob": "executors.json",
             "output": "."
+          },
+          {
+            "input": "./packages/style-dictionary",
+            "glob": "migrations.json",
+            "output": "."
           }
         ]
       }
@@ -45,7 +50,8 @@
           "packages/style-dictionary/**/*.ts",
           "packages/style-dictionary/generators.json",
           "packages/style-dictionary/executors.json",
-          "packages/style-dictionary/package.json"
+          "packages/style-dictionary/package.json",
+          "packages/style-dictionary/migrations.json"
         ]
       }
     },

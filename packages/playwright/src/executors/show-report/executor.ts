@@ -2,7 +2,7 @@ import { logger } from '@nrwl/devkit';
 import { PlaywrightCLI } from '../../utils/playwright';
 import { ShowReportExecutorSchema } from './schema';
 
-export default async function runExecutor(options: ShowReportExecutorSchema) {
+export async function showReportExecutor(options: ShowReportExecutorSchema) {
   try {
     await PlaywrightCLI.showReport(options.reportPath);
 
@@ -15,3 +15,5 @@ export default async function runExecutor(options: ShowReportExecutorSchema) {
     return { success: false };
   }
 }
+
+export default showReportExecutor;

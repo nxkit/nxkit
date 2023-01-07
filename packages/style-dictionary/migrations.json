@@ -1,0 +1,10 @@
+{
+  "generators": {
+    "update-extensions-imports-2.0.0": {
+      "version": "2.0.0-beta.0",
+      "description": "Update extensions type imports to use @nxkit/style-dictionary/extensions",
+      "cli": "nx",
+      "implementation": "./src/migrations/update-2-0-0/update-extensions-imports"
+    }
+  }
+}

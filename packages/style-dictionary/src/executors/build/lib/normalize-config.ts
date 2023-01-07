@@ -1,6 +1,6 @@
 import { ExecutorContext, joinPathFragments } from '@nrwl/devkit';
 import { resolve } from 'path';
-import { Config, Platform } from 'style-dictionary';
+import type { Config, Platform } from 'style-dictionary';
 import { NormalizedBuildExecutorSchema } from '../schema';
 
 export function normalizeStyleDictionaryConfig(
