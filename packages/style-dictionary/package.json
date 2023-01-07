@@ -29,6 +29,10 @@
   "publishConfig": {
     "access": "public"
   },
+  "dependencies": {
+    "ts-node": "10.9.1",
+    "fs-extra": "^11.1.0"
+  },
   "peerDependencies": {
     "style-dictionary": "^3.7.1"
   },
