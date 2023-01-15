@@ -15,6 +15,7 @@ module.exports = {
 
   scopes: [
     { name: 'core', description: 'anything NxKit core specific' },
+    { name: 'docs', description: 'anything docs specific' },
     { name: 'playwright', description: 'anything playwright specific' },
     {
       name: 'style-dictionary',
