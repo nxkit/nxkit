@@ -6,7 +6,11 @@ export async function addLinter(
   tree: Tree,
   normalizedOptions: NormalizedLibraryGeneratorSchema
 ) {
-  const { projectName, projectRoot } = normalizedOptions;
+  const { projectName, projectRoot, linter } = normalizedOptions;
+
+  if (!linter || linter === Linter.None) {
+    return;
+  }
 
   const installTask = await lintProjectGenerator(tree, {
     project: projectName,

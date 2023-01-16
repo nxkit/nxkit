@@ -1,3 +1,5 @@
+import { Linter } from '@nrwl/linter';
+
 export const enum Preset {
   BASIC = 'basic',
   COMPLETE = 'complete',
@@ -8,6 +10,7 @@ export interface LibraryGeneratorSchema {
   preset: Preset;
   tags?: string;
   directory?: string;
+  linter?: Linter;
   skipFormat?: boolean;
 }
 
