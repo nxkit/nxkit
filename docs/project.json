@@ -20,7 +20,7 @@
       }
     },
     "build": {
-      "dependsOn": ["build.server"],
+      "dependsOn": ["build.client", "build.server"],
       "command": "echo 'Build complete.'"
     },
     "serve": {
