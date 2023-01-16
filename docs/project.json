@@ -4,15 +4,15 @@
   "projectType": "application",
   "sourceRoot": "docs/src",
   "targets": {
-    "build.client": {
+    "build-client": {
       "executor": "@nrwl/vite:build",
       "options": {
         "outputPath": "dist/docs",
         "configFile": "docs/vite.config.ts"
       }
     },
-    "build.server": {
-      "dependsOn": ["build.client"],
+    "build-server": {
+      "dependsOn": ["build-client"],
       "executor": "@nrwl/vite:build",
       "options": {
         "outputPath": "dist/docs",
@@ -20,7 +20,7 @@
       }
     },
     "build": {
-      "dependsOn": ["build.client", "build.server"],
+      "dependsOn": ["build-client", "build-server"],
       "command": "echo 'Build complete.'"
     },
     "serve": {
