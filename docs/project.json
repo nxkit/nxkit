@@ -27,16 +27,16 @@
       "executor": "@nrwl/vite:dev-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "docs:build",
+        "buildTarget": "docs:build-client",
         "mode": "ssr"
       },
       "configurations": {
         "development": {
-          "buildTarget": "docs:build:development",
+          "buildTarget": "docs:build-client:development",
           "hmr": true
         },
         "production": {
-          "buildTarget": "docs:build:production",
+          "buildTarget": "docs:build-client:production",
           "hmr": false
         }
       }
