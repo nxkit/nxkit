@@ -1,0 +1,83 @@
+{
+  "name": "docs",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "docs/src",
+  "targets": {
+    "build-client": {
+      "executor": "@nrwl/vite:build",
+      "options": {
+        "outputPath": "dist/docs",
+        "configFile": "docs/vite.config.ts"
+      }
+    },
+    "build-server": {
+      "dependsOn": ["build-client"],
+      "executor": "@nrwl/vite:build",
+      "options": {
+        "outputPath": "dist/docs",
+        "configFile": "docs/adaptors/static/vite.config.ts"
+      }
+    },
+    "build": {
+      "dependsOn": ["build-client", "build-server"],
+      "command": "echo 'Build complete.'"
+    },
+    "serve": {
+      "executor": "@nrwl/vite:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "docs:build",
+        "mode": "ssr"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "docs:build:development",
+          "hmr": true
+        },
+        "production": {
+          "buildTarget": "docs:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "test": {
+      "executor": "@nrwl/vite:test",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "../coverage/docs"
+      }
+    },
+    "build-ssr": {
+      "executor": "@nrwl/vite:build",
+      "defaultConfiguration": "preview",
+      "options": {
+        "outputPath": "dist/docs"
+      },
+      "configurations": {
+        "preview": {
+          "ssr": "src/entry.preview.tsx",
+          "mode": "production"
+        }
+      },
+      "dependsOn": ["build"]
+    },
+    "preview": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "vite preview",
+        "cwd": "docs"
+      },
+      "dependsOn": ["build-ssr"]
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["docs/**/*.{ts,tsx,js,jsx}"]
+      }
+    }
+  },
+  "tags": []
+}
