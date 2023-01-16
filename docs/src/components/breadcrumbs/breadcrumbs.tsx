@@ -22,7 +22,10 @@ export const Breadcrumbs = component$(() => {
   );
 });
 
-export function createBreadcrumbs(menu: ContentMenu | undefined, pathname: string) {
+export function createBreadcrumbs(
+  menu: ContentMenu | undefined,
+  pathname: string
+) {
   if (menu?.items) {
     for (const indexA of menu.items) {
       const breadcrumbA: ContentBreadcrumb = {
