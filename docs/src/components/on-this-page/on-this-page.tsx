@@ -6,8 +6,7 @@ export default component$(() => {
   useStyles$(styles);
 
   const { headings } = useContent();
-  const contentHeadings =
-    headings?.filter((h) => h.level === 2 || h.level === 3) || [];
+  const contentHeadings = headings?.filter((h) => h.level === 2 || h.level === 3) || [];
 
   const { pathname } = useLocation();
   const editUrl = `#update-your-edit-url-for-${pathname}`;

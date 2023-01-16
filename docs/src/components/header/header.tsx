@@ -17,10 +17,7 @@ export default component$(() => {
         <a href="/docs" class={{ active: pathname.startsWith('/docs') }}>
           Docs
         </a>
-        <a
-          href="/about-us"
-          class={{ active: pathname.startsWith('/about-us') }}
-        >
+        <a href="/about-us" class={{ active: pathname.startsWith('/about-us') }}>
           About Us
         </a>
       </nav>

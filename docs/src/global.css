@@ -6,12 +6,11 @@
   --user-font-scale: 1rem - 16px;
   --max-width: calc(100% - 1rem);
 
-  --font-body: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica,
-    Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
-  --font-mono: 'IBM Plex Mono', Consolas, 'Andale Mono WT', 'Andale Mono',
-    'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono',
-    'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', Monaco,
-    'Courier New', Courier, monospace;
+  --font-body: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji;
+  --font-mono: 'IBM Plex Mono', Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console',
+    'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono',
+    'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace;
 
   color-scheme: light;
   --theme-accent: #006ce9;

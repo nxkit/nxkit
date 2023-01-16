@@ -11,11 +11,7 @@ export default component$(() => {
         <li>
           <span>The </span>
           <a href="/docs">Documentation</a>
-          <span>
-            {' '}
-            pages use multiple nested layouts, one of them providing a left
-            menu.
-          </span>
+          <span> pages use multiple nested layouts, one of them providing a left menu.</span>
         </li>
         <li>
           Check out the <code>src/routes</code> directory to get started.
@@ -69,10 +65,7 @@ export default component$(() => {
             <code>npm run qwik add azure-swa</code>
           </td>
           <td>
-            <a
-              href="https://learn.microsoft.com/azure/static-web-apps/overview"
-              target="_blank"
-            >
+            <a href="https://learn.microsoft.com/azure/static-web-apps/overview" target="_blank">
               Azure Static Web Apps
             </a>
           </td>
