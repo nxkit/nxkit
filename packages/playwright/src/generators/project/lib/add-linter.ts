@@ -6,11 +6,15 @@ export async function addLinter(
   tree: Tree,
   normalizedOptions: NormalizedProjectGeneratorSchema
 ) {
-  const { projectName, projectRoot } = normalizedOptions;
+  const { projectName, projectRoot, linter } = normalizedOptions;
+
+  if (!linter || linter === Linter.None) {
+    return;
+  }
 
   const installTask = await lintProjectGenerator(tree, {
     project: projectName,
-    linter: Linter.EsLint,
+    linter,
     skipFormat: true,
     tsConfigPaths: [joinPathFragments(projectRoot, 'tsconfig.json')],
     eslintFilePatterns: [`${projectRoot}/**/*.{js,ts}`],
