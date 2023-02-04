@@ -14,14 +14,14 @@
       },
       "x-prompt": "What name would you like to use?"
     },
-    "tags": {
+    "baseUrl": {
       "type": "string",
-      "description": "Add tags to the project (used for linting)",
-      "alias": "t"
-    },
-    "directory": {
-      "type": "string",
-      "description": "A directory where the project is placed"
+      "description": "The base url of the application to be tested.",
+      "default": "http://localhost:4200",
+      "x-prompt": {
+        "message": "What is the base URL to test?",
+        "type": "string"
+      }
     }
   },
   "required": ["name"]
