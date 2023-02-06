@@ -18,7 +18,11 @@ export function normalizeProjectName(options: ProjectGeneratorSchema) {
 function getE2EprojectName(options: ProjectGeneratorSchema) {
   const { name, frontendProject } = options;
 
-  if (!name && frontendProject) {
+  if (name) {
+    return name;
+  }
+
+  if (frontendProject) {
     return `${frontendProject}-e2e`;
   }
 
