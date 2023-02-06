@@ -29,7 +29,7 @@
     "directory": {
       "type": "string",
       "description": "A directory where the project is placed.",
-      "alias": "d",
+      "alias": "dir",
       "x-completion-type": "directory"
     },
     "linter": {
