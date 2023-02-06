@@ -20,6 +20,11 @@
       "schema": "./src/generators/extension/schema.json",
       "description": "Generates Style Dictionary extensions configuration for a project.",
       "aliases": ["ext"]
+    },
+    "preset": {
+      "factory": "./src/generators/preset/generator",
+      "schema": "./src/generators/preset/schema.json",
+      "description": "preset generator"
     }
   }
 }

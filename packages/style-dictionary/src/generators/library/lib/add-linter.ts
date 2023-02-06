@@ -9,7 +9,8 @@ export async function addLinter(
   const { projectName, projectRoot, linter } = normalizedOptions;
 
   if (!linter || linter === Linter.None) {
-    return;
+    // eslint-disable-next-line @typescript-eslint/no-empty-function
+    return () => {};
   }
 
   const installTask = await lintProjectGenerator(tree, {
