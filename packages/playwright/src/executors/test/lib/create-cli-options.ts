@@ -16,7 +16,7 @@ export function createCLIOptions(
     headed: options.headed,
     list: options.list,
     maxFailures: options.maxFailures,
-    project: options.project,
+    project: options.pwProject,
     quiet: options.quiet,
     repeatEach: options.repeatEach,
     reporter: options.reporter,
