@@ -2,7 +2,6 @@
 export default {
   displayName: 'playwright-e2e',
   preset: '../../jest.preset.js',
-  testTimeout: 240_000,
   globals: {
     'ts-jest': {
       tsconfig: '<rootDir>/tsconfig.spec.json',
