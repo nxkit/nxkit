@@ -3,10 +3,14 @@ import { Tree, readProjectConfiguration } from '@nrwl/devkit';
 
 import generator from './generator';
 import { PresetGeneratorSchema } from './schema';
+import { Preset } from '../library/schema';
 
 describe('preset generator', () => {
   let appTree: Tree;
-  const options: PresetGeneratorSchema = { name: 'test' };
+  const options: PresetGeneratorSchema = {
+    name: 'my-tokens',
+    preset: Preset.BASIC,
+  };
 
   beforeEach(() => {
     appTree = createTreeWithEmptyWorkspace();
@@ -14,7 +18,7 @@ describe('preset generator', () => {
 
   it('should run successfully', async () => {
     await generator(appTree, options);
-    const config = readProjectConfiguration(appTree, 'test');
+    const config = readProjectConfiguration(appTree, 'my-tokens');
     expect(config).toBeDefined();
   });
 });
