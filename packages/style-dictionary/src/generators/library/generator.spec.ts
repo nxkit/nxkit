@@ -197,6 +197,7 @@ describe('Style Dictionary Library', () => {
 
       [
         'libs/my-tokens/style-dictionary.config.ts',
+        'libs/my-tokens/src/extensions/actions/index.ts',
         'libs/my-tokens/src/tokens/color/background.json',
         'libs/my-tokens/src/tokens/color/base.json',
         'libs/my-tokens/src/tokens/color/border.json',
@@ -229,6 +230,40 @@ describe('Style Dictionary Library', () => {
         'utf-8'
       );
       expect(styleDictionaryConfig).toMatchSnapshot();
+    });
+
+    describe('--directory', () => {
+      it('should generate in the right directory', async () => {
+        await libraryGenerator(appTree, {
+          ...defaultOptions,
+          name: 'my-tokens',
+          directory: 'my-dir',
+          preset: Preset.COMPLETE,
+        });
+
+        [
+          'libs/my-dir/my-tokens/style-dictionary.config.ts',
+          'libs/my-dir/my-tokens/src/extensions/actions/index.ts',
+          'libs/my-dir/my-tokens/src/tokens/color/background.json',
+          'libs/my-dir/my-tokens/src/tokens/color/base.json',
+          'libs/my-dir/my-tokens/src/tokens/color/border.json',
+          'libs/my-dir/my-tokens/src/tokens/color/brand.json',
+          'libs/my-dir/my-tokens/src/tokens/color/chart.json',
+          'libs/my-dir/my-tokens/src/tokens/color/font.json',
+          'libs/my-dir/my-tokens/src/tokens/size/font.json',
+          'libs/my-dir/my-tokens/src/tokens/size/icon.json',
+          'libs/my-dir/my-tokens/src/tokens/size/font.json',
+          'libs/my-dir/my-tokens/src/tokens/content/icon.json',
+          'libs/my-dir/my-tokens/src/tokens/font.json',
+          'libs/my-dir/my-tokens/src/tokens/time.json',
+          'libs/my-dir/my-tokens/src/assets/fonts/MaterialIcons-Regular.eot',
+          'libs/my-dir/my-tokens/src/assets/fonts/MaterialIcons-Regular.ttf',
+          'libs/my-dir/my-tokens/src/assets/fonts/MaterialIcons-Regular.woff',
+          'libs/my-dir/my-tokens/src/assets/fonts/MaterialIcons-Regular.woff2',
+          'libs/my-dir/my-tokens/src/assets/fonts/OpenSans-Regular.ttf',
+          'libs/my-dir/my-tokens/src/assets/fonts/Roboto-Regular.ttf',
+        ].forEach((path) => expect(appTree.exists(path)).toBeTruthy());
+      });
     });
   });
 });

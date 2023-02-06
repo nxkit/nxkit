@@ -25,7 +25,7 @@ export async function libraryGenerator(
 
   if (normalizedOptions.preset === Preset.COMPLETE) {
     await extensionGenerator(tree, {
-      project: normalizedOptions.name,
+      project: normalizedOptions.projectName,
       extensions: [Extension.ACTIONS],
       directory: joinPathFragments('src', 'extensions'),
     });
