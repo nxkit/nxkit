@@ -13,6 +13,11 @@
       "schema": "./src/generators/project/schema.json",
       "description": "project generator",
       "aliases": ["proj"]
+    },
+    "preset": {
+      "factory": "./src/generators/preset/generator",
+      "schema": "./src/generators/preset/schema.json",
+      "description": "preset generator"
     }
   }
 }
