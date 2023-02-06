@@ -1,7 +1,6 @@
 import { formatFiles, GeneratorCallback, Tree } from '@nrwl/devkit';
 import { runTasksInSerial } from '@nrwl/workspace/src/utilities/run-tasks-in-serial';
 import { addDependencies } from './lib/add-dependencies';
-import { addWokspaceFiles } from './lib/add-workspace-files';
 import { installPlaywright } from './lib/install-playwright';
 import { updateGitIgnore } from './lib/update-gitignore';
 import { InitGeneratorSchema } from './schema';
@@ -21,7 +20,6 @@ export async function initGenerator(tree: Tree, options: InitGeneratorSchema) {
     tasks.push(installPlaywrightTask);
   }
 
-  addWokspaceFiles(tree, options);
   updateGitIgnore(tree);
 
   if (!options.skipFormat) {

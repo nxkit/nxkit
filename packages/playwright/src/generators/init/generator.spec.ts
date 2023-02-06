@@ -24,7 +24,5 @@ describe('init generator', () => {
     expect(packageJson.devDependencies['@playwright/test']).toBeDefined();
     expect(installPackagesTask).toHaveBeenCalled();
     expect(PlaywrightCLI.install).toHaveBeenCalled();
-
-    expect(appTree.exists(`playwright.config.base.ts`)).toBeTruthy();
   });
 });
