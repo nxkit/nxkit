@@ -18,11 +18,8 @@
       "type": "string",
       "description": "The base url of the application to be tested.",
       "default": "http://localhost:4200",
-      "x-prompt": {
-        "message": "What is the base URL to test?",
-        "type": "string"
-      }
+      "x-prompt": "What is the base URL to test?"
     }
   },
-  "required": ["name"]
+  "required": ["name", "baseUrl"]
 }

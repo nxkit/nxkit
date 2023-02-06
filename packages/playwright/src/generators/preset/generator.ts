@@ -14,8 +14,13 @@ function normalizeOptions(
   };
 }
 
-export default async function (tree: Tree, options: PresetGeneratorSchema) {
+export async function presetGenerator(
+  tree: Tree,
+  options: PresetGeneratorSchema
+) {
   const normalizedOptions = normalizeOptions(tree, options);
   const projectTask = await projectGenerator(tree, normalizedOptions);
   return runTasksInSerial(projectTask);
 }
+
+export default presetGenerator;
