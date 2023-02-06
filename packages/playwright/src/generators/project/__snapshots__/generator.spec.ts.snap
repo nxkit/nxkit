@@ -2,7 +2,6 @@
 
 exports[`Playwright Project --directory should set right path names in \`playwright.config.ts\` 1`] = `
 "import type { PlaywrightTestConfig } from '@playwright/test';
-import type { PlaywrightTestConfig } from '@playwright/test';
 import { devices } from '@playwright/test';
 
 /**
@@ -110,7 +109,6 @@ Object {
 
 exports[`Playwright Project should set right path names in \`playwright.config.ts\` 1`] = `
 "import type { PlaywrightTestConfig } from '@playwright/test';
-import type { PlaywrightTestConfig } from '@playwright/test';
 import { devices } from '@playwright/test';
 
 /**
