@@ -9,7 +9,10 @@ export async function startDevServer(
     return options.baseUrl;
   }
 
-  const devServerTarget = parseTargetString(options.devServerTarget);
+  const devServerTarget = parseTargetString(
+    options.devServerTarget,
+    context.projectGraph
+  );
 
   for await (const output of await runExecutor<{
     success: boolean;

@@ -15,7 +15,7 @@ export interface TestExecutorSchema {
   globalTimeout?: number;
   list?: boolean;
   maxFailures?: number;
-  project?: string;
+  pwProject?: string;
   quiet?: boolean;
   repeatEach?: number;
   reporter?: string;
