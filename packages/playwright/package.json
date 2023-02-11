@@ -3,7 +3,7 @@
   "description": "Nx Plugin containing executors and generators allowing your workspace to use the powerful Playwright end-to-end testing capabilities.",
   "version": "0.0.1",
   "private": false,
-  "main": "src/index.js",
+  "main": "./index.js",
   "generators": "./generators.json",
   "executors": "./executors.json",
   "keywords": [

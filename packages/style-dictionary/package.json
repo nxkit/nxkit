@@ -3,7 +3,7 @@
   "description": "Nx Plugin to generate Style Dictionary projects & maintain your design tokens within your Nx workspace",
   "version": "0.0.1",
   "private": false,
-  "main": "src/index.js",
+  "main": "./index.js",
   "generators": "./generators.json",
   "executors": "./executors.json",
   "keywords": [
