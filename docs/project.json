@@ -4,39 +4,27 @@
   "projectType": "application",
   "sourceRoot": "docs/src",
   "targets": {
-    "build-client": {
+    "build": {
       "executor": "@nrwl/vite:build",
       "options": {
         "outputPath": "dist/docs",
         "configFile": "docs/vite.config.ts"
       }
     },
-    "build-server": {
-      "dependsOn": ["build-client"],
-      "executor": "@nrwl/vite:build",
-      "options": {
-        "outputPath": "dist/docs",
-        "configFile": "docs/adaptors/static/vite.config.ts"
-      }
-    },
-    "build": {
-      "dependsOn": ["build-client", "build-server"],
-      "command": "echo 'Build complete.'"
-    },
     "serve": {
       "executor": "@nrwl/vite:dev-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "docs:build-client",
+        "buildTarget": "docs:build",
         "mode": "ssr"
       },
       "configurations": {
         "development": {
-          "buildTarget": "docs:build-client:development",
+          "buildTarget": "docs:build:development",
           "hmr": true
         },
         "production": {
-          "buildTarget": "docs:build-client:production",
+          "buildTarget": "docs:build:production",
           "hmr": false
         }
       }
