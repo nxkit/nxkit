@@ -30,6 +30,9 @@ describe('@nxkit/playwright e2e', () => {
       const project = uniq('app') + '-e2e';
 
       await runNxCommandAsync(`generate @nxkit/playwright:project ${project}`);
+
+      expect(() => checkFilesExist(`tsconfig.base.json`)).not.toThrow();
+
       const result = await runNxCommandAsync(`e2e ${project}`, {
         env: {
           // Workaround this issue https://github.com/microsoft/playwright/issues/17438
