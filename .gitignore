@@ -40,6 +40,7 @@ Thumbs.db
 
 # Nx
 nx-cloud.env
+migrations.json
 
 # Env
 .env

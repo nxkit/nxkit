@@ -5,7 +5,7 @@ import {
   offsetFromRoot,
   Tree,
 } from '@nrwl/devkit';
-import { getRelativePathToRootTsConfig } from '@nrwl/workspace/src/utilities/typescript';
+import { getRelativePathToRootTsConfig } from '@nrwl/js';
 import * as path from 'path';
 import { NormalizedLibraryGeneratorSchema } from '../schema';
 

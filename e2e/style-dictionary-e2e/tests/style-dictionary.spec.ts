@@ -34,6 +34,9 @@ describe('style-dictionary e2e', () => {
       await runNxCommandAsync(
         `generate @nxkit/style-dictionary:library ${project}`
       );
+
+      expect(() => checkFilesExist(`tsconfig.base.json`)).not.toThrow();
+
       const result = await runNxCommandAsync(`build ${project}`);
       expect(result.stdout).toContain('Successfully built design tokens');
       expect(() => {
