@@ -36,7 +36,7 @@
 
 <!-- prettier-ignore-start -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <!-- prettier-ignore-end -->
 
@@ -78,6 +78,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://sebastiandg.com/"><img src="https://avatars.githubusercontent.com/u/13395979?v=4?s=100" width="100px;" alt="Sebastian Duque Gutierrez"/><br /><sub><b>Sebastian Duque Gutierrez</b></sub></a><br /><a href="https://github.com/nxkit/nxkit/commits?author=sebastiandg7" title="Code">💻</a> <a href="#tool-sebastiandg7" title="Tools">🔧</a> <a href="https://github.com/nxkit/nxkit/pulls?q=is%3Apr+reviewed-by%3Asebastiandg7" title="Reviewed Pull Requests">👀</a> <a href="#ideas-sebastiandg7" title="Ideas, Planning, & Feedback">🤔</a> <a href="#infra-sebastiandg7" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#maintenance-sebastiandg7" title="Maintenance">🚧</a> <a href="#projectManagement-sebastiandg7" title="Project Management">📆</a> <a href="https://github.com/nxkit/nxkit/commits?author=sebastiandg7" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://cv-portfolio-angular.vercel.app/home"><img src="https://avatars.githubusercontent.com/u/21989106?v=4?s=100" width="100px;" alt="Andrés Valencia Díaz "/><br /><sub><b>Andrés Valencia Díaz </b></sub></a><br /><a href="#userTesting-AndresVD21" title="User Testing">📓</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/dmitry-stepanenko"><img src="https://avatars.githubusercontent.com/u/33101123?v=4?s=100" width="100px;" alt="Dmitriy Stepanenko"/><br /><sub><b>Dmitriy Stepanenko</b></sub></a><br /><a href="https://github.com/nxkit/nxkit/commits?author=dmitry-stepanenko" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://joepkockelkorn.com"><img src="https://avatars.githubusercontent.com/u/12891645?v=4?s=100" width="100px;" alt="Joep Kockelkorn"/><br /><sub><b>Joep Kockelkorn</b></sub></a><br /><a href="https://github.com/nxkit/nxkit/commits?author=JoepKockelkorn" title="Code">💻</a></td>
     </tr>
   </tbody>
   <tfoot>
