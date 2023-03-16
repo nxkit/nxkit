@@ -31,9 +31,9 @@ describe('Playwright Project', () => {
 
     expect(project.targets.e2e).toEqual({
       executor: '@nxkit/playwright:test',
-      outputs: ['{options.outputPath}'],
+      outputs: ['{workspaceRoot}/dist/{projectRoot}'],
       options: {
-        outputPath: `dist/apps/my-app-e2e/playwright-report`,
+        outputPath: `dist/apps/my-app-e2e/test-results`,
         playwrightConfig: `apps/my-app-e2e/playwright.config.ts`,
         baseUrl: 'https://example.com',
       },
@@ -46,9 +46,9 @@ describe('Playwright Project', () => {
 
     expect(project.targets.debug).toEqual({
       executor: '@nxkit/playwright:test',
-      outputs: ['{options.outputPath}'],
+      outputs: ['{workspaceRoot}/dist/{projectRoot}'],
       options: {
-        outputPath: `dist/apps/my-app-e2e/playwright-report`,
+        outputPath: `dist/apps/my-app-e2e/test-results`,
         playwrightConfig: `apps/my-app-e2e/playwright.config.ts`,
         baseUrl: 'https://example.com',
         debug: true,
@@ -162,7 +162,7 @@ describe('Playwright Project', () => {
       expect(project.root).toEqual('apps/my-dir/my-app-e2e');
       expect(project.sourceRoot).toEqual('apps/my-dir/my-app-e2e/src');
       expect(project.targets.e2e.options.outputPath).toEqual(
-        'dist/apps/my-dir/my-app-e2e/playwright-report'
+        'dist/apps/my-dir/my-app-e2e/test-results'
       );
 
       [
@@ -184,7 +184,7 @@ describe('Playwright Project', () => {
       expect(project.root).toEqual('apps/foo/bar/my-app-e2e');
       expect(project.sourceRoot).toEqual('apps/foo/bar/my-app-e2e/src');
       expect(project.targets.e2e.options.outputPath).toEqual(
-        'dist/apps/foo/bar/my-app-e2e/playwright-report'
+        'dist/apps/foo/bar/my-app-e2e/test-results'
       );
 
       [
@@ -275,9 +275,9 @@ describe('Playwright Project', () => {
 
       expect(project.targets.e2e).toEqual({
         executor: '@nxkit/playwright:test',
-        outputs: ['{options.outputPath}'],
+        outputs: ['{workspaceRoot}/dist/{projectRoot}'],
         options: {
-          outputPath: `dist/apps/my-app-e2e/playwright-report`,
+          outputPath: `dist/apps/my-app-e2e/test-results`,
           playwrightConfig: `apps/my-app-e2e/playwright.config.ts`,
           devServerTarget: 'my-app:serve',
         },
@@ -290,9 +290,9 @@ describe('Playwright Project', () => {
 
       expect(project.targets.debug).toEqual({
         executor: '@nxkit/playwright:test',
-        outputs: ['{options.outputPath}'],
+        outputs: ['{workspaceRoot}/dist/{projectRoot}'],
         options: {
-          outputPath: `dist/apps/my-app-e2e/playwright-report`,
+          outputPath: `dist/apps/my-app-e2e/test-results`,
           playwrightConfig: `apps/my-app-e2e/playwright.config.ts`,
           devServerTarget: 'my-app:serve',
           debug: true,

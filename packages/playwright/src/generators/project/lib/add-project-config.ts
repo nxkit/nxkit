@@ -16,9 +16,9 @@ function createE2ETarget(
   const { projectRoot, frontendProject } = options;
   return {
     executor: '@nxkit/playwright:test',
-    outputs: ['{options.outputPath}'],
+    outputs: ['{workspaceRoot}/dist/{projectRoot}'],
     options: {
-      outputPath: joinPathFragments('dist', projectRoot, 'playwright-report'),
+      outputPath: joinPathFragments('dist', projectRoot, 'test-results'),
       playwrightConfig: `${projectRoot}/playwright.config.ts`,
       ...(devServerTarget
         ? { devServerTarget }
