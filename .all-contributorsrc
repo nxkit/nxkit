@@ -43,6 +43,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "JoepKockelkorn",
+      "name": "Joep Kockelkorn",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12891645?v=4",
+      "profile": "http://joepkockelkorn.com",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
