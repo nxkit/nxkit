@@ -1,6 +1,6 @@
 {
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "name": "playwright",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "packages/playwright/src",
   "projectType": "library",
   "targets": {
@@ -33,6 +33,11 @@
             "input": "./packages/playwright",
             "glob": "executors.json",
             "output": "."
+          },
+          {
+            "input": "./packages/playwright",
+            "glob": "migrations.json",
+            "output": "."
           }
         ]
       }
@@ -45,7 +50,8 @@
           "packages/playwright/**/*.ts",
           "packages/playwright/generators.json",
           "packages/playwright/executors.json",
-          "packages/playwright/package.json"
+          "packages/playwright/package.json",
+          "packages/playwright/migrations.json"
         ]
       }
     },

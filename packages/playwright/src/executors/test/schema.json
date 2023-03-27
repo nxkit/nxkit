@@ -94,6 +94,10 @@
       "type": "number",
       "description": " Maximum timeout in milliseconds for each test, defaults to 30 seconds."
     },
+    "ui": {
+      "type": "boolean",
+      "description": "Whether to run with the Playwright UI Mode. Useful for debugging."
+    },
     "updateSnapshots": {
       "type": "boolean",
       "description": "Whether to update snapshots with actual results instead of comparing them. Use this when snapshot expectations have changed.",
