@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-yarn check-lock-files
-yarn check-commit
-yarn pretty-quick --check
+pnpm check-lock-files
+pnpm check-commit
+pnpm pretty-quick --check

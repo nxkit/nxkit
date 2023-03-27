@@ -11,9 +11,9 @@ const gitMessage = require('child_process')
 const allowedTypes = types.map((type) => type.value);
 const allowedScopes = scopes.map((scope) => scope.name);
 
-const commitMsgRegex = `(${allowedTypes.join('|')})\\((${allowedScopes.join(
+const commitMsgRegex = `(${allowedTypes.join('|')})(\\((${allowedScopes.join(
   '|'
-)})\\):\\s(([a-z0-9:\-\s])+)`;
+)})\\))?:\\s(([a-z0-9:\-\s])+)`;
 
 const matchCommit = new RegExp(commitMsgRegex, 'g').test(gitMessage);
 const matchRevert = /Revert/gi.test(gitMessage);
