@@ -23,6 +23,7 @@ export function createCLIOptions(
     retries: options.retries,
     shard: options.shard,
     timeout: options.timeout,
+    ui: options.ui,
     updateSnapshots: options.updateSnapshots,
     workers: options.workers,
   };

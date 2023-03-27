@@ -22,6 +22,7 @@ export interface TestExecutorSchema {
   retries?: number;
   shard?: string;
   timeout?: number;
+  ui?: boolean;
   updateSnapshots?: boolean;
   workers?: number;
 }
