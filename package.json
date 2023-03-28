@@ -95,5 +95,9 @@
     "commitizen": {
       "path": "./node_modules/cz-customizable"
     }
+  },
+  "volta": {
+    "node": "18.15.0",
+    "pnpm": "8.0.0"
   }
 }
