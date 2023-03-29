@@ -1,6 +1,6 @@
 import { Config } from 'style-dictionary';
 
-const config: Config = {
+const config: Config[] = [{
   source: ['src/tokens/**/*.json'],
   platforms: {
     ios: {
@@ -121,5 +121,6 @@ const config: Config = {
       actions: ['copy_assets_files'],
     },
   },
-};
+}];
+
 export default config;

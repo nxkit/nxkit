@@ -5,18 +5,20 @@ import { NormalizedBuildExecutorSchema } from '../../schema';
 import { registerExtensions } from './register-extensions';
 
 export function runBuild(
-  config: Config,
+  config: Config[],
   options: NormalizedBuildExecutorSchema,
   context: ExecutorContext
 ) {
-  const instance = styleDictionary.extend(config);
-  const { platform } = options;
+  config.forEach((currentConfig) => {
+    const instance = styleDictionary.extend(currentConfig);
+    const { platform } = options;
 
-  registerExtensions(instance, options, context);
+    registerExtensions(instance, options, context);
 
-  if (platform) {
-    instance.buildPlatform(platform);
-    return;
-  }
-  instance.buildAllPlatforms();
+    if (platform) {
+      instance.buildPlatform(platform);
+      return;
+    }
+    instance.buildAllPlatforms();
+  });
 }

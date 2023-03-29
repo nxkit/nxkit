@@ -1,4 +1,5 @@
 import { ExecutorContext, logger } from '@nrwl/devkit';
+import { Config } from 'style-dictionary';
 import { deleteOutputDir } from '../../utils/fs/delete-output-path';
 import { resolveFile } from '../../utils/typescript/resolve-file';
 import { normalizeStyleDictionaryConfig } from './lib/normalize-config';
@@ -17,11 +18,16 @@ export async function buildExecutor(
     normalizedOptions.styleDictionaryConfig,
     tsConfig
   );
-  const normalizedConfig = normalizeStyleDictionaryConfig(
-    styleDictionaryConfig,
-    normalizedOptions,
-    context
-  );
+
+  const normalizedConfig: Config[] = [];
+
+  styleDictionaryConfig.forEach((config: Config) => {
+    normalizedConfig.push(normalizeStyleDictionaryConfig(
+      config,
+      normalizedOptions,
+      context
+    ));
+  });
 
   if (deleteOutputPath) {
     deleteOutputDir(context.root, outputPath);
