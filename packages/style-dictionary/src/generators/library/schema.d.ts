@@ -3,6 +3,7 @@ import { Linter } from '@nrwl/linter';
 export const enum Preset {
   BASIC = 'basic',
   COMPLETE = 'complete',
+  MULTICONFIG = 'multiconfig',
 }
 
 export interface LibraryGeneratorSchema {

@@ -266,4 +266,58 @@ describe('Style Dictionary Library', () => {
       });
     });
   });
+
+  describe('--preset multiconfig', () => {
+    it('should generate project files', async () => {
+      await libraryGenerator(appTree, {
+        ...defaultOptions,
+        name: 'my-tokens',
+        preset: Preset.MULTICONFIG,
+      });
+
+      [
+        'libs/my-tokens/style-dictionary.config.ts',
+        'libs/my-tokens/src/tokens/brand-1/light/color/base.json',
+        'libs/my-tokens/src/tokens/brand-1/light/color/font.json',
+        'libs/my-tokens/src/tokens/brand-1/light/size/font.json',
+        'libs/my-tokens/src/tokens/brand-1/dark/color/base.json',
+        'libs/my-tokens/src/tokens/brand-1/dark/color/font.json',
+        'libs/my-tokens/src/tokens/brand-1/dark/size/font.json',
+      ].forEach((path) => expect(appTree.exists(path)).toBeTruthy());
+    });
+
+    it('should set right path names in `style-dictionary.config.ts`', async () => {
+      await libraryGenerator(appTree, {
+        ...defaultOptions,
+        name: 'my-tokens',
+        preset: Preset.MULTICONFIG,
+      });
+      const styleDictionaryConfig = appTree.read(
+        'libs/my-tokens/style-dictionary.config.ts',
+        'utf-8'
+      );
+      expect(styleDictionaryConfig).toMatchSnapshot();
+    });
+
+    describe('--directory', () => {
+      it('should generate in the right directory', async () => {
+        await libraryGenerator(appTree, {
+          ...defaultOptions,
+          name: 'my-tokens',
+          directory: 'my-dir',
+          preset: Preset.MULTICONFIG,
+        });
+
+        [
+          'libs/my-dir/my-tokens/style-dictionary.config.ts',
+          'libs/my-dir/my-tokens/src/tokens/brand-1/light/color/base.json',
+          'libs/my-dir/my-tokens/src/tokens/brand-1/light/color/font.json',
+          'libs/my-dir/my-tokens/src/tokens/brand-1/light/size/font.json',
+          'libs/my-dir/my-tokens/src/tokens/brand-1/dark/color/base.json',
+          'libs/my-dir/my-tokens/src/tokens/brand-1/dark/color/font.json',
+          'libs/my-dir/my-tokens/src/tokens/brand-1/dark/size/font.json',
+        ].forEach((path) => expect(appTree.exists(path)).toBeTruthy());
+      });
+    });
+  });
 });
