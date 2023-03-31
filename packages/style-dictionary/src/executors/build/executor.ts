@@ -14,10 +14,12 @@ export async function buildExecutor(
   const normalizedOptions = normalizeOptions(options, context);
 
   const { tsConfig, deleteOutputPath, outputPath } = normalizedOptions;
-  const styleDictionaryConfig = resolveFile(
+  let styleDictionaryConfig: Config | Config[] = resolveFile(
     normalizedOptions.styleDictionaryConfig,
     tsConfig
   );
+
+  styleDictionaryConfig = Array.isArray(styleDictionaryConfig) ? styleDictionaryConfig : [styleDictionaryConfig];
 
   const normalizedConfig: Config[] = [];
 
