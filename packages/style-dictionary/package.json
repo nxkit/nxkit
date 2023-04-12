@@ -1,5 +1,5 @@
 {
-  "name": "@addi-nxkit/style-dictionary",
+  "name": "@nxkit/style-dictionary",
   "description": "Nx Plugin to generate Style Dictionary projects & maintain your design tokens within your Nx workspace",
   "version": "0.0.1",
   "private": false,
