@@ -9,11 +9,11 @@ export function runBuild(
   options: NormalizedBuildExecutorSchema,
   context: ExecutorContext
 ) {
+  registerExtensions(styleDictionary, options, context);
+
   config.forEach((currentConfig) => {
     const instance = styleDictionary.extend(currentConfig);
     const { platform } = options;
-
-    registerExtensions(instance, options, context);
 
     if (platform) {
       instance.buildPlatform(platform);
