@@ -19,16 +19,16 @@ export async function buildExecutor(
     tsConfig
   );
 
-  styleDictionaryConfig = Array.isArray(styleDictionaryConfig) ? styleDictionaryConfig : [styleDictionaryConfig];
+  styleDictionaryConfig = Array.isArray(styleDictionaryConfig)
+    ? styleDictionaryConfig
+    : [styleDictionaryConfig];
 
   const normalizedConfig: Config[] = [];
 
   styleDictionaryConfig.forEach((config: Config) => {
-    normalizedConfig.push(normalizeStyleDictionaryConfig(
-      config,
-      normalizedOptions,
-      context
-    ));
+    normalizedConfig.push(
+      normalizeStyleDictionaryConfig(config, normalizedOptions, context)
+    );
   });
 
   if (deleteOutputPath) {
