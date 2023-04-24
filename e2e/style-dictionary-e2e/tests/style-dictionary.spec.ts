@@ -62,7 +62,7 @@ describe('style-dictionary e2e', () => {
   );
 
   it(
-    'it should create multi config project',
+    'should create multi config project',
     async () => {
       const project = uniq('style-dictionary');
       await runNxCommandAsync(
