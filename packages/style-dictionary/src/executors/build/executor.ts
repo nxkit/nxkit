@@ -23,10 +23,10 @@ export async function buildExecutor(
     ? styleDictionaryConfig
     : [styleDictionaryConfig];
 
-  const normalizedConfig: Config[] = [];
+  const normalizedConfigs: Config[] = [];
 
   styleDictionaryConfig.forEach((config: Config) => {
-    normalizedConfig.push(
+    normalizedConfigs.push(
       normalizeStyleDictionaryConfig(config, normalizedOptions, context)
     );
   });
@@ -36,7 +36,7 @@ export async function buildExecutor(
   }
 
   try {
-    runBuild(normalizedConfig, normalizedOptions, context);
+    runBuild(normalizedConfigs, normalizedOptions, context);
 
     logger.log('✅ Successfully built design tokens');
     return {

@@ -5,13 +5,13 @@ import { NormalizedBuildExecutorSchema } from '../../schema';
 import { registerExtensions } from './register-extensions';
 
 export function runBuild(
-  config: Config[],
+  configs: Config[],
   options: NormalizedBuildExecutorSchema,
   context: ExecutorContext
 ) {
   registerExtensions(styleDictionary, options, context);
 
-  config.forEach((currentConfig) => {
+  configs.forEach((currentConfig) => {
     const instance = styleDictionary.extend(currentConfig);
     const { platform } = options;
 
