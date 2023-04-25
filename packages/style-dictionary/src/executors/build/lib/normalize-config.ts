@@ -12,6 +12,7 @@ export function normalizeStyleDictionaryConfig(
   const normalized: Config = {
     ...config,
     source: config.source.map((src) => resolve(projectRoot, src)),
+    include: config?.include?.map((include) => resolve(projectRoot, include)),
     platforms: Object.entries(config.platforms).reduce(
       (accum: { [key: string]: Platform }, [name, platform]) => ({
         ...accum,

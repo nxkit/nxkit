@@ -20,7 +20,7 @@
       "description": "The Style Dictionary preset to be used for generating the library.",
       "type": "string",
       "default": "basic",
-      "enum": ["basic", "complete"],
+      "enum": ["basic", "complete", "multiconfig"],
       "x-prompt": {
         "message": "Which project preset would you like to use?",
         "type": "list",
@@ -32,6 +32,10 @@
           {
             "value": "complete",
             "label": "Complete"
+          },
+          {
+            "value": "multiconfig",
+            "label": "Multi config"
           }
         ]
       }

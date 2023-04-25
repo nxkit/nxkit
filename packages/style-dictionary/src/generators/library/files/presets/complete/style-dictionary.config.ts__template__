@@ -1,6 +1,7 @@
 import { Config } from 'style-dictionary';
 
-const config: Config = {
+// If you need to add multiple configutations Config[] is supported
+const config: Config | Config[] = {
   source: ['src/tokens/**/*.json'],
   platforms: {
     ios: {
@@ -122,4 +123,5 @@ const config: Config = {
     },
   },
 };
+
 export default config;
