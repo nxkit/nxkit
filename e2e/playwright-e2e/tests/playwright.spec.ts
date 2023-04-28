@@ -1,3 +1,4 @@
+import { NX_VERSION } from '@nrwl/devkit';
 import {
   checkFilesExist,
   ensureNxProject,
@@ -5,6 +6,7 @@ import {
   runNxCommandAsync,
   uniq,
 } from '@nrwl/nx-plugin/testing';
+
 import { DEFAULT_TIMEOUT, installPackage } from '@nxkit/e2e/utils';
 
 describe('@nxkit/playwright e2e', () => {
@@ -51,7 +53,7 @@ describe('@nxkit/playwright e2e', () => {
       const frontendProject = uniq('app');
       const project = frontendProject + '-e2e';
 
-      installPackage('@nrwl/react', 'latest');
+      installPackage('@nrwl/react', NX_VERSION);
       await runNxCommandAsync(
         `generate @nrwl/react:app ${frontendProject} --e2eTestRunner=none --linter=eslint --bundler vite`
       );
