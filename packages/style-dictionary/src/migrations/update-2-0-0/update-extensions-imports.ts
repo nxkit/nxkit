@@ -1,4 +1,4 @@
-import { Tree } from '@nrwl/devkit';
+import { Tree } from '@nx/devkit';
 import { tsquery } from '@phenomnomnominal/tsquery';
 import { getExtensionsFiles } from '../utils/get-extensions-files';
 

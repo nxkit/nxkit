@@ -1,4 +1,4 @@
-import { ExecutorContext } from '@nrwl/devkit';
+import { ExecutorContext } from '@nx/devkit';
 import { Core } from 'style-dictionary';
 import { NormalizedBuildExecutorSchema } from '../../schema';
 import { registerCustomActions } from './extensions/register-custom-actions';

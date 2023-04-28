@@ -1,4 +1,4 @@
-import { getProjects, Tree } from '@nrwl/devkit';
+import { getProjects, Tree } from '@nx/devkit';
 import { getDirectoryFiles } from './get-directory-files';
 import { dirname } from 'path';
 import { BuildExecutorSchema } from '../../executors/build/schema';

@@ -45,7 +45,7 @@ npx nx generate @nrwl/react:app my-app --e2eTestRunner none
 or, you can delete an existing e2e project, using:
 
 ```bash
-npx nx generate @nrwl/workspace:rm --project my-app-e2e
+npx nx generate @nx/workspace:rm --project my-app-e2e
 ```
 
 Now, for this `my-app` project, you can create a Playwright e2e testing project using:

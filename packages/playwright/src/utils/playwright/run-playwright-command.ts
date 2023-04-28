@@ -1,4 +1,4 @@
-import { getPackageManagerCommand } from '@nrwl/devkit';
+import { getPackageManagerCommand } from '@nx/devkit';
 import { exec } from 'child_process';
 
 export const enum PlayWrightCommand {

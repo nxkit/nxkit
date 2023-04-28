@@ -1,4 +1,4 @@
-import { ExecutorContext, joinPathFragments } from '@nrwl/devkit';
+import { ExecutorContext, joinPathFragments } from '@nx/devkit';
 import { resolve } from 'path';
 import type { Config, Platform } from 'style-dictionary';
 import { NormalizedBuildExecutorSchema } from '../schema';

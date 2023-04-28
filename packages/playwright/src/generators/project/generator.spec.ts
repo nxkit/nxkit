@@ -4,8 +4,8 @@ import {
   readProjectConfiguration,
   Tree,
   updateProjectConfiguration,
-} from '@nrwl/devkit';
-import { createTreeWithEmptyWorkspace } from '@nrwl/devkit/testing';
+} from '@nx/devkit';
+import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
 
 import { projectGenerator } from './generator';
 import { ProjectGeneratorSchema } from './schema';
@@ -68,7 +68,7 @@ describe('Playwright Project', () => {
     });
 
     expect(project.targets.lint).toEqual({
-      executor: '@nrwl/linter:eslint',
+      executor: '@nx/linter:eslint',
       outputs: ['{options.outputFile}'],
       options: {
         lintFilePatterns: [`apps/my-app-e2e/**/*.{js,ts}`],

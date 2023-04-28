@@ -1,6 +1,6 @@
-import { formatFiles, GeneratorCallback, Tree } from '@nrwl/devkit';
-import { runTasksInSerial } from '@nrwl/workspace/src/utilities/run-tasks-in-serial';
-import { initGenerator as jsInitGenerator } from '@nrwl/js';
+import { formatFiles, GeneratorCallback, Tree } from '@nx/devkit';
+import { runTasksInSerial } from '@nx/workspace/src/utilities/run-tasks-in-serial';
+import { initGenerator as jsInitGenerator } from '@nx/js';
 import { addDependencies } from './lib/add-dependencies';
 import { InitGeneratorSchema } from './schema';
 

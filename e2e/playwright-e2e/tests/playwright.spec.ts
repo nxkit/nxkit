@@ -1,11 +1,11 @@
-import { NX_VERSION } from '@nrwl/devkit';
+import { NX_VERSION } from '@nx/devkit';
 import {
   checkFilesExist,
   ensureNxProject,
   readJson,
   runNxCommandAsync,
   uniq,
-} from '@nrwl/nx-plugin/testing';
+} from '@nx/plugin/testing';
 
 import { DEFAULT_TIMEOUT, installPackage } from '@nxkit/e2e/utils';
 

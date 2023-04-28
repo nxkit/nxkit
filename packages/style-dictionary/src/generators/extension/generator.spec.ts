@@ -1,4 +1,4 @@
-import { readProjectConfiguration, Tree } from '@nrwl/devkit';
+import { readProjectConfiguration, Tree } from '@nx/devkit';
 import { createTestTokensLib } from '../../utils/testing/generators';
 import { extensionGenerator } from './generator';
 import { Extension, ExtensionGeneratorSchema } from './schema.d';

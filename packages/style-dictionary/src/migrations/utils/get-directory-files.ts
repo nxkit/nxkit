@@ -1,4 +1,4 @@
-import { Tree, visitNotIgnoredFiles } from '@nrwl/devkit';
+import { Tree, visitNotIgnoredFiles } from '@nx/devkit';
 
 export function utilsWorkspace(): string {
   return 'utils-workspace';

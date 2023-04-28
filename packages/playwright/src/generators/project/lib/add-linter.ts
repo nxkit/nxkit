@@ -1,5 +1,5 @@
-import { joinPathFragments, Tree } from '@nrwl/devkit';
-import { Linter, lintProjectGenerator } from '@nrwl/linter';
+import { joinPathFragments, Tree } from '@nx/devkit';
+import { Linter, lintProjectGenerator } from '@nx/linter';
 import { NormalizedProjectGeneratorSchema } from '../schema';
 
 export async function addLinter(
