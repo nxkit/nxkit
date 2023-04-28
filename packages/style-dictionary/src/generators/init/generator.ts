@@ -7,14 +7,14 @@ import { InitGeneratorSchema } from './schema';
 export async function initGenerator(tree: Tree, options: InitGeneratorSchema) {
   const tasks: GeneratorCallback[] = [];
 
-  await jsInitGenerator(tree, {
-    skipFormat: true,
-  });
-
   if (!options.skipPackageJson) {
     const installPackagesTask = addDependencies(tree);
     tasks.push(installPackagesTask);
   }
+
+  await jsInitGenerator(tree, {
+    skipFormat: true,
+  });
 
   if (!options.skipFormat) {
     await formatFiles(tree);
