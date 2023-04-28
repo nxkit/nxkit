@@ -36,10 +36,10 @@ npm install -D @nxkit/playwright
 
 ### Create a playwright E2E project
 
-Create a web project in your workspace without a default e2e test runner. This is a `@nrwl/react` example:
+Create a web project in your workspace without a default e2e test runner. This is a `@nx/react` example:
 
 ```bash
-npx nx generate @nrwl/react:app my-app --e2eTestRunner none
+npx nx generate @nx/react:app my-app --e2eTestRunner none
 ```
 
 or, you can delete an existing e2e project, using:
@@ -54,7 +54,7 @@ Now, for this `my-app` project, you can create a Playwright e2e testing project 
 npx nx generate @nxkit/playwright:project my-app-e2e --frontendProject my-app
 ```
 
-This will behave similar to what the official `@nrwl/cypress` plugin does. It will `serve` the `my-app` application, run e2e tests and provide the result.
+This will behave similar to what the official `@nx/cypress` plugin does. It will `serve` the `my-app` application, run e2e tests and provide the result.
 
 **Standalone E2E project**
 

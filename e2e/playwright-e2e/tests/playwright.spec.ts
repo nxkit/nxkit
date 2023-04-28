@@ -53,9 +53,9 @@ describe('@nxkit/playwright e2e', () => {
       const frontendProject = uniq('app');
       const project = frontendProject + '-e2e';
 
-      installPackage('@nrwl/react', NX_VERSION);
+      installPackage('@nx/react', NX_VERSION);
       await runNxCommandAsync(
-        `generate @nrwl/react:app ${frontendProject} --e2eTestRunner=none --linter=eslint --bundler vite`
+        `generate @nx/react:app ${frontendProject} --e2eTestRunner=none --linter=eslint --bundler vite`
       );
       await runNxCommandAsync(
         `generate @nxkit/playwright:project ${project} --frontendProject=${frontendProject}`
