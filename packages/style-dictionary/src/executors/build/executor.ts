@@ -1,4 +1,4 @@
-import { ExecutorContext, logger } from '@nrwl/devkit';
+import { ExecutorContext, logger } from '@nx/devkit';
 import { Config } from 'style-dictionary';
 import { deleteOutputDir } from '../../utils/fs/delete-output-path';
 import { resolveFile } from '../../utils/typescript/resolve-file';

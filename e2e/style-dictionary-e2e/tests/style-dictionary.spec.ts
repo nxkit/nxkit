@@ -4,7 +4,7 @@ import {
   readJson,
   runNxCommandAsync,
   uniq,
-} from '@nrwl/nx-plugin/testing';
+} from '@nx/plugin/testing';
 import { DEFAULT_TIMEOUT } from '@nxkit/e2e/utils';
 
 describe('style-dictionary e2e', () => {

@@ -1,4 +1,4 @@
-import { GeneratorCallback } from '@nrwl/devkit';
+import { GeneratorCallback } from '@nx/devkit';
 import { PlaywrightCLI } from '../../../utils/playwright';
 
 export async function installPlaywright({

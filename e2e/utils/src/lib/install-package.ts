@@ -1,5 +1,5 @@
-import { getPackageManagerCommand, detectPackageManager } from '@nrwl/devkit';
-import { tmpProjPath } from '@nrwl/nx-plugin/testing';
+import { getPackageManagerCommand, detectPackageManager } from '@nx/devkit';
+import { tmpProjPath } from '@nx/plugin/testing';
 import { execSync } from 'child_process';
 
 export function installPackage(

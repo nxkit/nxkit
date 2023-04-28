@@ -4,7 +4,7 @@ import {
   ProjectConfiguration,
   readProjectConfiguration,
   Tree,
-} from '@nrwl/devkit';
+} from '@nx/devkit';
 import { extensionsOptionsMap } from '../../../utils/extensions/options-map';
 import {
   Extension,

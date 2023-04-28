@@ -1,4 +1,4 @@
-import { ExecutorContext, logger } from '@nrwl/devkit';
+import { ExecutorContext, logger } from '@nx/devkit';
 import { PlaywrightCLI } from '../../utils/playwright';
 import { createCLIOptions } from './lib/create-cli-options';
 import { startDevServer } from './lib/start-dev-server';

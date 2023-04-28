@@ -1,4 +1,4 @@
-import { ExecutorContext } from '@nrwl/devkit';
+import { ExecutorContext } from '@nx/devkit';
 import * as styleDictionary from 'style-dictionary';
 import { Config } from 'style-dictionary';
 import { NormalizedBuildExecutorSchema } from '../../schema';

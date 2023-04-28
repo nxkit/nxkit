@@ -1,11 +1,11 @@
-import { readJson, Tree } from '@nrwl/devkit';
-import { installPackagesTask } from '@nrwl/devkit/src/tasks/install-packages-task';
-import { createTreeWithEmptyWorkspace } from '@nrwl/devkit/testing';
+import { readJson, Tree } from '@nx/devkit';
+import { installPackagesTask } from '@nx/devkit/src/tasks/install-packages-task';
+import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
 
 import generator from './generator';
 import { InitGeneratorSchema } from './schema';
 
-jest.mock('@nrwl/devkit/src/tasks/install-packages-task');
+jest.mock('@nx/devkit/src/tasks/install-packages-task');
 
 describe('Style Dictionary Init', () => {
   let appTree: Tree;

@@ -1,4 +1,4 @@
-import { formatFiles, Tree } from '@nrwl/devkit';
+import { formatFiles, Tree } from '@nx/devkit';
 import { addFiles } from './lib/add-files';
 import { normalizeOptions } from './lib/normalize-options';
 import { updateProjectConfig } from './lib/update-project-config';

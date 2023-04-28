@@ -1,5 +1,5 @@
-import { createTreeWithEmptyWorkspace } from '@nrwl/devkit/testing';
-import { Tree, readProjectConfiguration, readJson } from '@nrwl/devkit';
+import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { Tree, readProjectConfiguration, readJson } from '@nx/devkit';
 
 import { libraryGenerator } from './generator';
 import { LibraryGeneratorSchema, Preset } from './schema.d';
@@ -34,7 +34,7 @@ describe('Style Dictionary Library', () => {
     });
 
     expect(projectConfig.targets.lint).toEqual({
-      executor: '@nrwl/linter:eslint',
+      executor: '@nx/linter:eslint',
       outputs: ['{options.outputFile}'],
       options: {
         lintFilePatterns: ['libs/my-tokens/**/*.{js,ts}'],

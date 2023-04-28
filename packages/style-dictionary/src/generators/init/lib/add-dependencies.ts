@@ -3,7 +3,7 @@ import {
   GeneratorCallback,
   NX_VERSION,
   Tree,
-} from '@nrwl/devkit';
+} from '@nx/devkit';
 import { styleDictionaryVersion } from '../../../utils/versions';
 
 export function addDependencies(tree: Tree): GeneratorCallback {
@@ -11,7 +11,7 @@ export function addDependencies(tree: Tree): GeneratorCallback {
     tree,
     {},
     {
-      '@nrwl/js': NX_VERSION,
+      '@nx/js': NX_VERSION,
       'style-dictionary': styleDictionaryVersion,
     }
   );

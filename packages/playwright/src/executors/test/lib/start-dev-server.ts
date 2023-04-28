@@ -1,4 +1,4 @@
-import { ExecutorContext, parseTargetString, runExecutor } from '@nrwl/devkit';
+import { ExecutorContext, parseTargetString, runExecutor } from '@nx/devkit';
 import type { TestExecutorSchema } from '../schema';
 
 export async function startDevServer(

@@ -1,4 +1,4 @@
-import { getWorkspaceLayout, logger, names, Tree } from '@nrwl/devkit';
+import { getWorkspaceLayout, logger, names, Tree } from '@nx/devkit';
 import {
   NormalizedProjectGeneratorSchema,
   ProjectGeneratorSchema,

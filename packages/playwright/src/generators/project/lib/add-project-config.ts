@@ -6,7 +6,7 @@ import {
   stripIndents,
   TargetConfiguration,
   Tree,
-} from '@nrwl/devkit';
+} from '@nx/devkit';
 import { NormalizedProjectGeneratorSchema } from '../schema';
 
 function createE2ETarget(
@@ -64,7 +64,7 @@ function createLintTarget(
 ): TargetConfiguration {
   const { projectRoot } = options;
   return {
-    executor: '@nrwl/linter:eslint',
+    executor: '@nx/linter:eslint',
     outputs: ['{options.outputFile}'],
     options: {
       lintFilePatterns: [`${projectRoot}/**/*.{js,ts}`],

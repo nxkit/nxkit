@@ -4,8 +4,8 @@ import {
   names,
   offsetFromRoot,
   Tree,
-} from '@nrwl/devkit';
-import { getRelativePathToRootTsConfig } from '@nrwl/js';
+} from '@nx/devkit';
+import { getRelativePathToRootTsConfig } from '@nx/js';
 import * as path from 'path';
 import { NormalizedLibraryGeneratorSchema } from '../schema';
 

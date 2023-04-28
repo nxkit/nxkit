@@ -1,6 +1,5 @@
 {
   "$schema": "http://json-schema.org/schema",
-  "cli": "nx",
   "$id": "Init",
   "title": "Initializes the @nxkit/style-dictionary plugin",
   "description": "Initializes the @nxkit/style-dictionary plugin",

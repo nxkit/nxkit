@@ -3,7 +3,7 @@ import {
   joinPathFragments,
   TargetConfiguration,
   Tree,
-} from '@nrwl/devkit';
+} from '@nx/devkit';
 import { NormalizedLibraryGeneratorSchema } from '../schema';
 
 function createBuildTarget(
@@ -26,7 +26,7 @@ function createLintTarget(
 ): TargetConfiguration {
   const { projectRoot } = options;
   return {
-    executor: '@nrwl/linter:eslint',
+    executor: '@nx/linter:eslint',
     outputs: ['{options.outputFile}'],
     options: {
       lintFilePatterns: [`${projectRoot}/**/*.{js,ts}`],

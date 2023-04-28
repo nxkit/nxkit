@@ -1,5 +1,5 @@
-import { names, Tree } from '@nrwl/devkit';
-import { runTasksInSerial } from '@nrwl/workspace/src/utilities/run-tasks-in-serial';
+import { names, Tree } from '@nx/devkit';
+import { runTasksInSerial } from '@nx/workspace/src/utilities/run-tasks-in-serial';
 import { libraryGenerator } from '../library/generator';
 import { PresetGeneratorSchema } from './schema';
 

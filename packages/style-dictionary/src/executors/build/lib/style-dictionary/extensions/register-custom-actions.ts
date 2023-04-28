@@ -1,4 +1,4 @@
-import { ExecutorContext } from '@nrwl/devkit';
+import { ExecutorContext } from '@nx/devkit';
 import { Core } from 'style-dictionary';
 import { resolveFile } from '../../../../../utils/typescript/resolve-file';
 import { NormalizedBuildExecutorSchema } from '../../../schema';

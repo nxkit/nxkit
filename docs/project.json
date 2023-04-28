@@ -5,7 +5,7 @@
   "sourceRoot": "docs/src",
   "targets": {
     "build-client": {
-      "executor": "@nrwl/vite:build",
+      "executor": "@nx/vite:build",
       "options": {
         "outputPath": "dist/docs",
         "configFile": "docs/vite.config.ts"
@@ -13,7 +13,7 @@
     },
     "build-server": {
       "dependsOn": ["build-client"],
-      "executor": "@nrwl/vite:build",
+      "executor": "@nx/vite:build",
       "options": {
         "outputPath": "dist/docs",
         "configFile": "docs/adaptors/static/vite.config.ts"
@@ -24,7 +24,7 @@
       "command": "echo 'Build complete.'"
     },
     "serve": {
-      "executor": "@nrwl/vite:dev-server",
+      "executor": "@nx/vite:dev-server",
       "defaultConfiguration": "development",
       "options": {
         "buildTarget": "docs:build-client",
@@ -42,7 +42,7 @@
       }
     },
     "test": {
-      "executor": "@nrwl/vite:test",
+      "executor": "@nx/vite:test",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
         "passWithNoTests": true,
@@ -50,7 +50,7 @@
       }
     },
     "build-ssr": {
-      "executor": "@nrwl/vite:build",
+      "executor": "@nx/vite:build",
       "defaultConfiguration": "preview",
       "options": {
         "outputPath": "dist/docs"
@@ -72,7 +72,7 @@
       "dependsOn": ["build-ssr"]
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["docs/**/*.{ts,tsx,js,jsx}"]
