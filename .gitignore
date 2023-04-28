@@ -44,6 +44,7 @@ nx-cloud.env
 
 # Env
 .env
+.envrc
 
 # Lerna creates this
 CHANGELOG.md
