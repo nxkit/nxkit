@@ -9,10 +9,6 @@ import { InitGeneratorSchema } from './schema';
 export async function initGenerator(tree: Tree, options: InitGeneratorSchema) {
   const tasks: GeneratorCallback[] = [];
 
-  await jsInitGenerator(tree, {
-    skipFormat: true,
-  });
-
   if (!options.skipPackageJson) {
     const installPackagesTask = addDependencies(tree);
     tasks.push(installPackagesTask);
@@ -24,6 +20,10 @@ export async function initGenerator(tree: Tree, options: InitGeneratorSchema) {
     });
     tasks.push(installPlaywrightTask);
   }
+
+  await jsInitGenerator(tree, {
+    skipFormat: true,
+  });
 
   updateGitIgnore(tree);
 

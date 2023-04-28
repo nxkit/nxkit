@@ -1,6 +1,7 @@
 import {
   addDependenciesToPackageJson,
   GeneratorCallback,
+  NX_VERSION,
   Tree,
 } from '@nrwl/devkit';
 import { styleDictionaryVersion } from '../../../utils/versions';
@@ -10,6 +11,7 @@ export function addDependencies(tree: Tree): GeneratorCallback {
     tree,
     {},
     {
+      '@nrwl/js': NX_VERSION,
       'style-dictionary': styleDictionaryVersion,
     }
   );
