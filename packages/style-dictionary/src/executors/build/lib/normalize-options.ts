@@ -18,7 +18,7 @@ export function normalizeOptions(
     root,
     projectRoot,
     sourceRoot,
-    outputPath: resolve(root, options.outputPath),
+    outputPath: resolve(root, options.outputPath ?? ''),
     styleDictionaryConfig: resolve(root, options.styleDictionaryConfig),
     tsConfig: resolve(root, options.tsConfig),
   };

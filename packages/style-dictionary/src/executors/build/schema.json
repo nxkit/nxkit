@@ -64,5 +64,5 @@
       "description": "Build only the passed platform defined in the configuration."
     }
   },
-  "required": ["styleDictionaryConfig", "tsConfig", "outputPath"]
+  "required": ["styleDictionaryConfig", "tsConfig"]
 }
