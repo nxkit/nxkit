@@ -31,7 +31,7 @@ export async function buildExecutor(
     );
   });
 
-  if (deleteOutputPath) {
+  if (options.outputPath && deleteOutputPath) {
     deleteOutputDir(context.root, outputPath);
   }
 
