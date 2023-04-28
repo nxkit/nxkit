@@ -22,7 +22,7 @@ export const config: PlaywrightTestConfig = {
   maxFailures: 2,
   timeout: 30 * 1000,
   expect: {
-    timeout: 5000
+    timeout: 5000,
   },
   use: {
     actionTimeout: 0,
@@ -30,8 +30,19 @@ export const config: PlaywrightTestConfig = {
     trace: 'on-first-retry',
   },
   reporter: [
-    ['html', { outputFolder: '../../../dist/apps/my-dir/my-app-e2e/playwright-report' }],
-    ['json', { outputFile: '../../../dist/apps/my-dir/my-app-e2e/playwright-report/test-results.json' }],
+    [
+      'html',
+      {
+        outputFolder: '../../../dist/apps/my-dir/my-app-e2e/playwright-report',
+      },
+    ],
+    [
+      'json',
+      {
+        outputFile:
+          '../../../dist/apps/my-dir/my-app-e2e/playwright-report/test-results.json',
+      },
+    ],
   ],
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
@@ -129,7 +140,7 @@ export const config: PlaywrightTestConfig = {
   maxFailures: 2,
   timeout: 30 * 1000,
   expect: {
-    timeout: 5000
+    timeout: 5000,
   },
   use: {
     actionTimeout: 0,
@@ -138,7 +149,13 @@ export const config: PlaywrightTestConfig = {
   },
   reporter: [
     ['html', { outputFolder: '../../dist/apps/my-app-e2e/playwright-report' }],
-    ['json', { outputFile: '../../dist/apps/my-app-e2e/playwright-report/test-results.json' }],
+    [
+      'json',
+      {
+        outputFile:
+          '../../dist/apps/my-app-e2e/playwright-report/test-results.json',
+      },
+    ],
   ],
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
