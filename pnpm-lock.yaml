@@ -49,8 +49,8 @@ devDependencies:
     specifier: 15.9.3
     version: 15.9.3(@swc-node/register@1.5.4)(@swc/core@1.3.24)(eslint@8.15.0)(nx@15.9.3)(typescript@4.9.5)
   '@nrwl/nx-cloud':
-    specifier: 16.0.5
-    version: 16.0.5
+    specifier: 15.3.5
+    version: 15.3.5
   '@nrwl/nx-plugin':
     specifier: 15.9.3
     version: 15.9.3(@swc-node/register@1.5.4)(@swc/core@1.3.24)(@types/node@16.11.7)(eslint@8.15.0)(nx@15.9.3)(ts-node@10.9.1)(typescript@4.9.5)
@@ -3612,10 +3612,18 @@ packages:
       - typescript
     dev: true
 
-  /@nrwl/nx-cloud@16.0.5:
-    resolution: {integrity: sha512-1p82ym8WE9ziejwgPslstn19iV/VkHfHfKr/5YOnfCHQS+NxUf92ogcYhHXtqWLblVZ9Zs4W4pkSXK4e04wCmQ==}
+  /@nrwl/nx-cloud@15.3.5:
+    resolution: {integrity: sha512-JMKLY0HhdzQ/6jEvfL/EecPPdsdBIM0SyFrWAjikSJAh5MqhpFJWnr6FfTc5P57PJZ+IUNLkJ21VMuoTrA4+4w==}
+    hasBin: true
     dependencies:
-      nx-cloud: 16.0.5
+      axios: 0.21.4
+      chalk: 4.1.0
+      dotenv: 10.0.0
+      fs-extra: 10.1.0
+      node-machine-id: 1.1.12
+      strip-json-comments: 3.1.1
+      tar: 6.1.11
+      yargs-parser: 21.1.1
     transitivePeerDependencies:
       - debug
     dev: true
@@ -4926,12 +4934,10 @@ packages:
     engines: {node: '>= 4.0.0'}
     dev: true
 
-  /axios@1.1.3:
-    resolution: {integrity: sha512-00tXVRwKx/FZr/IDVFt4C+f9FYairX517WoGCL6dpOntqLkZofjhu43F/Xl44UOpqa+9sLFDrG/XAnFsUYgkDA==}
+  /axios@0.21.4:
+    resolution: {integrity: sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==}
     dependencies:
       follow-redirects: 1.15.2
-      form-data: 4.0.0
-      proxy-from-env: 1.1.0
     transitivePeerDependencies:
       - debug
     dev: true
@@ -6963,7 +6969,6 @@ packages:
       graceful-fs: 4.2.10
       jsonfile: 6.1.0
       universalify: 2.0.0
-    dev: false
 
   /fs-extra@11.1.0:
     resolution: {integrity: sha512-0rcTq621PD5jM/e0a3EJoGC/1TC5ZBCERW82LQuwfGnCa1V8w7dpYH1yNu+SLb6E5dkeCBzKEyLGlFrnr+dUyw==}
@@ -9780,24 +9785,6 @@ packages:
 
   /nwsapi@2.2.2:
     resolution: {integrity: sha512-90yv+6538zuvUMnN+zCr8LuV6bPFdq50304114vJYJ8RDyK8D5O9Phpbd6SZWgI7PwzmmfN1upeOJlvybDSgCw==}
-    dev: true
-
-  /nx-cloud@16.0.5:
-    resolution: {integrity: sha512-13P7r0aKikjBtmdZrNorwXzVPeVIV4MLEwqGY+DEG6doLBtI5KqEQk/d5B5l2dCF2BEi/LXEmLYCmf9gwbOJ+Q==}
-    hasBin: true
-    dependencies:
-      '@nrwl/nx-cloud': 16.0.5
-      axios: 1.1.3
-      chalk: 4.1.2
-      dotenv: 10.0.0
-      fs-extra: 11.1.0
-      node-machine-id: 1.1.12
-      open: 8.4.0
-      strip-json-comments: 3.1.1
-      tar: 6.1.11
-      yargs-parser: 21.1.1
-    transitivePeerDependencies:
-      - debug
     dev: true
 
   /nx@15.4.8(@swc-node/register@1.5.4)(@swc/core@1.3.24):
