@@ -2,6 +2,7 @@ import { ExecutorContext } from '@nx/devkit';
 import * as styleDictionary from 'style-dictionary';
 import { Config } from 'style-dictionary';
 import { NormalizedBuildExecutorSchema } from '../../schema';
+import { cleanPlatformBuildPath } from './clean-build-path';
 import { registerExtensions } from './register-extensions';
 
 export function runBuild(
@@ -16,9 +17,20 @@ export function runBuild(
     const { platform } = options;
 
     if (platform) {
+      const platformConfig = currentConfig.platforms[platform];
+      if (options.deleteOutputPath) {
+        cleanPlatformBuildPath(platformConfig, options);
+      }
       instance.buildPlatform(platform);
       return;
     }
+
+    if (options.deleteOutputPath) {
+      Object.values(currentConfig.platforms).forEach((platformConfig) => {
+        cleanPlatformBuildPath(platformConfig, options);
+      });
+    }
+
     instance.buildAllPlatforms();
   });
 }
