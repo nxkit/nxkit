@@ -1,18 +1,29 @@
-import { getWorkspaceLayout, logger, names, Tree } from '@nx/devkit';
+import {
+  extractLayoutDirectory,
+  getWorkspaceLayout,
+  joinPathFragments,
+  logger,
+  names,
+  Tree,
+} from '@nx/devkit';
 import {
   NormalizedProjectGeneratorSchema,
   ProjectGeneratorSchema,
 } from '../schema';
 
-export function normalizeDirectory(options: ProjectGeneratorSchema) {
-  const name = names(options.name).fileName;
-  return options.directory
-    ? `${names(options.directory).fileName}/${name}`
+export function normalizeDirectory(projectName: string, directory: string) {
+  const { projectDirectory } = extractLayoutDirectory(directory);
+  const name = names(projectName).fileName;
+  return projectDirectory
+    ? `${names(projectDirectory).fileName}/${name}`
     : name;
 }
 
-export function normalizeProjectName(options: ProjectGeneratorSchema) {
-  return normalizeDirectory(options).replace(new RegExp('/', 'g'), '-');
+export function normalizeProjectName(projectName: string, directory: string) {
+  return normalizeDirectory(projectName, directory).replace(
+    new RegExp('/', 'g'),
+    '-'
+  );
 }
 
 function getE2EprojectName(options: ProjectGeneratorSchema) {
@@ -45,9 +56,13 @@ export function normalizeOptions(
     options.frontendProject = '';
   }
 
-  const projectDirectory = normalizeDirectory(options);
-  const projectName = normalizeProjectName(options);
-  const projectRoot = `${getWorkspaceLayout(tree).appsDir}/${projectDirectory}`;
+  const projectDirectory = normalizeDirectory(options.name, options.directory);
+  const projectName = normalizeProjectName(options.name, options.directory);
+
+  const { layoutDirectory } = extractLayoutDirectory(options.directory ?? '');
+  const appsDir = layoutDirectory ?? getWorkspaceLayout(tree).appsDir;
+  const projectRoot = joinPathFragments(appsDir, projectDirectory);
+
   const parsedTags = parseTags(options.tags);
 
   return {

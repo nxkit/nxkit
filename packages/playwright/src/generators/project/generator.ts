@@ -1,5 +1,4 @@
-import { formatFiles, Tree } from '@nx/devkit';
-import { runTasksInSerial } from '@nx/workspace/src/utilities/run-tasks-in-serial';
+import { formatFiles, Tree, runTasksInSerial } from '@nx/devkit';
 import initGenerator from '../init/generator';
 import { addLinter } from './lib/add-linter';
 import { addProjectConfig } from './lib/add-project-config';

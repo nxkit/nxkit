@@ -1,5 +1,6 @@
 import {
   addProjectConfiguration,
+  joinPathFragments,
   readJson,
   readProjectConfiguration,
   Tree,
@@ -331,6 +332,38 @@ describe('Playwright Project', () => {
       const projectConfig = readProjectConfiguration(appTree, 'my-app-e2e');
       expect(projectConfig.targets['e2e'].options.devServerTarget).toEqual(
         'my-app:serve'
+      );
+    });
+
+    describe('should be able to resolve directory path based on the workspace layout', () => {
+      test.each`
+        directory               | expectedProjectName      | projectRoot
+        ${'/frontend'}          | ${'frontend-my-app-e2e'} | ${'apps/frontend/my-app-e2e'}
+        ${'apps'}               | ${'my-app-e2e'}          | ${'apps/my-app-e2e'}
+        ${'/apps/frontend'}     | ${'frontend-my-app-e2e'} | ${'apps/frontend/my-app-e2e'}
+        ${'apps/frontend'}      | ${'frontend-my-app-e2e'} | ${'apps/frontend/my-app-e2e'}
+        ${'/packages'}          | ${'my-app-e2e'}          | ${'packages/my-app-e2e'}
+        ${'/packages/frontend'} | ${'frontend-my-app-e2e'} | ${'packages/frontend/my-app-e2e'}
+      `(
+        'when directory is "$directory" should generate "$expectedProjectName" with project\'s root at "$projectRoot"',
+        async ({ directory, expectedProjectName, projectRoot }) => {
+          await projectGenerator(appTree, {
+            ...defaultOptions,
+            name: 'my-app-e2e',
+            directory,
+          });
+          const config = readProjectConfiguration(appTree, expectedProjectName);
+
+          expect(config.root).toBe(projectRoot);
+          expect(config).toMatchSnapshot(
+            JSON.stringify(directory, expectedProjectName)
+          );
+          expect(
+            appTree.exists(
+              joinPathFragments(projectRoot, 'playwright.config.ts')
+            )
+          ).toBeTruthy();
+        }
       );
     });
   });

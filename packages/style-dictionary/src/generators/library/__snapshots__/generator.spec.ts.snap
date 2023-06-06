@@ -315,6 +315,216 @@ export default config;
 "
 `;
 
+exports[`Style Dictionary Library --preset multiconfig should be able to resolve directory path based on the workspace layout when directory is "/libs/shared" should generate "shared-mylib" with project's root at "libs/shared/mylib": "/libs/shared" 1`] = `
+Object {
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "name": "shared-mylib",
+  "projectType": "library",
+  "root": "libs/shared/mylib",
+  "sourceRoot": "libs/shared/mylib/src",
+  "tags": Array [],
+  "targets": Object {
+    "build": Object {
+      "executor": "@nxkit/style-dictionary:build",
+      "options": Object {
+        "outputPath": "dist/libs/shared/mylib",
+        "styleDictionaryConfig": "libs/shared/mylib/style-dictionary.config.ts",
+        "tsConfig": "libs/shared/mylib/tsconfig.json",
+      },
+      "outputs": Array [
+        "{options.outputPath}",
+      ],
+    },
+    "lint": Object {
+      "executor": "@nx/linter:eslint",
+      "options": Object {
+        "lintFilePatterns": Array [
+          "libs/shared/mylib/**/*.{js,ts}",
+        ],
+      },
+      "outputs": Array [
+        "{options.outputFile}",
+      ],
+    },
+  },
+}
+`;
+
+exports[`Style Dictionary Library --preset multiconfig should be able to resolve directory path based on the workspace layout when directory is "/packages" should generate "mylib" with project's root at "packages/mylib": "/packages" 1`] = `
+Object {
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "mylib",
+  "projectType": "library",
+  "root": "packages/mylib",
+  "sourceRoot": "packages/mylib/src",
+  "tags": Array [],
+  "targets": Object {
+    "build": Object {
+      "executor": "@nxkit/style-dictionary:build",
+      "options": Object {
+        "outputPath": "dist/packages/mylib",
+        "styleDictionaryConfig": "packages/mylib/style-dictionary.config.ts",
+        "tsConfig": "packages/mylib/tsconfig.json",
+      },
+      "outputs": Array [
+        "{options.outputPath}",
+      ],
+    },
+    "lint": Object {
+      "executor": "@nx/linter:eslint",
+      "options": Object {
+        "lintFilePatterns": Array [
+          "packages/mylib/**/*.{js,ts}",
+        ],
+      },
+      "outputs": Array [
+        "{options.outputFile}",
+      ],
+    },
+  },
+}
+`;
+
+exports[`Style Dictionary Library --preset multiconfig should be able to resolve directory path based on the workspace layout when directory is "/packages/shared" should generate "shared-mylib" with project's root at "packages/shared/mylib": "/packages/shared" 1`] = `
+Object {
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "name": "shared-mylib",
+  "projectType": "library",
+  "root": "packages/shared/mylib",
+  "sourceRoot": "packages/shared/mylib/src",
+  "tags": Array [],
+  "targets": Object {
+    "build": Object {
+      "executor": "@nxkit/style-dictionary:build",
+      "options": Object {
+        "outputPath": "dist/packages/shared/mylib",
+        "styleDictionaryConfig": "packages/shared/mylib/style-dictionary.config.ts",
+        "tsConfig": "packages/shared/mylib/tsconfig.json",
+      },
+      "outputs": Array [
+        "{options.outputPath}",
+      ],
+    },
+    "lint": Object {
+      "executor": "@nx/linter:eslint",
+      "options": Object {
+        "lintFilePatterns": Array [
+          "packages/shared/mylib/**/*.{js,ts}",
+        ],
+      },
+      "outputs": Array [
+        "{options.outputFile}",
+      ],
+    },
+  },
+}
+`;
+
+exports[`Style Dictionary Library --preset multiconfig should be able to resolve directory path based on the workspace layout when directory is "/shared" should generate "shared-mylib" with project's root at "libs/shared/mylib": "/shared" 1`] = `
+Object {
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "name": "shared-mylib",
+  "projectType": "library",
+  "root": "libs/shared/mylib",
+  "sourceRoot": "libs/shared/mylib/src",
+  "tags": Array [],
+  "targets": Object {
+    "build": Object {
+      "executor": "@nxkit/style-dictionary:build",
+      "options": Object {
+        "outputPath": "dist/libs/shared/mylib",
+        "styleDictionaryConfig": "libs/shared/mylib/style-dictionary.config.ts",
+        "tsConfig": "libs/shared/mylib/tsconfig.json",
+      },
+      "outputs": Array [
+        "{options.outputPath}",
+      ],
+    },
+    "lint": Object {
+      "executor": "@nx/linter:eslint",
+      "options": Object {
+        "lintFilePatterns": Array [
+          "libs/shared/mylib/**/*.{js,ts}",
+        ],
+      },
+      "outputs": Array [
+        "{options.outputFile}",
+      ],
+    },
+  },
+}
+`;
+
+exports[`Style Dictionary Library --preset multiconfig should be able to resolve directory path based on the workspace layout when directory is "libs" should generate "mylib" with project's root at "libs/mylib": "libs" 1`] = `
+Object {
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "mylib",
+  "projectType": "library",
+  "root": "libs/mylib",
+  "sourceRoot": "libs/mylib/src",
+  "tags": Array [],
+  "targets": Object {
+    "build": Object {
+      "executor": "@nxkit/style-dictionary:build",
+      "options": Object {
+        "outputPath": "dist/libs/mylib",
+        "styleDictionaryConfig": "libs/mylib/style-dictionary.config.ts",
+        "tsConfig": "libs/mylib/tsconfig.json",
+      },
+      "outputs": Array [
+        "{options.outputPath}",
+      ],
+    },
+    "lint": Object {
+      "executor": "@nx/linter:eslint",
+      "options": Object {
+        "lintFilePatterns": Array [
+          "libs/mylib/**/*.{js,ts}",
+        ],
+      },
+      "outputs": Array [
+        "{options.outputFile}",
+      ],
+    },
+  },
+}
+`;
+
+exports[`Style Dictionary Library --preset multiconfig should be able to resolve directory path based on the workspace layout when directory is "libs/shared" should generate "shared-mylib" with project's root at "libs/shared/mylib": "libs/shared" 1`] = `
+Object {
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "name": "shared-mylib",
+  "projectType": "library",
+  "root": "libs/shared/mylib",
+  "sourceRoot": "libs/shared/mylib/src",
+  "tags": Array [],
+  "targets": Object {
+    "build": Object {
+      "executor": "@nxkit/style-dictionary:build",
+      "options": Object {
+        "outputPath": "dist/libs/shared/mylib",
+        "styleDictionaryConfig": "libs/shared/mylib/style-dictionary.config.ts",
+        "tsConfig": "libs/shared/mylib/tsconfig.json",
+      },
+      "outputs": Array [
+        "{options.outputPath}",
+      ],
+    },
+    "lint": Object {
+      "executor": "@nx/linter:eslint",
+      "options": Object {
+        "lintFilePatterns": Array [
+          "libs/shared/mylib/**/*.{js,ts}",
+        ],
+      },
+      "outputs": Array [
+        "{options.outputFile}",
+      ],
+    },
+  },
+}
+`;
+
 exports[`Style Dictionary Library --preset multiconfig should set right path names in \`style-dictionary.config.ts\` 1`] = `
 "import { Config } from 'style-dictionary';
 

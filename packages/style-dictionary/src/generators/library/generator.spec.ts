@@ -1,5 +1,10 @@
 import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
-import { Tree, readProjectConfiguration, readJson } from '@nx/devkit';
+import {
+  Tree,
+  readProjectConfiguration,
+  readJson,
+  joinPathFragments,
+} from '@nx/devkit';
 
 import { libraryGenerator } from './generator';
 import { LibraryGeneratorSchema, Preset } from './schema.d';
@@ -318,6 +323,38 @@ describe('Style Dictionary Library', () => {
           'libs/my-dir/my-tokens/src/tokens/brand-1/dark/size/font.json',
         ].forEach((path) => expect(appTree.exists(path)).toBeTruthy());
       });
+    });
+
+    describe('should be able to resolve directory path based on the workspace layout', () => {
+      test.each`
+        directory             | expectedProjectName | projectRoot
+        ${'/shared'}          | ${'shared-mylib'}   | ${'libs/shared/mylib'}
+        ${'libs'}             | ${'mylib'}          | ${'libs/mylib'}
+        ${'/libs/shared'}     | ${'shared-mylib'}   | ${'libs/shared/mylib'}
+        ${'libs/shared'}      | ${'shared-mylib'}   | ${'libs/shared/mylib'}
+        ${'/packages'}        | ${'mylib'}          | ${'packages/mylib'}
+        ${'/packages/shared'} | ${'shared-mylib'}   | ${'packages/shared/mylib'}
+      `(
+        'when directory is "$directory" should generate "$expectedProjectName" with project\'s root at "$projectRoot"',
+        async ({ directory, expectedProjectName, projectRoot }) => {
+          await libraryGenerator(appTree, {
+            ...defaultOptions,
+            name: 'mylib',
+            directory,
+          });
+          const config = readProjectConfiguration(appTree, expectedProjectName);
+
+          expect(config.root).toBe(projectRoot);
+          expect(config).toMatchSnapshot(
+            JSON.stringify(directory, expectedProjectName)
+          );
+          expect(
+            appTree.exists(
+              joinPathFragments(projectRoot, 'style-dictionary.config.ts')
+            )
+          ).toBeTruthy();
+        }
+      );
     });
   });
 });
