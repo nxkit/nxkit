@@ -118,6 +118,384 @@ Object {
 }
 `;
 
+exports[`Playwright Project --frontendProject should be able to resolve directory path based on the workspace layout when directory is "/apps/frontend" should generate "frontend-my-app-e2e" with project's root at "apps/frontend/my-app-e2e": "/apps/frontend" 1`] = `
+Object {
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "name": "frontend-my-app-e2e",
+  "projectType": "application",
+  "root": "apps/frontend/my-app-e2e",
+  "sourceRoot": "apps/frontend/my-app-e2e/src",
+  "tags": Array [],
+  "targets": Object {
+    "debug": Object {
+      "configurations": Object {
+        "production": Object {
+          "baseUrl": "https://example.com",
+        },
+      },
+      "executor": "@nxkit/playwright:test",
+      "options": Object {
+        "baseUrl": "https://example.com",
+        "debug": true,
+        "outputPath": "dist/apps/frontend/my-app-e2e/test-results",
+        "playwrightConfig": "apps/frontend/my-app-e2e/playwright.config.ts",
+      },
+      "outputs": Array [
+        "{workspaceRoot}/dist/{projectRoot}",
+      ],
+    },
+    "e2e": Object {
+      "configurations": Object {
+        "production": Object {
+          "baseUrl": "https://example.com",
+        },
+      },
+      "executor": "@nxkit/playwright:test",
+      "options": Object {
+        "baseUrl": "https://example.com",
+        "outputPath": "dist/apps/frontend/my-app-e2e/test-results",
+        "playwrightConfig": "apps/frontend/my-app-e2e/playwright.config.ts",
+      },
+      "outputs": Array [
+        "{workspaceRoot}/dist/{projectRoot}",
+      ],
+    },
+    "lint": Object {
+      "executor": "@nx/linter:eslint",
+      "options": Object {
+        "lintFilePatterns": Array [
+          "apps/frontend/my-app-e2e/**/*.{js,ts}",
+        ],
+      },
+      "outputs": Array [
+        "{options.outputFile}",
+      ],
+    },
+    "show-report": Object {
+      "executor": "@nxkit/playwright:show-report",
+      "options": Object {
+        "reportPath": "dist/apps/frontend/my-app-e2e/playwright-report",
+      },
+    },
+  },
+}
+`;
+
+exports[`Playwright Project --frontendProject should be able to resolve directory path based on the workspace layout when directory is "/frontend" should generate "frontend-my-app-e2e" with project's root at "apps/frontend/my-app-e2e": "/frontend" 1`] = `
+Object {
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "name": "frontend-my-app-e2e",
+  "projectType": "application",
+  "root": "apps/frontend/my-app-e2e",
+  "sourceRoot": "apps/frontend/my-app-e2e/src",
+  "tags": Array [],
+  "targets": Object {
+    "debug": Object {
+      "configurations": Object {
+        "production": Object {
+          "baseUrl": "https://example.com",
+        },
+      },
+      "executor": "@nxkit/playwright:test",
+      "options": Object {
+        "baseUrl": "https://example.com",
+        "debug": true,
+        "outputPath": "dist/apps/frontend/my-app-e2e/test-results",
+        "playwrightConfig": "apps/frontend/my-app-e2e/playwright.config.ts",
+      },
+      "outputs": Array [
+        "{workspaceRoot}/dist/{projectRoot}",
+      ],
+    },
+    "e2e": Object {
+      "configurations": Object {
+        "production": Object {
+          "baseUrl": "https://example.com",
+        },
+      },
+      "executor": "@nxkit/playwright:test",
+      "options": Object {
+        "baseUrl": "https://example.com",
+        "outputPath": "dist/apps/frontend/my-app-e2e/test-results",
+        "playwrightConfig": "apps/frontend/my-app-e2e/playwright.config.ts",
+      },
+      "outputs": Array [
+        "{workspaceRoot}/dist/{projectRoot}",
+      ],
+    },
+    "lint": Object {
+      "executor": "@nx/linter:eslint",
+      "options": Object {
+        "lintFilePatterns": Array [
+          "apps/frontend/my-app-e2e/**/*.{js,ts}",
+        ],
+      },
+      "outputs": Array [
+        "{options.outputFile}",
+      ],
+    },
+    "show-report": Object {
+      "executor": "@nxkit/playwright:show-report",
+      "options": Object {
+        "reportPath": "dist/apps/frontend/my-app-e2e/playwright-report",
+      },
+    },
+  },
+}
+`;
+
+exports[`Playwright Project --frontendProject should be able to resolve directory path based on the workspace layout when directory is "/packages" should generate "my-app-e2e" with project's root at "packages/my-app-e2e": "/packages" 1`] = `
+Object {
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "my-app-e2e",
+  "projectType": "application",
+  "root": "packages/my-app-e2e",
+  "sourceRoot": "packages/my-app-e2e/src",
+  "tags": Array [],
+  "targets": Object {
+    "debug": Object {
+      "configurations": Object {
+        "production": Object {
+          "baseUrl": "https://example.com",
+        },
+      },
+      "executor": "@nxkit/playwright:test",
+      "options": Object {
+        "baseUrl": "https://example.com",
+        "debug": true,
+        "outputPath": "dist/packages/my-app-e2e/test-results",
+        "playwrightConfig": "packages/my-app-e2e/playwright.config.ts",
+      },
+      "outputs": Array [
+        "{workspaceRoot}/dist/{projectRoot}",
+      ],
+    },
+    "e2e": Object {
+      "configurations": Object {
+        "production": Object {
+          "baseUrl": "https://example.com",
+        },
+      },
+      "executor": "@nxkit/playwright:test",
+      "options": Object {
+        "baseUrl": "https://example.com",
+        "outputPath": "dist/packages/my-app-e2e/test-results",
+        "playwrightConfig": "packages/my-app-e2e/playwright.config.ts",
+      },
+      "outputs": Array [
+        "{workspaceRoot}/dist/{projectRoot}",
+      ],
+    },
+    "lint": Object {
+      "executor": "@nx/linter:eslint",
+      "options": Object {
+        "lintFilePatterns": Array [
+          "packages/my-app-e2e/**/*.{js,ts}",
+        ],
+      },
+      "outputs": Array [
+        "{options.outputFile}",
+      ],
+    },
+    "show-report": Object {
+      "executor": "@nxkit/playwright:show-report",
+      "options": Object {
+        "reportPath": "dist/packages/my-app-e2e/playwright-report",
+      },
+    },
+  },
+}
+`;
+
+exports[`Playwright Project --frontendProject should be able to resolve directory path based on the workspace layout when directory is "/packages/frontend" should generate "frontend-my-app-e2e" with project's root at "packages/frontend/my-app-e2e": "/packages/frontend" 1`] = `
+Object {
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "name": "frontend-my-app-e2e",
+  "projectType": "application",
+  "root": "packages/frontend/my-app-e2e",
+  "sourceRoot": "packages/frontend/my-app-e2e/src",
+  "tags": Array [],
+  "targets": Object {
+    "debug": Object {
+      "configurations": Object {
+        "production": Object {
+          "baseUrl": "https://example.com",
+        },
+      },
+      "executor": "@nxkit/playwright:test",
+      "options": Object {
+        "baseUrl": "https://example.com",
+        "debug": true,
+        "outputPath": "dist/packages/frontend/my-app-e2e/test-results",
+        "playwrightConfig": "packages/frontend/my-app-e2e/playwright.config.ts",
+      },
+      "outputs": Array [
+        "{workspaceRoot}/dist/{projectRoot}",
+      ],
+    },
+    "e2e": Object {
+      "configurations": Object {
+        "production": Object {
+          "baseUrl": "https://example.com",
+        },
+      },
+      "executor": "@nxkit/playwright:test",
+      "options": Object {
+        "baseUrl": "https://example.com",
+        "outputPath": "dist/packages/frontend/my-app-e2e/test-results",
+        "playwrightConfig": "packages/frontend/my-app-e2e/playwright.config.ts",
+      },
+      "outputs": Array [
+        "{workspaceRoot}/dist/{projectRoot}",
+      ],
+    },
+    "lint": Object {
+      "executor": "@nx/linter:eslint",
+      "options": Object {
+        "lintFilePatterns": Array [
+          "packages/frontend/my-app-e2e/**/*.{js,ts}",
+        ],
+      },
+      "outputs": Array [
+        "{options.outputFile}",
+      ],
+    },
+    "show-report": Object {
+      "executor": "@nxkit/playwright:show-report",
+      "options": Object {
+        "reportPath": "dist/packages/frontend/my-app-e2e/playwright-report",
+      },
+    },
+  },
+}
+`;
+
+exports[`Playwright Project --frontendProject should be able to resolve directory path based on the workspace layout when directory is "apps" should generate "my-app-e2e" with project's root at "apps/my-app-e2e": "apps" 1`] = `
+Object {
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "my-app-e2e",
+  "projectType": "application",
+  "root": "apps/my-app-e2e",
+  "sourceRoot": "apps/my-app-e2e/src",
+  "tags": Array [],
+  "targets": Object {
+    "debug": Object {
+      "configurations": Object {
+        "production": Object {
+          "baseUrl": "https://example.com",
+        },
+      },
+      "executor": "@nxkit/playwright:test",
+      "options": Object {
+        "baseUrl": "https://example.com",
+        "debug": true,
+        "outputPath": "dist/apps/my-app-e2e/test-results",
+        "playwrightConfig": "apps/my-app-e2e/playwright.config.ts",
+      },
+      "outputs": Array [
+        "{workspaceRoot}/dist/{projectRoot}",
+      ],
+    },
+    "e2e": Object {
+      "configurations": Object {
+        "production": Object {
+          "baseUrl": "https://example.com",
+        },
+      },
+      "executor": "@nxkit/playwright:test",
+      "options": Object {
+        "baseUrl": "https://example.com",
+        "outputPath": "dist/apps/my-app-e2e/test-results",
+        "playwrightConfig": "apps/my-app-e2e/playwright.config.ts",
+      },
+      "outputs": Array [
+        "{workspaceRoot}/dist/{projectRoot}",
+      ],
+    },
+    "lint": Object {
+      "executor": "@nx/linter:eslint",
+      "options": Object {
+        "lintFilePatterns": Array [
+          "apps/my-app-e2e/**/*.{js,ts}",
+        ],
+      },
+      "outputs": Array [
+        "{options.outputFile}",
+      ],
+    },
+    "show-report": Object {
+      "executor": "@nxkit/playwright:show-report",
+      "options": Object {
+        "reportPath": "dist/apps/my-app-e2e/playwright-report",
+      },
+    },
+  },
+}
+`;
+
+exports[`Playwright Project --frontendProject should be able to resolve directory path based on the workspace layout when directory is "apps/frontend" should generate "frontend-my-app-e2e" with project's root at "apps/frontend/my-app-e2e": "apps/frontend" 1`] = `
+Object {
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "name": "frontend-my-app-e2e",
+  "projectType": "application",
+  "root": "apps/frontend/my-app-e2e",
+  "sourceRoot": "apps/frontend/my-app-e2e/src",
+  "tags": Array [],
+  "targets": Object {
+    "debug": Object {
+      "configurations": Object {
+        "production": Object {
+          "baseUrl": "https://example.com",
+        },
+      },
+      "executor": "@nxkit/playwright:test",
+      "options": Object {
+        "baseUrl": "https://example.com",
+        "debug": true,
+        "outputPath": "dist/apps/frontend/my-app-e2e/test-results",
+        "playwrightConfig": "apps/frontend/my-app-e2e/playwright.config.ts",
+      },
+      "outputs": Array [
+        "{workspaceRoot}/dist/{projectRoot}",
+      ],
+    },
+    "e2e": Object {
+      "configurations": Object {
+        "production": Object {
+          "baseUrl": "https://example.com",
+        },
+      },
+      "executor": "@nxkit/playwright:test",
+      "options": Object {
+        "baseUrl": "https://example.com",
+        "outputPath": "dist/apps/frontend/my-app-e2e/test-results",
+        "playwrightConfig": "apps/frontend/my-app-e2e/playwright.config.ts",
+      },
+      "outputs": Array [
+        "{workspaceRoot}/dist/{projectRoot}",
+      ],
+    },
+    "lint": Object {
+      "executor": "@nx/linter:eslint",
+      "options": Object {
+        "lintFilePatterns": Array [
+          "apps/frontend/my-app-e2e/**/*.{js,ts}",
+        ],
+      },
+      "outputs": Array [
+        "{options.outputFile}",
+      ],
+    },
+    "show-report": Object {
+      "executor": "@nxkit/playwright:show-report",
+      "options": Object {
+        "reportPath": "dist/apps/frontend/my-app-e2e/playwright-report",
+      },
+    },
+  },
+}
+`;
+
 exports[`Playwright Project should set right path names in \`playwright.config.ts\` 1`] = `
 "import type { PlaywrightTestConfig } from '@playwright/test';
 import { devices } from '@playwright/test';
