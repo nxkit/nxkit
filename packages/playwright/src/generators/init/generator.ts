@@ -1,5 +1,4 @@
-import { formatFiles, GeneratorCallback, Tree } from '@nx/devkit';
-import { runTasksInSerial } from '@nx/workspace/src/utilities/run-tasks-in-serial';
+import { formatFiles, GeneratorCallback, Tree, runTasksInSerial} from '@nx/devkit';
 import { initGenerator as jsInitGenerator } from '@nx/js';
 import { addDependencies } from './lib/add-dependencies';
 import { installPlaywright } from './lib/install-playwright';
