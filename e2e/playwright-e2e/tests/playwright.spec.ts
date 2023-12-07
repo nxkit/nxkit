@@ -78,10 +78,10 @@ describe('@nxkit/playwright e2e', () => {
       async () => {
         const project = uniq('app') + '-e2e';
         await runNxCommandAsync(
-          `generate @nxkit/playwright:project ${project} --directory subdir`
+          `generate @nxkit/playwright:project ${project} --directory libs/subdir`
         );
         expect(() =>
-          checkFilesExist(`apps/subdir/${project}/src/e2e/app.spec.ts`)
+          checkFilesExist(`libs/subdir/${project}/src/e2e/app.spec.ts`)
         ).not.toThrow();
       },
       DEFAULT_TIMEOUT
@@ -96,7 +96,7 @@ describe('@nxkit/playwright e2e', () => {
         await runNxCommandAsync(
           `generate @nxkit/playwright:project ${projectName} --tags e2etag,e2ePackage`
         );
-        const project = readJson(`apps/${projectName}/project.json`);
+        const project = readJson(`${projectName}/project.json`);
         expect(project.tags).toEqual(['e2etag', 'e2ePackage']);
       },
       DEFAULT_TIMEOUT

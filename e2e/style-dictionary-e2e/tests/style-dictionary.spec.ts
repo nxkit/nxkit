@@ -41,20 +41,20 @@ describe('style-dictionary e2e', () => {
       expect(result.stdout).toContain('Successfully built design tokens');
       expect(() => {
         checkFilesExist(
-          `dist/libs/${project}/android/font_dimens.xml`,
-          `dist/libs/${project}/android/colors.xml`,
-          `dist/libs/${project}/compose/StyleDictionaryColor.kt`,
-          `dist/libs/${project}/compose/StyleDictionarySize.kt`,
-          `dist/libs/${project}/ios/StyleDictionaryColor.h`,
-          `dist/libs/${project}/ios/StyleDictionaryColor.m`,
-          `dist/libs/${project}/ios/StyleDictionarySize.h`,
-          `dist/libs/${project}/ios/StyleDictionarySize.m`,
-          `dist/libs/${project}/ios-swift/StyleDictionary+Class.swift`,
-          `dist/libs/${project}/ios-swift/StyleDictionary+Enum.swift`,
-          `dist/libs/${project}/ios-swift/StyleDictionary+Struct.swift`,
-          `dist/libs/${project}/ios-swift/StyleDictionaryColor.swift`,
-          `dist/libs/${project}/ios-swift/StyleDictionarySize.swift`,
-          `dist/libs/${project}/scss/_variables.scss`
+          `dist/${project}/android/font_dimens.xml`,
+          `dist/${project}/android/colors.xml`,
+          `dist/${project}/compose/StyleDictionaryColor.kt`,
+          `dist/${project}/compose/StyleDictionarySize.kt`,
+          `dist/${project}/ios/StyleDictionaryColor.h`,
+          `dist/${project}/ios/StyleDictionaryColor.m`,
+          `dist/${project}/ios/StyleDictionarySize.h`,
+          `dist/${project}/ios/StyleDictionarySize.m`,
+          `dist/${project}/ios-swift/StyleDictionary+Class.swift`,
+          `dist/${project}/ios-swift/StyleDictionary+Enum.swift`,
+          `dist/${project}/ios-swift/StyleDictionary+Struct.swift`,
+          `dist/${project}/ios-swift/StyleDictionaryColor.swift`,
+          `dist/${project}/ios-swift/StyleDictionarySize.swift`,
+          `dist/${project}/scss/_variables.scss`
         );
       }).not.toThrow();
     },
@@ -75,34 +75,34 @@ describe('style-dictionary e2e', () => {
       expect(result.stdout).toContain('Successfully built design tokens');
       expect(() => {
         checkFilesExist(
-          `dist/libs/${project}/brand-1/light/android/font_dimens.xml`,
-          `dist/libs/${project}/brand-1/light/android/colors.xml`,
-          `dist/libs/${project}/brand-1/light/compose/StyleDictionaryColor.kt`,
-          `dist/libs/${project}/brand-1/light/compose/StyleDictionarySize.kt`,
-          `dist/libs/${project}/brand-1/light/ios/StyleDictionaryColor.h`,
-          `dist/libs/${project}/brand-1/light/ios/StyleDictionaryColor.m`,
-          `dist/libs/${project}/brand-1/light/ios/StyleDictionarySize.h`,
-          `dist/libs/${project}/brand-1/light/ios/StyleDictionarySize.m`,
-          `dist/libs/${project}/brand-1/light/ios-swift/StyleDictionary+Class.swift`,
-          `dist/libs/${project}/brand-1/light/ios-swift/StyleDictionary+Enum.swift`,
-          `dist/libs/${project}/brand-1/light/ios-swift/StyleDictionary+Struct.swift`,
-          `dist/libs/${project}/brand-1/light/ios-swift/StyleDictionaryColor.swift`,
-          `dist/libs/${project}/brand-1/light/ios-swift/StyleDictionarySize.swift`,
-          `dist/libs/${project}/brand-1/light/scss/_variables.scss`,
-          `dist/libs/${project}/brand-1/dark/android/font_dimens.xml`,
-          `dist/libs/${project}/brand-1/dark/android/colors.xml`,
-          `dist/libs/${project}/brand-1/dark/compose/StyleDictionaryColor.kt`,
-          `dist/libs/${project}/brand-1/dark/compose/StyleDictionarySize.kt`,
-          `dist/libs/${project}/brand-1/dark/ios/StyleDictionaryColor.h`,
-          `dist/libs/${project}/brand-1/dark/ios/StyleDictionaryColor.m`,
-          `dist/libs/${project}/brand-1/dark/ios/StyleDictionarySize.h`,
-          `dist/libs/${project}/brand-1/dark/ios/StyleDictionarySize.m`,
-          `dist/libs/${project}/brand-1/dark/ios-swift/StyleDictionary+Class.swift`,
-          `dist/libs/${project}/brand-1/dark/ios-swift/StyleDictionary+Enum.swift`,
-          `dist/libs/${project}/brand-1/dark/ios-swift/StyleDictionary+Struct.swift`,
-          `dist/libs/${project}/brand-1/dark/ios-swift/StyleDictionaryColor.swift`,
-          `dist/libs/${project}/brand-1/dark/ios-swift/StyleDictionarySize.swift`,
-          `dist/libs/${project}/brand-1/dark/scss/_variables.scss`
+          `dist/${project}/brand-1/light/android/font_dimens.xml`,
+          `dist/${project}/brand-1/light/android/colors.xml`,
+          `dist/${project}/brand-1/light/compose/StyleDictionaryColor.kt`,
+          `dist/${project}/brand-1/light/compose/StyleDictionarySize.kt`,
+          `dist/${project}/brand-1/light/ios/StyleDictionaryColor.h`,
+          `dist/${project}/brand-1/light/ios/StyleDictionaryColor.m`,
+          `dist/${project}/brand-1/light/ios/StyleDictionarySize.h`,
+          `dist/${project}/brand-1/light/ios/StyleDictionarySize.m`,
+          `dist/${project}/brand-1/light/ios-swift/StyleDictionary+Class.swift`,
+          `dist/${project}/brand-1/light/ios-swift/StyleDictionary+Enum.swift`,
+          `dist/${project}/brand-1/light/ios-swift/StyleDictionary+Struct.swift`,
+          `dist/${project}/brand-1/light/ios-swift/StyleDictionaryColor.swift`,
+          `dist/${project}/brand-1/light/ios-swift/StyleDictionarySize.swift`,
+          `dist/${project}/brand-1/light/scss/_variables.scss`,
+          `dist/${project}/brand-1/dark/android/font_dimens.xml`,
+          `dist/${project}/brand-1/dark/android/colors.xml`,
+          `dist/${project}/brand-1/dark/compose/StyleDictionaryColor.kt`,
+          `dist/${project}/brand-1/dark/compose/StyleDictionarySize.kt`,
+          `dist/${project}/brand-1/dark/ios/StyleDictionaryColor.h`,
+          `dist/${project}/brand-1/dark/ios/StyleDictionaryColor.m`,
+          `dist/${project}/brand-1/dark/ios/StyleDictionarySize.h`,
+          `dist/${project}/brand-1/dark/ios/StyleDictionarySize.m`,
+          `dist/${project}/brand-1/dark/ios-swift/StyleDictionary+Class.swift`,
+          `dist/${project}/brand-1/dark/ios-swift/StyleDictionary+Enum.swift`,
+          `dist/${project}/brand-1/dark/ios-swift/StyleDictionary+Struct.swift`,
+          `dist/${project}/brand-1/dark/ios-swift/StyleDictionaryColor.swift`,
+          `dist/${project}/brand-1/dark/ios-swift/StyleDictionarySize.swift`,
+          `dist/${project}/brand-1/dark/scss/_variables.scss`
         );
       }).not.toThrow();
     },
@@ -138,20 +138,20 @@ describe('style-dictionary e2e', () => {
         expect(result.stdout).toContain('Successfully built design tokens');
         expect(() => {
           checkFilesExist(
-            `dist/libs/${project}/android/font_dimens.xml`,
-            `dist/libs/${project}/android/colors.xml`,
-            `dist/libs/${project}/compose/StyleDictionaryColor.kt`,
-            `dist/libs/${project}/compose/StyleDictionarySize.kt`,
-            `dist/libs/${project}/ios/StyleDictionaryColor.h`,
-            `dist/libs/${project}/ios/StyleDictionaryColor.m`,
-            `dist/libs/${project}/ios/StyleDictionarySize.h`,
-            `dist/libs/${project}/ios/StyleDictionarySize.m`,
-            `dist/libs/${project}/ios-swift/StyleDictionary+Class.swift`,
-            `dist/libs/${project}/ios-swift/StyleDictionary+Enum.swift`,
-            `dist/libs/${project}/ios-swift/StyleDictionary+Struct.swift`,
-            `dist/libs/${project}/ios-swift/StyleDictionaryColor.swift`,
-            `dist/libs/${project}/ios-swift/StyleDictionarySize.swift`,
-            `dist/libs/${project}/scss/_variables.scss`
+            `dist/${project}/android/font_dimens.xml`,
+            `dist/${project}/android/colors.xml`,
+            `dist/${project}/compose/StyleDictionaryColor.kt`,
+            `dist/${project}/compose/StyleDictionarySize.kt`,
+            `dist/${project}/ios/StyleDictionaryColor.h`,
+            `dist/${project}/ios/StyleDictionaryColor.m`,
+            `dist/${project}/ios/StyleDictionarySize.h`,
+            `dist/${project}/ios/StyleDictionarySize.m`,
+            `dist/${project}/ios-swift/StyleDictionary+Class.swift`,
+            `dist/${project}/ios-swift/StyleDictionary+Enum.swift`,
+            `dist/${project}/ios-swift/StyleDictionary+Struct.swift`,
+            `dist/${project}/ios-swift/StyleDictionaryColor.swift`,
+            `dist/${project}/ios-swift/StyleDictionarySize.swift`,
+            `dist/${project}/scss/_variables.scss`
           );
         }).not.toThrow();
       },
@@ -163,7 +163,7 @@ describe('style-dictionary e2e', () => {
     it('should create src in the specified directory', async () => {
       const project = uniq('style-dictionary');
       await runNxCommandAsync(
-        `generate @nxkit/style-dictionary:library ${project} --directory subdir`
+        `generate @nxkit/style-dictionary:library ${project} --directory libs/subdir`
       );
       expect(() =>
         checkFilesExist(`libs/subdir/${project}/style-dictionary.config.ts`)
