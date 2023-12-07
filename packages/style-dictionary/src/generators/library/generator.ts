@@ -1,5 +1,9 @@
-import { formatFiles, joinPathFragments, Tree } from '@nx/devkit';
-import { runTasksInSerial } from '@nx/workspace/src/utilities/run-tasks-in-serial';
+import {
+  formatFiles,
+  joinPathFragments,
+  Tree,
+  runTasksInSerial,
+} from '@nx/devkit';
 import extensionGenerator from '../extension/generator';
 import { Extension } from '../extension/schema';
 import initGenerator from '../init/generator';

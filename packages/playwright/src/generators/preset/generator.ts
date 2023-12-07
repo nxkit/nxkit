@@ -1,5 +1,4 @@
-import { names, Tree } from '@nx/devkit';
-import { runTasksInSerial } from '@nx/workspace/src/utilities/run-tasks-in-serial';
+import { names, Tree, runTasksInSerial } from '@nx/devkit';
 import projectGenerator from '../project/generator';
 import { PresetGeneratorSchema } from './schema';
 
