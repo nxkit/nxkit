@@ -161,7 +161,7 @@ Object {
       ],
     },
     "lint": Object {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:eslint",
       "options": Object {
         "lintFilePatterns": Array [
           "apps/frontend/my-app-e2e/**/*.{js,ts}",
@@ -224,7 +224,7 @@ Object {
       ],
     },
     "lint": Object {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:eslint",
       "options": Object {
         "lintFilePatterns": Array [
           "apps/frontend/my-app-e2e/**/*.{js,ts}",
@@ -287,7 +287,7 @@ Object {
       ],
     },
     "lint": Object {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:eslint",
       "options": Object {
         "lintFilePatterns": Array [
           "packages/my-app-e2e/**/*.{js,ts}",
@@ -350,7 +350,7 @@ Object {
       ],
     },
     "lint": Object {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:eslint",
       "options": Object {
         "lintFilePatterns": Array [
           "packages/frontend/my-app-e2e/**/*.{js,ts}",
@@ -413,7 +413,7 @@ Object {
       ],
     },
     "lint": Object {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:eslint",
       "options": Object {
         "lintFilePatterns": Array [
           "apps/my-app-e2e/**/*.{js,ts}",
@@ -476,7 +476,7 @@ Object {
       ],
     },
     "lint": Object {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:eslint",
       "options": Object {
         "lintFilePatterns": Array [
           "apps/frontend/my-app-e2e/**/*.{js,ts}",

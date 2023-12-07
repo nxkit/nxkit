@@ -2,6 +2,7 @@ import { TestExecutorSchema } from './schema';
 
 import executor from './executor';
 import { PlaywrightCLI } from '../../utils/playwright';
+import { ExecutorContext } from '@nx/devkit';
 
 jest.mock('../../utils/playwright');
 
@@ -15,7 +16,7 @@ describe('Playwright Test Executor', () => {
     root: '/root',
     workspace: { projects: {} },
     projectName: 'mock-project',
-  } as any;
+  } as ExecutorContext;
 
   it('can run', async () => {
     const output = await executor(options, mockContext);
