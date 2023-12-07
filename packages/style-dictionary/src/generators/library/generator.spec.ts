@@ -39,7 +39,7 @@ describe('Style Dictionary Library', () => {
     });
 
     expect(projectConfig.targets.lint).toEqual({
-      executor: '@nx/linter:eslint',
+      executor: '@nx/eslint:eslint',
       outputs: ['{options.outputFile}'],
       options: {
         lintFilePatterns: ['libs/my-tokens/**/*.{js,ts}'],

@@ -336,7 +336,7 @@ Object {
       ],
     },
     "lint": Object {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:eslint",
       "options": Object {
         "lintFilePatterns": Array [
           "libs/shared/mylib/**/*.{js,ts}",
@@ -371,7 +371,7 @@ Object {
       ],
     },
     "lint": Object {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:eslint",
       "options": Object {
         "lintFilePatterns": Array [
           "packages/mylib/**/*.{js,ts}",
@@ -406,7 +406,7 @@ Object {
       ],
     },
     "lint": Object {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:eslint",
       "options": Object {
         "lintFilePatterns": Array [
           "packages/shared/mylib/**/*.{js,ts}",
@@ -441,7 +441,7 @@ Object {
       ],
     },
     "lint": Object {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:eslint",
       "options": Object {
         "lintFilePatterns": Array [
           "libs/shared/mylib/**/*.{js,ts}",
@@ -476,7 +476,7 @@ Object {
       ],
     },
     "lint": Object {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:eslint",
       "options": Object {
         "lintFilePatterns": Array [
           "libs/mylib/**/*.{js,ts}",
@@ -511,7 +511,7 @@ Object {
       ],
     },
     "lint": Object {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:eslint",
       "options": Object {
         "lintFilePatterns": Array [
           "libs/shared/mylib/**/*.{js,ts}",

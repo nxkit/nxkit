@@ -11,7 +11,6 @@
         "outputPath": "dist/packages/style-dictionary",
         "main": "packages/style-dictionary/src/index.ts",
         "tsConfig": "packages/style-dictionary/tsconfig.lib.json",
-        "updateBuildableProjectDepsInPackageJson": false,
         "assets": [
           "packages/style-dictionary/*.md",
           {
@@ -43,7 +42,7 @@
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
@@ -59,8 +58,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "packages/style-dictionary/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "packages/style-dictionary/jest.config.ts"
       }
     }
   },

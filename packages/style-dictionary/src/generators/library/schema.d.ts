@@ -1,4 +1,4 @@
-import { Linter } from '@nx/linter';
+import { Linter } from '@nx/eslint';
 
 export const enum Preset {
   BASIC = 'basic',
