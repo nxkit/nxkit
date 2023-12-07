@@ -69,7 +69,7 @@ describe('Playwright Project', () => {
     });
 
     expect(project.targets.lint).toEqual({
-      executor: '@nx/linter:eslint',
+      executor: '@nx/eslint:eslint',
       outputs: ['{options.outputFile}'],
       options: {
         lintFilePatterns: [`apps/my-app-e2e/**/*.{js,ts}`],

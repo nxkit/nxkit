@@ -2,7 +2,7 @@
 import { qwikVite } from '@builder.io/qwik/optimizer';
 import { qwikCity } from '@builder.io/qwik-city/vite';
 import { defineConfig } from 'vite';
-import tsconfigPaths from 'vite-tsconfig-paths';
+import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 
 export default defineConfig({
   plugins: [
@@ -15,7 +15,7 @@ export default defineConfig({
         outDir: '../dist/docs/server',
       },
     }),
-    tsconfigPaths(),
+    nxViteTsPaths(),
   ],
   preview: {
     headers: {

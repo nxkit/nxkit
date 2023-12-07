@@ -26,7 +26,7 @@ function createLintTarget(
 ): TargetConfiguration {
   const { projectRoot } = options;
   return {
-    executor: '@nx/linter:eslint',
+    executor: '@nx/eslint:eslint',
     outputs: ['{options.outputFile}'],
     options: {
       lintFilePatterns: [`${projectRoot}/**/*.{js,ts}`],
