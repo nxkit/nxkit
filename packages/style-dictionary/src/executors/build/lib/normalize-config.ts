@@ -1,5 +1,5 @@
 import { ExecutorContext, joinPathFragments } from '@nx/devkit';
-import { resolve } from 'path';
+import { posix } from 'path';
 import type { Config, Platform } from 'style-dictionary';
 import { NormalizedBuildExecutorSchema } from '../schema';
 
@@ -11,8 +11,8 @@ export function normalizeStyleDictionaryConfig(
   const { root: projectRoot } = context.workspace.projects[context.projectName];
   const normalized: Config = {
     ...config,
-    source: config.source.map((src) => resolve(projectRoot, src)),
-    include: config?.include?.map((include) => resolve(projectRoot, include)),
+    source: config.source.map((src) => posix.resolve(projectRoot, src)),
+    include: config?.include?.map((include) => posix.resolve(projectRoot, include)),
     platforms: Object.entries(config.platforms).reduce(
       (accum: { [key: string]: Platform }, [name, platform]) => ({
         ...accum,
