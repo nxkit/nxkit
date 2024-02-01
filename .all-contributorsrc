@@ -100,6 +100,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "isaacplmann",
+      "name": "Isaac Mann",
+      "avatar_url": "https://avatars.githubusercontent.com/u/861504?v=4",
+      "profile": "https://github.com/isaacplmann",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
