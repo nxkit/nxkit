@@ -1,0 +1,77 @@
+name: CI
+
+on:
+  workflow_dispatch:
+    inputs:
+      type:
+        type: choice
+        description: 'Type of release'
+        required: true
+        default: 'patch'
+        options:
+          - major
+          - premajor
+          - minor
+          - preminor
+          - patch
+          - prepatch
+          - prerelease
+      dry-run:
+        type: boolean
+        description: 'Dry run'
+        required: false
+        default: false
+
+env:
+  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+  NX_CLOUD_AUTH_TOKEN: ${{ secrets.NX_CLOUD_AUTH_TOKEN }}
+  VOLTA_FEATURE_PNPM: 1
+
+jobs:
+  release:
+    name: Nxkit Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Install Node toolchain
+        uses: volta-cli/action@v4
+
+      - name: Set node/pnpm versions
+        id: versions
+        run: |
+          node_ver=$( node --version )
+          pnpm_ver=$( pnpm --version )
+          volta_ver=$( volta --version )
+          echo "Volta: ${volta_ver}"
+          echo "Node: ${node_ver:1}"
+          echo "PNPM: ${pnpm_ver}"
+          echo "node_version=${node_ver:1}" >> $GITHUB_OUTPUT
+          echo "pnpm_version=${pnpm_ver}" >> $GITHUB_OUTPUT
+
+      - name: Get pnpm cache directory path
+        id: pnpm-cache-dir-path
+        run: echo "dir=$(pnpm store path)" >> $GITHUB_OUTPUT
+
+      - name: Use the node_modules cache if available
+        uses: actions/cache@v3
+        with:
+          path: ${{ steps.pnpm-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-node-${{ steps.versions.outputs.node_version }}-pnpm-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-node-${{ steps.versions.outputs.node_version }}-pnpm
+
+      - name: Use NPM token
+        run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build packages
+        run: pnpm build-all
+
+      - name: Release
+        run: pnpm nx release ${{ github.event.inputs.type }} --dry-run=${{ github.event.inputs.dry-run }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

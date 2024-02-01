@@ -20,7 +20,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "build-all": "nx run-many --target build --all --parallel 8 --exclude utils-workspace,docs",
+    "build-all": "nx run-many --target build --all --parallel 8 --projects packages/*",
     "commit": "git-cz",
     "check-commit": "node ./tools/scripts/commit-lint.js",
     "check-format": "nx format:check --all",
