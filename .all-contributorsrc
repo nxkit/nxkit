@@ -91,6 +91,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "maxime4000",
+      "name": "Maxime",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4070713?v=4",
+      "profile": "https://github.com/maxime4000",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
