@@ -29,6 +29,10 @@
   "publishConfig": {
     "access": "public"
   },
+  "dependencies": {
+    "@nx/devkit": "17.3.1",
+    "tslib": "^2.3.0"
+  },
   "peerDependencies": {
     "@playwright/test": "^1.25.2"
   },
