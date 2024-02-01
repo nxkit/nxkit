@@ -82,6 +82,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "astrodomas",
+      "name": "Dominykas Astrauskas",
+      "avatar_url": "https://avatars.githubusercontent.com/u/134293602?v=4",
+      "profile": "https://github.com/astrodomas",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
