@@ -36,7 +36,7 @@
 
 <!-- prettier-ignore-start -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <!-- prettier-ignore-end -->
 
@@ -90,6 +90,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="http://joepkockelkorn.com"><img src="https://avatars.githubusercontent.com/u/12891645?v=4?s=100" width="100px;" alt="Joep Kockelkorn"/><br /><sub><b>Joep Kockelkorn</b></sub></a><br /><a href="https://github.com/nxkit/nxkit/commits?author=JoepKockelkorn" title="Code">💻</a> <a href="https://github.com/nxkit/nxkit/issues?q=author%3AJoepKockelkorn" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/jgrodriguezc"><img src="https://avatars.githubusercontent.com/u/105730830?v=4?s=100" width="100px;" alt="José Gregorio Rodríguez Chacón"/><br /><sub><b>José Gregorio Rodríguez Chacón</b></sub></a><br /><a href="#ideas-jgrodriguezc" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/nxkit/nxkit/commits?author=jgrodriguezc" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://twitter.com/kamikillerto"><img src="https://avatars.githubusercontent.com/u/9579729?v=4?s=100" width="100px;" alt="Benjamin JEGARD"/><br /><sub><b>Benjamin JEGARD</b></sub></a><br /><a href="https://github.com/nxkit/nxkit/commits?author=KamiKillertO" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.linkedin.com/in/jeroen--akkerman/"><img src="https://avatars.githubusercontent.com/u/3472373?v=4?s=100" width="100px;" alt="Jeroen Akkerman"/><br /><sub><b>Jeroen Akkerman</b></sub></a><br /><a href="https://github.com/nxkit/nxkit/commits?author=Ionaru" title="Code">💻</a></td>
     </tr>
   </tbody>
   <tfoot>
