@@ -1,11 +1,18 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "release": {
-    "projects": ["style-dictionary", "playwright"],
+    "projects": ["packages/*"],
     "releaseTagPattern": "{version}",
+    "changelog": {
+      "workspaceChangelog": {
+        "createRelease": "github"
+      }
+    },
     "version": {
       "generatorOptions": {
-        "currentVersionResolver": "git-tag"
+        "packageRoot": "dist/packages/{projectName}",
+        "currentVersionResolver": "registry",
+        "skipLockFileUpdate": true
       }
     }
   },

@@ -47,7 +47,6 @@ nx-cloud.env
 .envrc
 
 # Lerna creates this
-CHANGELOG.md
 lerna-debug.log
 
 # Playwright
