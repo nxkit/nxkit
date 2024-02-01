@@ -43,16 +43,7 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": [
-          "packages/style-dictionary/**/*.ts",
-          "packages/style-dictionary/generators.json",
-          "packages/style-dictionary/executors.json",
-          "packages/style-dictionary/package.json",
-          "packages/style-dictionary/migrations.json"
-        ]
-      }
+      "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",

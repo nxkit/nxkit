@@ -49,7 +49,7 @@
 | <a href="https://github.com/nxkit/nxkit/tree/main/packages/playwright"><img src="https://playwright.dev/img/playwright-logo.svg" width="30"> Playwright</a>                      | [![@nxkit/playwright](https://img.shields.io/npm/v/@nxkit/playwright?label=%40nxkit%2Fplaywright&logo=nx)](https://www.npmjs.com/package/@nxkit/playwright)              |
 | <a href="https://github.com/nxkit/nxkit/tree/main/packages/style-dictionary"><img src="https://amzn.github.io/style-dictionary/assets/logo.png" width="20"> Style Dictionary</a> | [![npm (scoped)](https://img.shields.io/npm/v/@nxkit/style-dictionary?label=%40nxkit%2Fstyle-dictionary&logo=nx)](https://www.npmjs.com/package/@nxkit/style-dictionary) |
 
-## NxKit & Nx Compatibility Chart
+## NxKit & Nx Compatibility
 
 | NxKit version    | Nx version |
 | ---------------- | ---------- |
@@ -57,6 +57,13 @@
 | >= 3.0.0         | ^16.0.0    |
 | >= 2.1.2 < 3.0.0 | ^15.8.0    |
 | >= 1.0.0 < 2.1.2 | ^15.4.2    |
+
+## NxKit & Node Compatibility
+
+| NxKit version | Node version |
+| ------------- | ------------ |
+| >= 5.0.0      | ^18.0.0      |
+| >= 1.0.0      | ^16.0.0      |
 
 ## Contributing
 
