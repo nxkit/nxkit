@@ -40,7 +40,7 @@ jobs:
       NX_HEAD: HEAD
     strategy:
       matrix:
-        node-version: [16, 18]
+        node-version: [18, 20]
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v3
