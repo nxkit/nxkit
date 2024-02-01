@@ -12,7 +12,9 @@ export function normalizeStyleDictionaryConfig(
   const normalized: Config = {
     ...config,
     source: config.source.map((src) => posix.resolve(projectRoot, src)),
-    include: config?.include?.map((include) => posix.resolve(projectRoot, include)),
+    include: config?.include?.map((include) =>
+      posix.resolve(projectRoot, include)
+    ),
     platforms: Object.entries(config.platforms).reduce(
       (accum: { [key: string]: Platform }, [name, platform]) => ({
         ...accum,
