@@ -10,7 +10,7 @@ export function normalizeOptions(
   options: BuildExecutorSchema,
   context: ExecutorContext
 ): NormalizedBuildExecutorSchema {
-  const projectConfig = context.workspace.projects[context.projectName];
+  const projectConfig = context.projectsConfigurations.projects[context.projectName];
   const { sourceRoot, root: projectRoot } = projectConfig;
   const { root } = context;
   return {
