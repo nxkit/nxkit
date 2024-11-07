@@ -12,11 +12,41 @@ const options: TestExecutorSchema = {
 };
 
 describe('Playwright Test Executor', () => {
-  const mockContext = {
+  const mockContext: ExecutorContext = {
     root: '/root',
-    workspace: { projects: {} },
     projectName: 'mock-project',
-  } as ExecutorContext;
+    projectsConfigurations: {
+      version: 2,
+      projects: {
+        'mock-project': {
+          root: 'apps/mock-project',
+        }
+      },
+    },
+    nxJsonConfiguration: {},
+    cwd: process.cwd(),
+    isVerbose: false,
+    projectGraph: {
+      version: '2',
+      nodes: {
+        'mock-project': {
+          type: 'e2e',
+          name: 'mock-project',
+          data: {
+            root: 'apps/mock-project',
+            targets: {
+              e2e: {
+                configurations: {
+                  development: {}
+                }
+              },
+            }
+          },
+        }
+      },
+      dependencies: {},
+    },
+  };
 
   it('can run', async () => {
     const output = await executor(options, mockContext);

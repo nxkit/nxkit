@@ -6,3 +6,4 @@
 # nx format:check fails on CI on this file
 pnpm-lock.yaml
 /.nx/cache
+/.nx/workspace-data
