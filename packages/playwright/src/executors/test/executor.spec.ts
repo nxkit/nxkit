@@ -20,7 +20,7 @@ describe('Playwright Test Executor', () => {
       projects: {
         'mock-project': {
           root: 'apps/mock-project',
-        }
+        },
       },
     },
     nxJsonConfiguration: {},
@@ -37,12 +37,12 @@ describe('Playwright Test Executor', () => {
             targets: {
               e2e: {
                 configurations: {
-                  development: {}
-                }
+                  development: {},
+                },
               },
-            }
+            },
           },
-        }
+        },
       },
       dependencies: {},
     },
