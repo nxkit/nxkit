@@ -1,3 +1,7 @@
+
+> [!WARNING]  
+> This plugin is deprecated, please use the official [Playwright Nx Plugin](https://nx.dev/nx-api/playwright) instead.
+
 <p align="center">
     <a href="https://nx.dev">
         <img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="90">
