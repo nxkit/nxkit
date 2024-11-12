@@ -46,7 +46,7 @@
   },
   "namedInputs": {
     "default": ["{projectRoot}/**/*", "sharedGlobals"],
-    "sharedGlobals": [],
+    "sharedGlobals": ["{workspaceRoot}/.github/workflows/ci.yml"],
     "production": [
       "default",
       "!{projectRoot}/**/?(*.)+(spec|test).[jt]s?(x)?(.snap)",
@@ -56,8 +56,15 @@
       "!{projectRoot}/src/test-setup.[jt]s"
     ]
   },
-  "nxCloudAccessToken": "OWI2ZTgxODEtNWI2YS00ZjI1LWJkZjktZDc0ODgxOTE4N2I2fHJlYWQ=",
   "useInferencePlugins": false,
   "defaultBase": "main",
-  "useLegacyCache": true
+  "useLegacyCache": true,
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "nx-cloud",
+      "options": {
+        "nxCloudId": "631b6e9f4888886bdd0606c3"
+      }
+    }
+  }
 }
