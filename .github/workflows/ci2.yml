@@ -6,45 +6,34 @@ on:
       - main
   pull_request:
 
-permissions:
-  actions: read
-  contents: read
-
 env:
   NX_CLOUD_ACCESS_TOKEN: ${{ secrets.NX_CLOUD_ACCESS_TOKEN }}
   VOLTA_FEATURE_PNPM: 1
 
 jobs:
-  main:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+  ci:
+    name: Nx Cloud - Main Job
+    uses: nrwl/ci/.github/workflows/nx-cloud-main.yml@v0.14.0
+    with:
+      number-of-agents: 3
+      init-commands: |
+        pnpm exec nx-cloud start-ci-run --stop-agents-after="build" --agent-count=3
+      parallel-commands: |
+        pnpm exec nx-cloud record -- pnpm exec nx format:check
+      parallel-commands-on-agents: |
+        pnpm exec nx affected --target=lint --parallel=3
+        pnpm exec nx affected --target=test --parallel=3 --ci --code-coverage
+        pnpm exec nx affected --target=build --parallel=3
 
-      - uses: pnpm/action-setup@v4
-        with:
-          version: 9
-
-      - run: pnpm dlx nx-cloud start-ci-run --distribute-on="3 linux-small-js" --stop-agents-after="build"
-
-      # Cache node_modules
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: 'pnpm'
-
-      - run: pnpm install --frozen-lockfile
-      - uses: nrwl/nx-set-shas@v4
-
-      # Prepend any command with "nx-cloud record --" to record its logs to Nx Cloud
-      # - run: pnpm exec nx-cloud record -- echo Hello World
-      # Nx Affected runs only tasks affected by the changes in this PR/commit. Learn more: https://nx.dev/ci/features/affected
-      - run: pnpm exec nx affected -t lint test build
+  agents:
+    name: Nx Cloud - Agents
+    uses: nrwl/ci/.github/workflows/nx-cloud-agents.yml@v0.14.0
+    with:
+      number-of-agents: 3
 
   e2e:
     name: E2E
-    needs: [main]
+    needs: [ci, agents]
     runs-on: ubuntu-latest
     env:
       NX_BASE: origin/main
