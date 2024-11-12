@@ -8,7 +8,8 @@ export function normalizeStyleDictionaryConfig(
   options: NormalizedBuildExecutorSchema,
   context: ExecutorContext
 ): Config {
-  const { root: projectRoot } = context.workspace.projects[context.projectName];
+  const { root: projectRoot } =
+    context.projectsConfigurations.projects[context.projectName];
   const normalized: Config = {
     ...config,
     source: config.source.map((src) => posix.resolve(projectRoot, src)),

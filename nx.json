@@ -16,9 +16,6 @@
       }
     }
   },
-  "affected": {
-    "defaultBase": "main"
-  },
   "targetDefaults": {
     "build": {
       "dependsOn": ["^build"],
@@ -59,5 +56,8 @@
       "!{projectRoot}/src/test-setup.[jt]s"
     ]
   },
-  "nxCloudAccessToken": "OWI2ZTgxODEtNWI2YS00ZjI1LWJkZjktZDc0ODgxOTE4N2I2fHJlYWQ="
+  "nxCloudAccessToken": "OWI2ZTgxODEtNWI2YS00ZjI1LWJkZjktZDc0ODgxOTE4N2I2fHJlYWQ=",
+  "useInferencePlugins": false,
+  "defaultBase": "main",
+  "useLegacyCache": true
 }
