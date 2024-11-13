@@ -36,7 +36,7 @@
 
 <!-- prettier-ignore-start -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-10-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-11-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <!-- prettier-ignore-end -->
 
@@ -105,6 +105,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/astrodomas"><img src="https://avatars.githubusercontent.com/u/134293602?v=4?s=100" width="100px;" alt="Dominykas Astrauskas"/><br /><sub><b>Dominykas Astrauskas</b></sub></a><br /><a href="https://github.com/nxkit/nxkit/issues?q=author%3Aastrodomas" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/maxime4000"><img src="https://avatars.githubusercontent.com/u/4070713?v=4?s=100" width="100px;" alt="Maxime"/><br /><sub><b>Maxime</b></sub></a><br /><a href="https://github.com/nxkit/nxkit/issues?q=author%3Amaxime4000" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/isaacplmann"><img src="https://avatars.githubusercontent.com/u/861504?v=4?s=100" width="100px;" alt="Isaac Mann"/><br /><sub><b>Isaac Mann</b></sub></a><br /><a href="https://github.com/nxkit/nxkit/issues?q=author%3Aisaacplmann" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/codebysandeep"><img src="https://avatars.githubusercontent.com/u/5619364?v=4?s=100" width="100px;" alt="Sandeep Upadhyay"/><br /><sub><b>Sandeep Upadhyay</b></sub></a><br /><a href="https://github.com/nxkit/nxkit/issues?q=author%3Acodebysandeep" title="Bug reports">🐛</a></td>
     </tr>
   </tbody>
   <tfoot>
